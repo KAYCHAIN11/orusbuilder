@@ -1,0 +1,1020 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-aa020da0-48c2-4ac4-9e6e-facd8bc80c52",
+  "projectId": "talento-vivo-fullstack",
+  "version": 1,
+  "status": "ready",
+  "depth": "complete",
+  "source": {
+    "type": "prompt",
+    "prompt": "Sistema Talento Vivo com vagas, candidatos, processo seletivo em pipeline, entrevistas e relatórios de contratação. Identidade corporativa contemporânea em azul elétrico e grafite, foco em decisões de talento.",
+    "documentIds": []
+  },
+  "product": {
+    "name": "Orus Studio",
+    "summary": "Sistema Talento Vivo com vagas, candidatos, processo seletivo em pipeline, entrevistas e relatórios de contratação. Identidade corporativa contemporânea em azul elétrico e grafite, foco em decisões de talento.",
+    "problem": "Executar o objetivo descrito pelo usuário",
+    "valueProposition": "Uma experiência coerente com o fluxo solicitado",
+    "audience": [
+      "Usuário"
+    ],
+    "goals": [
+      "Publicar e acompanhar oportunidades com requisitos e responsáveis",
+      "Organizar perfis, competências e histórico de candidatos",
+      "Conduzir candidaturas pelas etapas definidas de recrutamento",
+      "Planejar entrevistas, participantes e avaliações",
+      "Transformar dados operacionais em decisões"
+    ],
+    "outOfScope": []
+  },
+  "visualIntent": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "generic",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Orus Studio",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "studio-cobalt",
+      "primary": "bg-blue-600",
+      "primaryHover": "hover:bg-blue-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-blue-50 text-blue-800",
+      "accent": "text-fuchsia-700",
+      "page": "bg-zinc-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-violet-50",
+      "text": "text-zinc-950",
+      "textMuted": "text-zinc-600",
+      "border": "border-violet-100",
+      "heroGradient": "bg-gradient-to-br from-blue-700 via-violet-700 to-fuchsia-600",
+      "cssPrimary": "37 99 235",
+      "cssPrimaryHover": "59 130 246",
+      "cssPrimarySoft": "239 246 255",
+      "cssAccent": "162 28 175",
+      "cssPage": "250 250 250",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "245 243 255",
+      "cssText": "24 24 27",
+      "cssTextMuted": "82 82 91",
+      "cssBorder": "237 233 254"
+    },
+    "identity": {
+      "personality": [
+        "warm",
+        "precise",
+        "trustworthy"
+      ],
+      "voice": "humana, objetiva e orientada a potencial",
+      "promise": "talentos e oportunidades avançam com contexto",
+      "visualMetaphor": "jornada de talentos em movimento",
+      "signature": "perfis, etapas e sinais de aderência",
+      "imagery": "pessoas, competências e encontros profissionais"
+    },
+    "experience": {
+      "pattern": "talent-hub",
+      "primaryDataView": "kanban",
+      "hierarchy": "people-first",
+      "heroTreatment": "ambient",
+      "componentShape": "layered",
+      "layout": "split-focus",
+      "screenPriorities": [
+        "vagas prioritárias",
+        "candidatos em movimento",
+        "entrevistas próximas"
+      ]
+    },
+    "composition": {
+      "shell": "sidebar-workspace",
+      "contentFrame": "contained",
+      "header": "minimal",
+      "actionPlacement": "floating",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:generic",
+        "layout:split-focus",
+        "hierarchy:people-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:editorial",
+      "domain-family:recruiting",
+      "archetype:generic",
+      "palette:explicit-blue",
+      "composition:planned-sidebar-workspace"
+    ]
+  },
+  "personas": [
+    {
+      "id": "PERSONA-001",
+      "name": "Usuário",
+      "goals": [
+        "Uma experiência coerente com o fluxo solicitado"
+      ],
+      "permissions": [
+        "public"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Vagas",
+      "purpose": "Publicar e acompanhar oportunidades com requisitos e responsáveis",
+      "strategy": "content",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "JobOpening"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "JobOpening content can be created, loaded and opened from persistent storage",
+        "Vagas handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Vagas",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-002",
+      "name": "Candidatos",
+      "purpose": "Organizar perfis, competências e histórico de candidatos",
+      "strategy": "crud",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Candidate"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Candidate records can be created, loaded, updated and removed through persistent APIs",
+        "Candidatos handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Candidatos",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-003",
+      "name": "Processo seletivo",
+      "purpose": "Conduzir candidaturas pelas etapas definidas de recrutamento",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Application",
+        "Candidate",
+        "JobOpening"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Application records can move only through allowed persisted workflow transitions",
+        "Processo seletivo handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Processo seletivo",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-004",
+      "name": "Entrevistas",
+      "purpose": "Planejar entrevistas, participantes e avaliações",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Interview",
+        "Candidate"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Interview records can move only through allowed persisted workflow transitions",
+        "Entrevistas handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Entrevistas",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-005",
+      "name": "Relatórios e análises",
+      "purpose": "Transformar dados operacionais em decisões",
+      "strategy": "computed",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Report"
+      ],
+      "rules": [
+        "Summaries include every persisted record",
+        "Numeric totals are calculated on the server"
+      ],
+      "acceptanceCriteria": [
+        "Report indicators are calculated from all persisted source records and expose grouped totals",
+        "Relatórios e análises handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Relatórios e análises",
+          "confidence": 0.96
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "FLOW-001",
+      "name": "Vagas",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Vagas",
+      "steps": [
+        "Open the relevant workspace",
+        "Publicar e acompanhar oportunidades com requisitos e responsáveis",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "outcome": "JobOpening content can be created, loaded and opened from persistent storage"
+    },
+    {
+      "id": "FLOW-002",
+      "name": "Candidatos",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Candidatos",
+      "steps": [
+        "Open the relevant workspace",
+        "Organizar perfis, competências e histórico de candidatos",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "outcome": "Candidate records can be created, loaded, updated and removed through persistent APIs"
+    },
+    {
+      "id": "FLOW-003",
+      "name": "Processo seletivo",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Processo seletivo",
+      "steps": [
+        "Open the relevant workspace",
+        "Conduzir candidaturas pelas etapas definidas de recrutamento",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "outcome": "Application records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-004",
+      "name": "Entrevistas",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Entrevistas",
+      "steps": [
+        "Open the relevant workspace",
+        "Planejar entrevistas, participantes e avaliações",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-004"
+      ],
+      "outcome": "Interview records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-005",
+      "name": "Relatórios e análises",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Relatórios e análises",
+      "steps": [
+        "Open the relevant workspace",
+        "Transformar dados operacionais em decisões",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "outcome": "Report indicators are calculated from all persisted source records and expose grouped totals"
+    }
+  ],
+  "screens": [
+    {
+      "id": "SCREEN-001",
+      "name": "Experiência principal",
+      "route": "/",
+      "purpose": "Executar o fluxo principal",
+      "layout": "editorial-overview",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002",
+        "CAP-003"
+      ],
+      "componentIds": [
+        "COMP-001",
+        "COMP-002",
+        "COMP-003"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-002",
+      "name": "Vagas",
+      "route": "/jobs",
+      "purpose": "Publicar e acompanhar oportunidades com requisitos e responsáveis",
+      "layout": "catalog",
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "componentIds": [
+        "COMP-004",
+        "COMP-005",
+        "COMP-006"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-003",
+      "name": "Candidatos",
+      "route": "/candidates",
+      "purpose": "Organizar perfis, competências e histórico de candidatos",
+      "layout": "directory",
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-007",
+        "COMP-008",
+        "COMP-009"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-004",
+      "name": "Processo seletivo",
+      "route": "/hiring",
+      "purpose": "Conduzir candidaturas pelas etapas definidas de recrutamento",
+      "layout": "kanban",
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "componentIds": [
+        "COMP-010",
+        "COMP-011",
+        "COMP-012"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-005",
+      "name": "Entrevistas",
+      "route": "/interviews",
+      "purpose": "Planejar entrevistas, participantes e avaliações",
+      "layout": "calendar",
+      "capabilityIds": [
+        "CAP-004"
+      ],
+      "componentIds": [
+        "COMP-013",
+        "COMP-014",
+        "COMP-015"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-006",
+      "name": "Relatórios e análises",
+      "route": "/reports",
+      "purpose": "Transformar dados operacionais em decisões",
+      "layout": "analytics",
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "componentIds": [
+        "COMP-016",
+        "COMP-017",
+        "COMP-018"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-001",
+      "name": "PrimaryWorkspace",
+      "category": "domain",
+      "purpose": "PrimaryWorkspace on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "name": "ActionPanel",
+      "category": "domain",
+      "purpose": "ActionPanel on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "name": "FeedbackState",
+      "category": "domain",
+      "purpose": "FeedbackState on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "name": "JobCatalog",
+      "category": "domain",
+      "purpose": "JobCatalog on Vagas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "name": "JobFilters",
+      "category": "domain",
+      "purpose": "JobFilters on Vagas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "name": "JobEditor",
+      "category": "domain",
+      "purpose": "JobEditor on Vagas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-007",
+      "name": "CandidateDirectory",
+      "category": "domain",
+      "purpose": "CandidateDirectory on Candidatos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-008",
+      "name": "TalentSearch",
+      "category": "domain",
+      "purpose": "TalentSearch on Candidatos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-009",
+      "name": "CandidateProfile",
+      "category": "domain",
+      "purpose": "CandidateProfile on Candidatos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-010",
+      "name": "HiringBoard",
+      "category": "domain",
+      "purpose": "HiringBoard on Processo seletivo",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-011",
+      "name": "ApplicationCard",
+      "category": "domain",
+      "purpose": "ApplicationCard on Processo seletivo",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-012",
+      "name": "StageFilters",
+      "category": "domain",
+      "purpose": "StageFilters on Processo seletivo",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-013",
+      "name": "InterviewCalendar",
+      "category": "domain",
+      "purpose": "InterviewCalendar on Entrevistas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-014",
+      "name": "InterviewDrawer",
+      "category": "domain",
+      "purpose": "InterviewDrawer on Entrevistas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-015",
+      "name": "EvaluationPanel",
+      "category": "domain",
+      "purpose": "EvaluationPanel on Entrevistas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-016",
+      "name": "ReportBuilder",
+      "category": "domain",
+      "purpose": "ReportBuilder on Relatórios e análises",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-017",
+      "name": "MetricCanvas",
+      "category": "domain",
+      "purpose": "MetricCanvas on Relatórios e análises",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-018",
+      "name": "ExportActions",
+      "category": "domain",
+      "purpose": "ExportActions on Relatórios e análises",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "DATA-001",
+      "name": "JobOpening",
+      "purpose": "Support Vagas, Processo seletivo",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-002",
+      "name": "Candidate",
+      "purpose": "Support Candidatos, Processo seletivo, Entrevistas",
+      "capabilityIds": [
+        "CAP-002",
+        "CAP-003",
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-003",
+      "name": "Application",
+      "purpose": "Support Processo seletivo",
+      "capabilityIds": [
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-004",
+      "name": "Interview",
+      "purpose": "Support Entrevistas",
+      "capabilityIds": [
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-005",
+      "name": "Report",
+      "purpose": "Support Relatórios e análises",
+      "capabilityIds": [
+        "CAP-005"
+      ]
+    }
+  ],
+  "architecture": {
+    "frontend": [
+      "react",
+      "typescript"
+    ],
+    "backend": [
+      "node.js",
+      "express"
+    ],
+    "database": "sqlite",
+    "authentication": false,
+    "api": "rest"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "AC-001",
+      "statement": "JobOpening content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "JobOpening",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-002",
+      "statement": "Vagas handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "JobOpening",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-003",
+      "statement": "Candidate records can be created, loaded, updated and removed through persistent APIs",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "persistence",
+      "entity": "Candidate",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-004",
+      "statement": "Candidatos handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Candidate",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-005",
+      "statement": "Application records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Application",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-006",
+      "statement": "Processo seletivo handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Application",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-007",
+      "statement": "Interview records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Interview",
+      "route": "/interviews",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-008",
+      "statement": "Entrevistas handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Interview",
+      "route": "/interviews",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-009",
+      "statement": "Report indicators are calculated from all persisted source records and expose grouped totals",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "calculation",
+      "entity": "Report",
+      "route": "/reports",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-010",
+      "statement": "Relatórios e análises handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Report",
+      "route": "/reports",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Low-confidence requirements must be reviewed in the workspace"
+  ],
+  "openQuestions": [],
+  "confidence": 0.71,
+  "createdAt": "2026-10-08T20:49:48.314Z",
+  "updatedAt": "2026-10-08T20:49:48.314Z"
+}

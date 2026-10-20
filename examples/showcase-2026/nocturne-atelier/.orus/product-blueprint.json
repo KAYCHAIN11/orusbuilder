@@ -1,0 +1,544 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-57d2c000-6148-45df-9146-42a4a830a03d",
+  "projectId": "nocturne-atelier",
+  "version": 1,
+  "status": "ready",
+  "depth": "comprehensive",
+  "source": {
+    "type": "prompt",
+    "prompt": "Landing page editorial de luxo para Nocturne Atelier, uma casa brasileira de mobiliário colecionável. Visual cinematográfico escuro, preto mineral, marfim e cobre, tipografia serifada monumental, composição assimétrica, muito espaço negativo e detalhes de galeria. Exatamente quatro seções: manifesto hero, coleção selecionada, processo artesanal e visita ao atelier. Evitar dashboard, cards SaaS e gradientes genéricos.",
+    "documentIds": []
+  },
+  "product": {
+    "name": "Nocturne Atelier",
+    "summary": "Landing page editorial de luxo para Nocturne Atelier, uma casa brasileira de mobiliário colecionável. Visual cinematográfico escuro, preto mineral, marfim e cobre, tipografia serifada monumental, composição assimétrica, muito espaço negativo e detalhes de galeria. Exatamente quatro seções: manifesto hero, coleção selecionada, processo artesanal e visita ao atelier. Evitar dashboard, cards SaaS e gradientes genéricos.",
+    "problem": "Priorizar e executar trabalho operacional",
+    "valueProposition": "Uma central acionável do que exige atenção",
+    "audience": [
+      "Operador",
+      "Gestor"
+    ],
+    "goals": [
+      "Organizar trabalho por estágio",
+      "Medir progresso e pendências"
+    ],
+    "outOfScope": []
+  },
+  "visualIntent": {
+    "version": 2,
+    "style": "luxury",
+    "archetype": "dashboard",
+    "density": "spacious",
+    "locale": "pt-BR",
+    "colorMode": "dark",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Nocturne Atelier",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "obsidian-gold",
+      "primary": "bg-amber-500",
+      "primaryHover": "hover:bg-amber-400",
+      "primaryText": "text-neutral-950",
+      "primarySoft": "bg-amber-400/10 text-amber-300",
+      "accent": "text-amber-400",
+      "page": "bg-neutral-950",
+      "surface": "bg-neutral-900",
+      "surfaceMuted": "bg-neutral-900/70",
+      "text": "text-amber-50",
+      "textMuted": "text-neutral-400",
+      "border": "border-amber-400/20",
+      "heroGradient": "bg-gradient-to-br from-black via-neutral-950 to-amber-950",
+      "cssPrimary": "245 158 11",
+      "cssPrimaryHover": "251 191 36",
+      "cssPrimarySoft": "69 26 3",
+      "cssAccent": "251 191 36",
+      "cssPage": "10 10 10",
+      "cssSurface": "10 10 10",
+      "cssSurfaceMuted": "23 23 23",
+      "cssText": "255 251 235",
+      "cssTextMuted": "163 163 163",
+      "cssBorder": "69 58 25"
+    },
+    "identity": {
+      "personality": [
+        "refined",
+        "precise"
+      ],
+      "voice": "operacional, direta e acionável",
+      "promise": "controle do que exige atenção agora",
+      "visualMetaphor": "central de comando",
+      "signature": "hierarquia por urgência e densidade controlada",
+      "imagery": "dados operacionais e sinais de progresso"
+    },
+    "experience": {
+      "pattern": "command-center",
+      "hierarchy": "workflow-first",
+      "heroTreatment": "solid",
+      "componentShape": "outlined",
+      "layout": "editorial-stack",
+      "screenPriorities": [
+        "itens críticos",
+        "fluxo em andamento",
+        "atividade recente"
+      ],
+      "primaryDataView": "gallery"
+    },
+    "composition": {
+      "shell": "compact-rail",
+      "contentFrame": "narrow",
+      "header": "command",
+      "actionPlacement": "floating",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:dashboard",
+        "layout:editorial-stack",
+        "hierarchy:workflow-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:luxury",
+      "archetype:dashboard",
+      "archetype-score:1",
+      "composition:planned-compact-rail"
+    ]
+  },
+  "personas": [
+    {
+      "id": "PERSONA-001",
+      "name": "Operador",
+      "goals": [
+        "Uma central acionável do que exige atenção"
+      ],
+      "permissions": [
+        "public"
+      ]
+    },
+    {
+      "id": "PERSONA-002",
+      "name": "Gestor",
+      "goals": [
+        "Administrar e acompanhar a operação"
+      ],
+      "permissions": [
+        "public"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Fluxo operacional",
+      "purpose": "Organizar trabalho por estágio",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Task"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Task records can move only through allowed persisted workflow transitions",
+        "Fluxo operacional handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "dashboard:Fluxo operacional",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-002",
+      "name": "Acompanhamento",
+      "purpose": "Medir progresso e pendências",
+      "strategy": "computed",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Task",
+        "Project"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Acompanhamento indicators are calculated from persisted source records",
+        "Acompanhamento handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "dashboard:Acompanhamento",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-003",
+      "name": "Atividade recente",
+      "purpose": "Manter contexto das mudanças",
+      "strategy": "content",
+      "priority": "should",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Activity"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Activity content can be created, loaded and opened from persistent storage",
+        "Atividade recente handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "dashboard:Atividade recente",
+          "confidence": 0.82
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "FLOW-001",
+      "name": "Fluxo operacional",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Fluxo operacional",
+      "steps": [
+        "Open the relevant workspace",
+        "Organizar trabalho por estágio",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "outcome": "Task records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-002",
+      "name": "Acompanhamento",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Acompanhamento",
+      "steps": [
+        "Open the relevant workspace",
+        "Medir progresso e pendências",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "outcome": "Acompanhamento indicators are calculated from persisted source records"
+    }
+  ],
+  "screens": [
+    {
+      "id": "SCREEN-001",
+      "name": "Central operacional",
+      "route": "/",
+      "purpose": "Priorizar trabalho",
+      "layout": "command-center",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-001",
+        "COMP-002",
+        "COMP-003"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-002",
+      "name": "Trabalho",
+      "route": "/tasks",
+      "purpose": "Executar tarefas",
+      "layout": "kanban",
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "componentIds": [
+        "COMP-004",
+        "COMP-005",
+        "COMP-006"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-001",
+      "name": "WorkBoard",
+      "category": "domain",
+      "purpose": "WorkBoard on Central operacional",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "name": "PrioritySignals",
+      "category": "domain",
+      "purpose": "PrioritySignals on Central operacional",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "name": "ProgressMetrics",
+      "category": "domain",
+      "purpose": "ProgressMetrics on Central operacional",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "name": "TaskBoard",
+      "category": "domain",
+      "purpose": "TaskBoard on Trabalho",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "name": "TaskCard",
+      "category": "domain",
+      "purpose": "TaskCard on Trabalho",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "name": "TaskFilters",
+      "category": "domain",
+      "purpose": "TaskFilters on Trabalho",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "DATA-001",
+      "name": "Task",
+      "purpose": "Support Fluxo operacional, Acompanhamento",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002"
+      ]
+    },
+    {
+      "id": "DATA-002",
+      "name": "Project",
+      "purpose": "Support Acompanhamento",
+      "capabilityIds": [
+        "CAP-002"
+      ]
+    },
+    {
+      "id": "DATA-003",
+      "name": "Activity",
+      "purpose": "Support Atividade recente",
+      "capabilityIds": [
+        "CAP-003"
+      ]
+    }
+  ],
+  "architecture": {
+    "frontend": [
+      "react",
+      "typescript"
+    ],
+    "backend": [
+      "node.js",
+      "express"
+    ],
+    "database": "sqlite",
+    "authentication": false,
+    "api": "rest"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "AC-001",
+      "statement": "Task records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Task",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-002",
+      "statement": "Fluxo operacional handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Task",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-003",
+      "statement": "Acompanhamento indicators are calculated from persisted source records",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "calculation",
+      "entity": "Task",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-004",
+      "statement": "Acompanhamento handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Task",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-005",
+      "statement": "Activity content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": false,
+      "kind": "content",
+      "entity": "Activity",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-006",
+      "statement": "Atividade recente handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": false,
+      "kind": "state-handling",
+      "entity": "Activity",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Low-confidence requirements must be reviewed in the workspace"
+  ],
+  "openQuestions": [],
+  "confidence": 0.71,
+  "createdAt": "2026-10-11T17:51:25.642Z",
+  "updatedAt": "2026-10-11T17:51:25.642Z"
+}

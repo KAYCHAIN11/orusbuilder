@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Nocturne Atelier",
+  "experience": {
+    "pattern": "command-center",
+    "hierarchy": "workflow-first",
+    "heroTreatment": "solid",
+    "componentShape": "outlined",
+    "layout": "editorial-stack",
+    "screenPriorities": [
+      "itens críticos",
+      "fluxo em andamento",
+      "atividade recente"
+    ],
+    "primaryDataView": "gallery"
+  },
+  "composition": {
+    "shell": "compact-rail",
+    "contentFrame": "narrow",
+    "header": "command",
+    "actionPlacement": "floating",
+    "mobileNavigation": "drawer",
+    "rationale": [
+      "archetype:dashboard",
+      "layout:editorial-stack",
+      "hierarchy:workflow-first",
+      "action:floating"
+    ]
+  },
+  "navigation": "sidebar",
+  "density": "spacious",
+  "motion": "subtle",
+  "componentPlan": [
+    "hero",
+    "feature-grid",
+    "testimonial",
+    "cta",
+    "button",
+    "text-field"
+  ]
+}

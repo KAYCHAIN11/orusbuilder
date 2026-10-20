@@ -1,0 +1,1129 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-8c8aa6a8-293e-4df9-b326-d3f944390eaa",
+  "projectId": "atlas-treasury",
+  "version": 1,
+  "status": "ready",
+  "depth": "comprehensive",
+  "source": {
+    "type": "prompt",
+    "prompt": "Sistema financeiro fullstack Atlas Treasury para tesouraria de empresas em crescimento. Incluir contas, transações, faturas, centros de custo, previsões de caixa, conciliação, aprovações e alertas. Interface densa e precisa com azul petróleo, branco frio e verde esmeralda, navegação superior, ledger tabular dominante, filtros avançados, command bar e painéis bento apenas para síntese. Criar fluxos de conciliação, aprovação de pagamento, projeção e fechamento mensal com papéis e auditoria.",
+    "documentIds": []
+  },
+  "product": {
+    "name": "Atlas Treasury",
+    "summary": "Sistema financeiro fullstack Atlas Treasury para tesouraria de empresas em crescimento. Incluir contas, transações, faturas, centros de custo, previsões de caixa, conciliação, aprovações e alertas. Interface densa e precisa com azul petróleo, branco frio e verde esmeralda, navegação superior, ledger tabular dominante, filtros avançados, command bar e painéis bento apenas para síntese. Criar fluxos de conciliação, aprovação de pagamento, projeção e fechamento mensal com papéis e auditoria.",
+    "problem": "Entender movimentações, compromissos e resultado",
+    "valueProposition": "Decisões financeiras baseadas em uma visão reconciliada",
+    "audience": [
+      "Responsável financeiro",
+      "Gestor"
+    ],
+    "goals": [
+      "Registrar e conciliar entradas e saídas",
+      "Acompanhar valores a pagar e receber",
+      "Comparar planejado e realizado",
+      "Entregar alertas relevantes dentro do produto",
+      "Controlar acesso por responsabilidade",
+      "Processar e acompanhar transações financeiras"
+    ],
+    "outOfScope": []
+  },
+  "visualIntent": {
+    "version": 2,
+    "style": "corporate",
+    "archetype": "finance",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "Atlas Treasury",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "ink-paper",
+      "primary": "bg-gray-950",
+      "primaryHover": "hover:bg-gray-800",
+      "primaryText": "text-white",
+      "primarySoft": "bg-gray-100 text-gray-900",
+      "accent": "text-gray-950",
+      "page": "bg-white",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-gray-50",
+      "text": "text-gray-950",
+      "textMuted": "text-gray-500",
+      "border": "border-gray-200",
+      "heroGradient": "bg-gradient-to-b from-gray-50 to-white",
+      "cssPrimary": "17 24 39",
+      "cssPrimaryHover": "31 41 55",
+      "cssPrimarySoft": "243 244 246",
+      "cssAccent": "17 24 39",
+      "cssPage": "255 255 255",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "249 250 251",
+      "cssText": "17 24 39",
+      "cssTextMuted": "107 114 128",
+      "cssBorder": "229 231 235"
+    },
+    "identity": {
+      "personality": [
+        "precise",
+        "trustworthy",
+        "refined"
+      ],
+      "voice": "segura, objetiva e orientada a decisões",
+      "promise": "clareza para decidir com confiança",
+      "visualMetaphor": "sinais financeiros em movimento",
+      "signature": "linhas de tendência e destaques numéricos",
+      "imagery": "dados, profundidade e luz controlada"
+    },
+    "experience": {
+      "pattern": "wealth-overview",
+      "hierarchy": "metric-first",
+      "heroTreatment": "ambient",
+      "componentShape": "layered",
+      "layout": "modular-grid",
+      "screenPriorities": [
+        "saldo e tendência",
+        "movimentações",
+        "risco e metas"
+      ],
+      "primaryDataView": "ledger"
+    },
+    "composition": {
+      "shell": "top-navigation",
+      "contentFrame": "contained",
+      "header": "minimal",
+      "actionPlacement": "command-bar",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:finance",
+        "layout:modular-grid",
+        "hierarchy:metric-first",
+        "action:command-bar"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "archetype:finance",
+      "archetype-score:2",
+      "palette:explicit-green-teal",
+      "composition:explicit-top-navigation"
+    ]
+  },
+  "personas": [
+    {
+      "id": "PERSONA-001",
+      "name": "Responsável financeiro",
+      "goals": [
+        "Decisões financeiras baseadas em uma visão reconciliada"
+      ],
+      "permissions": [
+        "member"
+      ]
+    },
+    {
+      "id": "PERSONA-002",
+      "name": "Gestor",
+      "goals": [
+        "Administrar e acompanhar a operação"
+      ],
+      "permissions": [
+        "admin"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Movimentações",
+      "purpose": "Registrar e conciliar entradas e saídas",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Transaction",
+        "Account"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Transaction records can move only through allowed persisted workflow transitions",
+        "Movimentações handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "finance:Movimentações",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-002",
+      "name": "Contas e faturas",
+      "purpose": "Acompanhar valores a pagar e receber",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Invoice"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Invoice records can move only through allowed persisted workflow transitions",
+        "Contas e faturas handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "finance:Contas e faturas",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-003",
+      "name": "Orçamento",
+      "purpose": "Comparar planejado e realizado",
+      "strategy": "computed",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Budget",
+        "Transaction"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Orçamento indicators are calculated from persisted source records",
+        "Orçamento handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "finance:Orçamento",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-004",
+      "name": "Indicadores financeiros",
+      "purpose": "Consolidar saldo e tendências",
+      "strategy": "computed",
+      "priority": "should",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Transaction",
+        "Invoice"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Indicadores financeiros indicators are calculated from persisted source records",
+        "Indicadores financeiros handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "finance:Indicadores financeiros",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-005",
+      "name": "Notificações",
+      "purpose": "Entregar alertas relevantes dentro do produto",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Notification"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Notification records can move only through allowed persisted workflow transitions",
+        "Notificações handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Notificações",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-006",
+      "name": "Papéis e permissões",
+      "purpose": "Controlar acesso por responsabilidade",
+      "strategy": "custom",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Role"
+      ],
+      "rules": [
+        "Only administrators can change access policies",
+        "Every policy declares scope and permissions"
+      ],
+      "acceptanceCriteria": [
+        "Access policies persist explicit scopes and permissions and can be changed only by administrators",
+        "Papéis e permissões handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Papéis e permissões",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-007",
+      "name": "Pagamentos",
+      "purpose": "Processar e acompanhar transações financeiras",
+      "strategy": "integration",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Payment"
+      ],
+      "rules": [
+        "Amount cannot be negative",
+        "Payment state follows the declared financial workflow"
+      ],
+      "acceptanceCriteria": [
+        "Payments preserve amount and method while allowing only declared financial status transitions",
+        "Pagamentos handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Pagamentos",
+          "confidence": 0.96
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "FLOW-001",
+      "name": "Notificações",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Notificações",
+      "steps": [
+        "Open the relevant workspace",
+        "Entregar alertas relevantes dentro do produto",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "outcome": "Notification records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-002",
+      "name": "Papéis e permissões",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Papéis e permissões",
+      "steps": [
+        "Open the relevant workspace",
+        "Controlar acesso por responsabilidade",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-006"
+      ],
+      "outcome": "Access policies persist explicit scopes and permissions and can be changed only by administrators"
+    },
+    {
+      "id": "FLOW-003",
+      "name": "Pagamentos",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Pagamentos",
+      "steps": [
+        "Open the relevant workspace",
+        "Processar e acompanhar transações financeiras",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-007"
+      ],
+      "outcome": "Payments preserve amount and method while allowing only declared financial status transitions"
+    },
+    {
+      "id": "FLOW-004",
+      "name": "Movimentações",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Movimentações",
+      "steps": [
+        "Open the relevant workspace",
+        "Registrar e conciliar entradas e saídas",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "outcome": "Transaction records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-005",
+      "name": "Contas e faturas",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Contas e faturas",
+      "steps": [
+        "Open the relevant workspace",
+        "Acompanhar valores a pagar e receber",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "outcome": "Invoice records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-006",
+      "name": "Orçamento",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Orçamento",
+      "steps": [
+        "Open the relevant workspace",
+        "Comparar planejado e realizado",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "outcome": "Orçamento indicators are calculated from persisted source records"
+    }
+  ],
+  "screens": [
+    {
+      "id": "SCREEN-001",
+      "name": "Visão financeira",
+      "route": "/",
+      "purpose": "Acompanhar saldo e compromissos",
+      "layout": "wealth-overview",
+      "capabilityIds": [
+        "CAP-003",
+        "CAP-004"
+      ],
+      "componentIds": [
+        "COMP-001",
+        "COMP-002",
+        "COMP-003"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-002",
+      "name": "Movimentações",
+      "route": "/transactions",
+      "purpose": "Conciliar transações",
+      "layout": "ledger",
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "componentIds": [
+        "COMP-004",
+        "COMP-005"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-003",
+      "name": "Faturas",
+      "route": "/invoices",
+      "purpose": "Acompanhar vencimentos",
+      "layout": "timeline",
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-006",
+        "COMP-007"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-004",
+      "name": "Notificações",
+      "route": "/notifications",
+      "purpose": "Entregar alertas relevantes dentro do produto",
+      "layout": "inbox",
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "componentIds": [
+        "COMP-008",
+        "COMP-009"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-005",
+      "name": "Papéis e permissões",
+      "route": "/access",
+      "purpose": "Controlar acesso por responsabilidade",
+      "layout": "permission-matrix",
+      "capabilityIds": [
+        "CAP-006"
+      ],
+      "componentIds": [
+        "COMP-010",
+        "COMP-011",
+        "COMP-012"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-006",
+      "name": "Pagamentos",
+      "route": "/payments",
+      "purpose": "Processar e acompanhar transações financeiras",
+      "layout": "payment-operations",
+      "capabilityIds": [
+        "CAP-007"
+      ],
+      "componentIds": [
+        "COMP-013",
+        "COMP-014",
+        "COMP-015"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-001",
+      "name": "BalanceHero",
+      "category": "domain",
+      "purpose": "BalanceHero on Visão financeira",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "name": "CashFlowChart",
+      "category": "domain",
+      "purpose": "CashFlowChart on Visão financeira",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "name": "BudgetProgress",
+      "category": "domain",
+      "purpose": "BudgetProgress on Visão financeira",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "name": "TransactionLedger",
+      "category": "domain",
+      "purpose": "TransactionLedger on Movimentações",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "name": "ReconciliationFilters",
+      "category": "domain",
+      "purpose": "ReconciliationFilters on Movimentações",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "name": "InvoiceTimeline",
+      "category": "domain",
+      "purpose": "InvoiceTimeline on Faturas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-007",
+      "name": "DueDateCalendar",
+      "category": "domain",
+      "purpose": "DueDateCalendar on Faturas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-008",
+      "name": "NotificationInbox",
+      "category": "domain",
+      "purpose": "NotificationInbox on Notificações",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-009",
+      "name": "NotificationPreferences",
+      "category": "domain",
+      "purpose": "NotificationPreferences on Notificações",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-010",
+      "name": "RoleDirectory",
+      "category": "domain",
+      "purpose": "RoleDirectory on Papéis e permissões",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-011",
+      "name": "PermissionMatrix",
+      "category": "domain",
+      "purpose": "PermissionMatrix on Papéis e permissões",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-012",
+      "name": "AccessAudit",
+      "category": "domain",
+      "purpose": "AccessAudit on Papéis e permissões",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-013",
+      "name": "PaymentSummary",
+      "category": "domain",
+      "purpose": "PaymentSummary on Pagamentos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-014",
+      "name": "PaymentTimeline",
+      "category": "domain",
+      "purpose": "PaymentTimeline on Pagamentos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-015",
+      "name": "RefundActions",
+      "category": "domain",
+      "purpose": "RefundActions on Pagamentos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "DATA-001",
+      "name": "Transaction",
+      "purpose": "Support Movimentações, Orçamento, Indicadores financeiros",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-003",
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-002",
+      "name": "Account",
+      "purpose": "Support Movimentações",
+      "capabilityIds": [
+        "CAP-001"
+      ]
+    },
+    {
+      "id": "DATA-003",
+      "name": "Invoice",
+      "purpose": "Support Contas e faturas, Indicadores financeiros",
+      "capabilityIds": [
+        "CAP-002",
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-004",
+      "name": "Budget",
+      "purpose": "Support Orçamento",
+      "capabilityIds": [
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-005",
+      "name": "Notification",
+      "purpose": "Support Notificações",
+      "capabilityIds": [
+        "CAP-005"
+      ]
+    },
+    {
+      "id": "DATA-006",
+      "name": "Role",
+      "purpose": "Support Papéis e permissões",
+      "capabilityIds": [
+        "CAP-006"
+      ]
+    },
+    {
+      "id": "DATA-007",
+      "name": "Payment",
+      "purpose": "Support Pagamentos",
+      "capabilityIds": [
+        "CAP-007"
+      ]
+    }
+  ],
+  "architecture": {
+    "frontend": [
+      "react",
+      "typescript"
+    ],
+    "backend": [
+      "node.js",
+      "express"
+    ],
+    "database": "sqlite",
+    "authentication": true,
+    "api": "rest"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "AC-001",
+      "statement": "Transaction records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Transaction",
+      "route": "/transactions",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-002",
+      "statement": "Movimentações handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Transaction",
+      "route": "/transactions",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-003",
+      "statement": "Invoice records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Invoice",
+      "route": "/invoices",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-004",
+      "statement": "Contas e faturas handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Invoice",
+      "route": "/invoices",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-005",
+      "statement": "Orçamento indicators are calculated from persisted source records",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "calculation",
+      "entity": "Budget",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-006",
+      "statement": "Orçamento handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Budget",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-007",
+      "statement": "Indicadores financeiros indicators are calculated from persisted source records",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": false,
+      "kind": "calculation",
+      "entity": "Transaction",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-008",
+      "statement": "Indicadores financeiros handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": false,
+      "kind": "state-handling",
+      "entity": "Transaction",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-009",
+      "statement": "Notification records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-010",
+      "statement": "Notificações handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-011",
+      "statement": "Access policies persist explicit scopes and permissions and can be changed only by administrators",
+      "capabilityId": "CAP-006",
+      "testType": "journey",
+      "required": true,
+      "kind": "custom",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-012",
+      "statement": "Papéis e permissões handles loading, empty, success and error states",
+      "capabilityId": "CAP-006",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-013",
+      "statement": "Payments preserve amount and method while allowing only declared financial status transitions",
+      "capabilityId": "CAP-007",
+      "testType": "journey",
+      "required": true,
+      "kind": "integration",
+      "entity": "Payment",
+      "route": "/payments",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-014",
+      "statement": "Pagamentos handles loading, empty, success and error states",
+      "capabilityId": "CAP-007",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Payment",
+      "route": "/payments",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Low-confidence requirements must be reviewed in the workspace"
+  ],
+  "openQuestions": [],
+  "confidence": 0.71,
+  "createdAt": "2026-10-11T17:51:32.708Z",
+  "updatedAt": "2026-10-11T17:51:32.708Z"
+}

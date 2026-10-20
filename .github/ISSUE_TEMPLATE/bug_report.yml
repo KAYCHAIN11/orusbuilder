@@ -1,0 +1,70 @@
+name: Relatar um erro
+description: Informe um comportamento reproduzível do Builder ou de um projeto gerado.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Remova chaves, tokens, prompts privados e dados pessoais antes de enviar evidências.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - Planejamento e Product Blueprint
+        - Geração de interface
+        - Geração de backend e banco
+        - Certificação e CIG
+        - Preview
+        - Workspace e regeneração
+        - Instalação ou desenvolvimento
+        - Documentação
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Comportamento observado
+      description: Descreva o erro e a etapa em que ocorreu.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reprodução mínima
+      description: Inclua passos, prompt sanitizado e comandos necessários.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão ou commit
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      description: Sistema operacional, Node.js, npm e Docker.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnósticos sanitizados
+      description: Logs, screenshots ou manifesto de certificação sem segredos.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Verificações
+      options:
+        - label: Procurei por uma issue existente.
+          required: true
+        - label: Removi segredos e dados pessoais das evidências.
+          required: true

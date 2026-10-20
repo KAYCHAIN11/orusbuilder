@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "FrameFlow Studio",
+  "experience": {
+    "pattern": "creative-studio",
+    "hierarchy": "content-first",
+    "heroTreatment": "editorial",
+    "componentShape": "layered",
+    "layout": "immersive-canvas",
+    "screenPriorities": [
+      "trabalho em destaque",
+      "projetos ativos",
+      "próximas entregas"
+    ],
+    "primaryDataView": "gallery"
+  },
+  "composition": {
+    "shell": "canvas",
+    "contentFrame": "fluid",
+    "header": "immersive",
+    "actionPlacement": "floating",
+    "mobileNavigation": "scrolling-tabs",
+    "rationale": [
+      "archetype:creative",
+      "layout:immersive-canvas",
+      "hierarchy:content-first",
+      "action:floating"
+    ]
+  },
+  "navigation": "top",
+  "density": "comfortable",
+  "motion": "subtle",
+  "componentPlan": [
+    "app-shell",
+    "button",
+    "text-field",
+    "select",
+    "card",
+    "data-table",
+    "stat",
+    "badge",
+    "empty-state",
+    "toast",
+    "dialog",
+    "skeleton",
+    "gallery"
+  ]
+}

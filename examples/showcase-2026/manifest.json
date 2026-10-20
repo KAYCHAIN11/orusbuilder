@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "nocturne-atelier",
+    "name": "Nocturne Atelier",
+    "type": "landing",
+    "projectRoot": "C:\\Users\\joao pedro\\Documents\\orusbuilder\\examples\\showcase-2026\\nocturne-atelier",
+    "files": 19
+  },
+  {
+    "slug": "northstar-control",
+    "name": "Northstar Control",
+    "type": "fullstack",
+    "projectRoot": "C:\\Users\\joao pedro\\Documents\\orusbuilder\\examples\\showcase-2026\\northstar-control",
+    "files": 145
+  },
+  {
+    "slug": "lumen-academy",
+    "name": "Lumen Academy",
+    "type": "fullstack",
+    "projectRoot": "C:\\Users\\joao pedro\\Documents\\orusbuilder\\examples\\showcase-2026\\lumen-academy",
+    "files": 133
+  },
+  {
+    "slug": "amparo-care",
+    "name": "Amparo Care",
+    "type": "fullstack",
+    "projectRoot": "C:\\Users\\joao pedro\\Documents\\orusbuilder\\examples\\showcase-2026\\amparo-care",
+    "files": 161
+  },
+  {
+    "slug": "frameflow-studio",
+    "name": "FrameFlow Studio",
+    "type": "fullstack",
+    "projectRoot": "C:\\Users\\joao pedro\\Documents\\orusbuilder\\examples\\showcase-2026\\frameflow-studio",
+    "files": 166
+  },
+  {
+    "slug": "atlas-treasury",
+    "name": "Atlas Treasury",
+    "type": "fullstack",
+    "projectRoot": "C:\\Users\\joao pedro\\Documents\\orusbuilder\\examples\\showcase-2026\\atlas-treasury",
+    "files": 166
+  }
+]

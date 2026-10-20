@@ -1,0 +1,31 @@
+/* Generated from .orus/design-system.json. Do not hard-code colors in components. */
+:root {
+  color-scheme: light;
+  --orus-primary: 192 38 211;
+  --orus-primary-hover: 217 70 239;
+  --orus-primary-soft: 253 244 255;
+  --orus-on-primary: 255 255 255;
+  --orus-accent: 161 98 7;
+  --orus-page: 255 247 237;
+  --orus-panel: 255 255 255;
+  --orus-panel-muted: 254 252 232;
+  --orus-text: 59 7 100;
+  --orus-text-muted: 107 33 168;
+  --orus-border: 245 208 254;
+  --orus-radius: 1rem;
+  --orus-density: 1;
+}
+
+body {
+  background: rgb(var(--orus-page));
+  color: rgb(var(--orus-text));
+}
+
+::selection {
+  background: rgb(var(--orus-primary) / 0.3);
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--orus-accent) / 0.55);
+  outline-offset: 3px;
+}

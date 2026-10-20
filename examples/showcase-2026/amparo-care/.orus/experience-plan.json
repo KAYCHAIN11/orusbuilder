@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Amparo Care",
+  "experience": {
+    "pattern": "care-hub",
+    "hierarchy": "people-first",
+    "heroTreatment": "solid",
+    "componentShape": "quiet",
+    "layout": "split-focus",
+    "screenPriorities": [
+      "agenda do dia",
+      "pacientes prioritários",
+      "continuidade do cuidado"
+    ],
+    "primaryDataView": "calendar"
+  },
+  "composition": {
+    "shell": "sidebar-workspace",
+    "contentFrame": "contained",
+    "header": "minimal",
+    "actionPlacement": "command-bar",
+    "mobileNavigation": "drawer",
+    "rationale": [
+      "archetype:healthcare",
+      "layout:split-focus",
+      "hierarchy:people-first",
+      "action:command-bar"
+    ]
+  },
+  "navigation": "sidebar",
+  "density": "comfortable",
+  "motion": "subtle",
+  "componentPlan": [
+    "app-shell",
+    "button",
+    "text-field",
+    "select",
+    "card",
+    "data-table",
+    "stat",
+    "badge",
+    "empty-state",
+    "toast",
+    "dialog",
+    "skeleton",
+    "calendar"
+  ]
+}

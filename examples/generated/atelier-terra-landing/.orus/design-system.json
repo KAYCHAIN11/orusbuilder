@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "premium",
+    "archetype": "creative",
+    "density": "spacious",
+    "locale": "pt-BR",
+    "colorMode": "dark",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "Orus Studio",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "earth-atelier",
+      "primary": "bg-orange-800",
+      "primaryHover": "hover:bg-orange-700",
+      "primaryText": "text-white",
+      "primarySoft": "bg-orange-100 text-orange-950",
+      "accent": "text-lime-900",
+      "page": "bg-stone-100",
+      "surface": "bg-amber-50",
+      "surfaceMuted": "bg-stone-200",
+      "text": "text-stone-900",
+      "textMuted": "text-stone-600",
+      "border": "border-stone-300",
+      "heroGradient": "bg-gradient-to-br from-stone-100 via-amber-50 to-orange-100",
+      "cssPrimary": "154 52 18",
+      "cssPrimaryHover": "194 65 12",
+      "cssPrimarySoft": "255 237 213",
+      "cssAccent": "54 83 20",
+      "cssPage": "245 245 244",
+      "cssSurface": "255 251 235",
+      "cssSurfaceMuted": "231 229 228",
+      "cssText": "28 25 23",
+      "cssTextMuted": "87 83 78",
+      "cssBorder": "214 211 209"
+    },
+    "identity": {
+      "personality": [
+        "inventive",
+        "bold",
+        "refined"
+      ],
+      "voice": "autoral, expressiva e confiante",
+      "promise": "trabalho memorável apresentado com intenção",
+      "visualMetaphor": "canvas vivo",
+      "signature": "composição assimétrica e tipografia protagonista",
+      "imagery": "portfólio imersivo e recortes de processo"
+    },
+    "experience": {
+      "pattern": "creative-studio",
+      "hierarchy": "content-first",
+      "heroTreatment": "editorial",
+      "componentShape": "layered",
+      "layout": "editorial-stack",
+      "screenPriorities": [
+        "trabalho em destaque",
+        "projetos ativos",
+        "próximas entregas"
+      ],
+      "primaryDataView": "gallery"
+    },
+    "composition": {
+      "shell": "canvas",
+      "contentFrame": "fluid",
+      "header": "immersive",
+      "actionPlacement": "floating",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:creative",
+        "layout:editorial-stack",
+        "hierarchy:content-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:premium",
+      "archetype:creative",
+      "archetype-score:1",
+      "palette:explicit-earth-atelier",
+      "composition:planned-canvas"
+    ]
+  },
+  "components": [
+    {
+      "id": "hero",
+      "category": "marketing",
+      "variants": [
+        "centered",
+        "split",
+        "editorial"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Primary value proposition and actions",
+      "selectedVariant": "centered"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "feature-grid",
+      "category": "marketing",
+      "variants": [
+        "three-column",
+        "bento"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Product capability storytelling",
+      "selectedVariant": "three-column"
+    },
+    {
+      "id": "testimonial",
+      "category": "marketing",
+      "variants": [
+        "quote",
+        "logo-wall"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Trust and social proof",
+      "selectedVariant": "quote"
+    },
+    {
+      "id": "cta",
+      "category": "marketing",
+      "variants": [
+        "banner",
+        "contained"
+      ],
+      "states": [
+        "default",
+        "submitted"
+      ],
+      "purpose": "Conversion-focused final action",
+      "selectedVariant": "banner"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

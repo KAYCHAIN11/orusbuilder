@@ -1,0 +1,352 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-d6f85417-fe7b-4d56-ab86-c583f75c66ac",
+  "blueprintVersion": 1,
+  "criteria": [
+    {
+      "id": "AC-001",
+      "statement": "Obra content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "Obra",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Catálogo de obras",
+        "strategy": "content",
+        "entities": [
+          "Obra"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Catálogo de obras",
+          "route": "/obras"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-002",
+      "statement": "Catálogo de obras handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Obra",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Catálogo de obras",
+        "strategy": "content",
+        "entities": [
+          "Obra"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Catálogo de obras",
+          "route": "/obras"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-003",
+      "statement": "Emprestimo records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Emprestimo",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Empréstimos com prazo",
+        "strategy": "workflow",
+        "entities": [
+          "Emprestimo"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Empréstimos com prazo",
+          "route": "/emprestimos"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-004",
+      "statement": "Empréstimos com prazo handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Emprestimo",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Empréstimos com prazo",
+        "strategy": "workflow",
+        "entities": [
+          "Emprestimo"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Empréstimos com prazo",
+          "route": "/emprestimos"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-005",
+      "statement": "Devolucao records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Devolucao",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Devolução",
+        "strategy": "workflow",
+        "entities": [
+          "Devolucao"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Devolução",
+          "route": "/devolucao"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-006",
+      "statement": "Devolução handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Devolucao",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Devolução",
+        "strategy": "workflow",
+        "entities": [
+          "Devolucao"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Devolução",
+          "route": "/devolucao"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-007",
+      "statement": "Reserva records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Reserva",
+      "route": "/reservas",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Reservas",
+        "strategy": "workflow",
+        "entities": [
+          "Reserva"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Reservas",
+          "route": "/reservas"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-008",
+      "statement": "Reservas handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Reserva",
+      "route": "/reservas",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Reservas",
+        "strategy": "workflow",
+        "entities": [
+          "Reserva"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Reservas",
+          "route": "/reservas"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-009",
+      "statement": "Cálculo automático de multas indicators are calculated from persisted source records",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "calculation",
+      "entity": "Multa",
+      "route": "/multas",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Cálculo automático de multas",
+        "strategy": "computed",
+        "entities": [
+          "Multa"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Cálculo automático de multas",
+          "route": "/multas"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-010",
+      "statement": "Cálculo automático de multas handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Multa",
+      "route": "/multas",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Cálculo automático de multas",
+        "strategy": "computed",
+        "entities": [
+          "Multa"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Cálculo automático de multas",
+          "route": "/multas"
+        }
+      ],
+      "status": "planned"
+    }
+  ]
+}

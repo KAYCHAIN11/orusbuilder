@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Orus Studio",
+  "style": "premium",
+  "archetype": "creative",
+  "identity": {
+    "personality": [
+      "inventive",
+      "bold",
+      "refined"
+    ],
+    "voice": "autoral, expressiva e confiante",
+    "promise": "trabalho memorável apresentado com intenção",
+    "visualMetaphor": "canvas vivo",
+    "signature": "composição assimétrica e tipografia protagonista",
+    "imagery": "portfólio imersivo e recortes de processo"
+  },
+  "typography": {
+    "display": "Playfair Display",
+    "body": "Inter"
+  },
+  "palette": {
+    "name": "earth-atelier",
+    "primary": "bg-orange-800",
+    "primaryHover": "hover:bg-orange-700",
+    "primaryText": "text-white",
+    "primarySoft": "bg-orange-100 text-orange-950",
+    "accent": "text-lime-900",
+    "page": "bg-stone-100",
+    "surface": "bg-amber-50",
+    "surfaceMuted": "bg-stone-200",
+    "text": "text-stone-900",
+    "textMuted": "text-stone-600",
+    "border": "border-stone-300",
+    "heroGradient": "bg-gradient-to-br from-stone-100 via-amber-50 to-orange-100",
+    "cssPrimary": "154 52 18",
+    "cssPrimaryHover": "194 65 12",
+    "cssPrimarySoft": "255 237 213",
+    "cssAccent": "54 83 20",
+    "cssPage": "245 245 244",
+    "cssSurface": "255 251 235",
+    "cssSurfaceMuted": "231 229 228",
+    "cssText": "28 25 23",
+    "cssTextMuted": "87 83 78",
+    "cssBorder": "214 211 209"
+  }
+}

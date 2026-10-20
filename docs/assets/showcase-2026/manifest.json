@@ -1,0 +1,164 @@
+[
+  {
+    "slug": "nocturne-atelier",
+    "name": "Nocturne Atelier",
+    "type": "landing",
+    "prompt": "# Nocturne Atelier\n\nLanding page editorial de luxo para Nocturne Atelier, uma casa brasileira de mobiliário colecionável. Visual cinematográfico escuro, preto mineral, marfim e cobre, tipografia serifada monumental, composição assimétrica, muito espaço negativo e detalhes de galeria. Exatamente quatro seções: manifesto hero, coleção selecionada, processo artesanal e visita ao atelier. Evitar dashboard, cards SaaS e gradientes genéricos.",
+    "captures": [
+      {
+        "device": "desktop",
+        "file": "nocturne-atelier-desktop.png",
+        "url": "http://127.0.0.1:51455/",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "device": "mobile",
+        "file": "nocturne-atelier-mobile.png",
+        "url": "http://127.0.0.1:51455/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "northstar-control",
+    "name": "Northstar Control",
+    "type": "fullstack",
+    "prompt": "# Northstar Control\n\nCentral operacional fullstack Northstar Control para logística de cadeia fria. Deve acompanhar remessas e entregas, gestão de frota, planejamento de rotas, rastreamento logístico, sensores de temperatura e incidentes críticos. Visual escuro de sala de comando, azul noite, ciano elétrico e sinais âmbar, rail compacto, mapa operacional dominante, timeline de exceções e ações contextuais próximas aos dados. Criar fluxos de despacho, monitoramento, tratamento de incidente e confirmação de entrega. Não usar dashboard CRUD genérico.",
+    "captures": [
+      {
+        "device": "desktop",
+        "file": "northstar-control-desktop.png",
+        "url": "http://127.0.0.1:51493/",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "device": "mobile",
+        "file": "northstar-control-mobile.png",
+        "url": "http://127.0.0.1:51493/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "lumen-academy",
+    "name": "Lumen Academy",
+    "type": "fullstack",
+    "prompt": "# Lumen Academy\n\nPlataforma fullstack Lumen Academy para formação criativa. Deve possuir catálogo de cursos, trilhas, aulas, matrículas, progresso, avaliações e certificados. Identidade clara e otimista com azul cobalto, amarelo solar e fundos marfim; navegação superior, capas editoriais grandes, catálogo visual em mosaico e página inicial semelhante a um campus digital, não a um painel administrativo. Criar jornadas de descoberta, matrícula, continuidade da aula, avaliação e conclusão.",
+    "captures": [
+      {
+        "device": "desktop",
+        "file": "lumen-academy-desktop.png",
+        "url": "http://127.0.0.1:51531/",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "device": "mobile",
+        "file": "lumen-academy-mobile.png",
+        "url": "http://127.0.0.1:51531/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "amparo-care",
+    "name": "Amparo Care",
+    "type": "fullstack",
+    "prompt": "# Amparo Care\n\nAplicação clínica fullstack Amparo Care para cuidado materno e acompanhamento pós-parto. Incluir pacientes, profissionais, agenda, plano de cuidado, registros clínicos, retornos, tarefas e alertas. Visual acolhedor e sofisticado em argila, rosa queimado, ameixa e creme, formas orgânicas, tipografia humana e composição de jornada. A tela inicial deve priorizar agenda do dia, pacientes que exigem atenção e continuidade do cuidado. Criar calendário, linha do tempo clínica e permissões por papel.",
+    "captures": [
+      {
+        "device": "desktop",
+        "file": "amparo-care-desktop.png",
+        "url": "http://127.0.0.1:51560/login",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "device": "mobile",
+        "file": "amparo-care-mobile.png",
+        "url": "http://127.0.0.1:51560/login",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "frameflow-studio",
+    "name": "FrameFlow Studio",
+    "type": "fullstack",
+    "prompt": "# FrameFlow Studio\n\nWorkspace criativo fullstack FrameFlow Studio para produtoras audiovisuais. Gerenciar projetos, cenas, takes, ativos de mídia, revisões, comentários, aprovações e entregas. Visual imersivo inspirado em sala de edição, grafite, violeta intenso e verde-lima pontual; canvas central, filmstrip horizontal, painéis flutuantes e galeria de ativos. A página inicial deve abrir o trabalho em andamento, não métricas genéricas. Criar fluxo de revisão com versões, comentários por timecode e aprovação do cliente.",
+    "captures": [
+      {
+        "device": "desktop",
+        "file": "frameflow-studio-desktop.png",
+        "url": "http://127.0.0.1:51612/",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "device": "mobile",
+        "file": "frameflow-studio-mobile.png",
+        "url": "http://127.0.0.1:51612/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "slug": "atlas-treasury",
+    "name": "Atlas Treasury",
+    "type": "fullstack",
+    "prompt": "# Atlas Treasury\n\nSistema financeiro fullstack Atlas Treasury para tesouraria de empresas em crescimento. Incluir contas, transações, faturas, centros de custo, previsões de caixa, conciliação, aprovações e alertas. Interface densa e precisa com azul petróleo, branco frio e verde esmeralda, navegação superior, ledger tabular dominante, filtros avançados, command bar e painéis bento apenas para síntese. Criar fluxos de conciliação, aprovação de pagamento, projeção e fechamento mensal com papéis e auditoria.",
+    "captures": [
+      {
+        "device": "desktop",
+        "file": "atlas-treasury-desktop.png",
+        "url": "http://127.0.0.1:51634/",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        }
+      },
+      {
+        "device": "mobile",
+        "file": "atlas-treasury-mobile.png",
+        "url": "http://127.0.0.1:51634/",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "errors": []
+  }
+]

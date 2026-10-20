@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Maison Aurea",
+  "experience": {
+    "pattern": "commerce-pulse",
+    "hierarchy": "metric-first",
+    "heroTreatment": "gradient",
+    "componentShape": "elevated",
+    "screenPriorities": [
+      "receita e conversão",
+      "pedidos",
+      "catálogo e estoque"
+    ],
+    "primaryDataView": "calendar"
+  },
+  "navigation": "top",
+  "density": "spacious",
+  "motion": "subtle",
+  "componentPlan": [
+    "hero",
+    "feature-grid",
+    "testimonial",
+    "cta",
+    "button",
+    "text-field"
+  ]
+}

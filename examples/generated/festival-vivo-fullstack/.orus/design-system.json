@@ -1,0 +1,316 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "playful",
+    "archetype": "generic",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "Orus Studio",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "commerce-coral",
+      "primary": "bg-orange-700",
+      "primaryHover": "hover:bg-orange-800",
+      "primaryText": "text-white",
+      "primarySoft": "bg-orange-50 text-orange-800",
+      "accent": "text-rose-700",
+      "page": "bg-stone-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-orange-50",
+      "text": "text-stone-950",
+      "textMuted": "text-stone-600",
+      "border": "border-orange-100",
+      "heroGradient": "bg-gradient-to-br from-stone-950 via-orange-950 to-rose-900",
+      "cssPrimary": "194 65 12",
+      "cssPrimaryHover": "154 52 18",
+      "cssPrimarySoft": "255 247 237",
+      "cssAccent": "190 18 60",
+      "cssPage": "250 250 249",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "255 247 237",
+      "cssText": "28 25 23",
+      "cssTextMuted": "87 83 78",
+      "cssBorder": "255 237 213"
+    },
+    "identity": {
+      "personality": [
+        "energetic",
+        "warm",
+        "inventive"
+      ],
+      "voice": "vibrante, convidativa e coordenada",
+      "promise": "da programação à entrada, cada momento conectado",
+      "visualMetaphor": "palco em preparação",
+      "signature": "agenda, lotes e pulsos de presença",
+      "imagery": "palcos, encontros e experiências coletivas"
+    },
+    "experience": {
+      "pattern": "event-stage",
+      "primaryDataView": "calendar",
+      "hierarchy": "content-first",
+      "heroTreatment": "gradient",
+      "componentShape": "layered",
+      "layout": "immersive-canvas",
+      "screenPriorities": [
+        "programação ao vivo",
+        "venda de ingressos",
+        "fluxo de entrada"
+      ]
+    },
+    "composition": {
+      "shell": "bottom-navigation",
+      "contentFrame": "contained",
+      "header": "editorial",
+      "actionPlacement": "command-bar",
+      "mobileNavigation": "bottom-tabs",
+      "rationale": [
+        "archetype:generic",
+        "layout:immersive-canvas",
+        "hierarchy:content-first",
+        "action:command-bar"
+      ]
+    },
+    "evidence": [
+      "style:playful",
+      "domain-family:events",
+      "archetype:generic",
+      "palette:explicit-orange-coral",
+      "composition:explicit-bottom-navigation"
+    ]
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "category": "layout",
+      "variants": [
+        "topbar",
+        "sidebar"
+      ],
+      "states": [
+        "desktop",
+        "mobile"
+      ],
+      "purpose": "Application frame and responsive navigation",
+      "selectedVariant": "top"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "select",
+      "category": "input",
+      "variants": [
+        "default",
+        "combobox"
+      ],
+      "states": [
+        "default",
+        "open",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Single or searchable selection",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "card",
+      "category": "data-display",
+      "variants": [
+        "standard",
+        "interactive",
+        "media",
+        "metric"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "selected",
+        "loading"
+      ],
+      "purpose": "Grouped information and actions",
+      "selectedVariant": "media"
+    },
+    {
+      "id": "data-table",
+      "category": "data-display",
+      "variants": [
+        "comfortable",
+        "compact"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "error"
+      ],
+      "purpose": "Scannable structured records",
+      "selectedVariant": "comfortable"
+    },
+    {
+      "id": "calendar",
+      "category": "data-display",
+      "variants": [
+        "agenda",
+        "week"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "selected"
+      ],
+      "purpose": "Time-based work and appointments",
+      "selectedVariant": "agenda"
+    },
+    {
+      "id": "stat",
+      "category": "data-display",
+      "variants": [
+        "plain",
+        "trend",
+        "progress"
+      ],
+      "states": [
+        "loading",
+        "populated"
+      ],
+      "purpose": "Key performance indicators",
+      "selectedVariant": "plain"
+    },
+    {
+      "id": "badge",
+      "category": "data-display",
+      "variants": [
+        "neutral",
+        "success",
+        "warning",
+        "danger"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Status and compact metadata",
+      "selectedVariant": "neutral"
+    },
+    {
+      "id": "empty-state",
+      "category": "feedback",
+      "variants": [
+        "first-use",
+        "no-results",
+        "error"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Actionable absence of data",
+      "selectedVariant": "first-use"
+    },
+    {
+      "id": "toast",
+      "category": "feedback",
+      "variants": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ],
+      "states": [
+        "enter",
+        "visible",
+        "exit"
+      ],
+      "purpose": "Non-blocking operation feedback",
+      "selectedVariant": "success"
+    },
+    {
+      "id": "dialog",
+      "category": "feedback",
+      "variants": [
+        "confirmation",
+        "form",
+        "detail"
+      ],
+      "states": [
+        "open",
+        "closing"
+      ],
+      "purpose": "Focused decisions and workflows",
+      "selectedVariant": "confirmation"
+    },
+    {
+      "id": "skeleton",
+      "category": "feedback",
+      "variants": [
+        "text",
+        "card",
+        "table"
+      ],
+      "states": [
+        "loading"
+      ],
+      "purpose": "Layout-stable loading feedback",
+      "selectedVariant": "text"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

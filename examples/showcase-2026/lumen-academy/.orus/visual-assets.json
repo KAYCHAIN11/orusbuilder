@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0.0",
+  "policy": "offline-first",
+  "externalAssetsAllowed": false,
+  "assets": [
+    {
+      "id": "brand-mark",
+      "path": "frontend/public/brand-mark.svg",
+      "purpose": "favicon-and-brand-signature",
+      "source": "generated-by-orus",
+      "license": "project-license",
+      "format": "svg",
+      "fallback": "text-brand-name"
+    },
+    {
+      "id": "visual-card",
+      "path": "frontend/public/visual-card.svg",
+      "purpose": "local-content-visual",
+      "source": "generated-by-orus",
+      "license": "project-license",
+      "format": "svg",
+      "fallback": "semantic-gradient"
+    }
+  ]
+}

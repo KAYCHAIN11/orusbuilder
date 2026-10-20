@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-daa7aa82-df5c-4ea6-a6f6-a0093913e080",
+  "blueprintVersion": 1,
+  "criteria": [
+    {
+      "id": "AC-001",
+      "statement": "Course content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "Course",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Catálogo de cursos",
+        "strategy": "content",
+        "entities": [
+          "Course",
+          "Lesson"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Catálogo de cursos",
+          "route": "/courses"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-002",
+      "statement": "Catálogo de cursos handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Course",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Catálogo de cursos",
+        "strategy": "content",
+        "entities": [
+          "Course",
+          "Lesson"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Catálogo de cursos",
+          "route": "/courses"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-003",
+      "statement": "Enrollment records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Enrollment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Matrículas",
+        "strategy": "workflow",
+        "entities": [
+          "Enrollment",
+          "Student",
+          "Course"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Matrículas",
+          "route": "/enrollments"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-004",
+      "statement": "Matrículas handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Enrollment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Matrículas",
+        "strategy": "workflow",
+        "entities": [
+          "Enrollment",
+          "Student",
+          "Course"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Matrículas",
+          "route": "/enrollments"
+        }
+      ],
+      "status": "planned"
+    }
+  ]
+}

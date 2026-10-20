@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-11T17:51:30.816Z",
+  "generator": "CodeGenerator",
+  "type": "fullstack",
+  "visualFingerprint": {
+    "version": 2,
+    "style": "premium",
+    "archetype": "healthcare",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "dark",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Amparo Care",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "electric-candy",
+      "primary": "bg-fuchsia-600",
+      "primaryHover": "hover:bg-fuchsia-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-fuchsia-50 text-fuchsia-700",
+      "accent": "text-amber-700",
+      "page": "bg-orange-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-yellow-50",
+      "text": "text-purple-950",
+      "textMuted": "text-purple-700/70",
+      "border": "border-fuchsia-200",
+      "heroGradient": "bg-gradient-to-br from-fuchsia-600 via-purple-600 to-orange-400",
+      "cssPrimary": "192 38 211",
+      "cssPrimaryHover": "217 70 239",
+      "cssPrimarySoft": "253 244 255",
+      "cssAccent": "161 98 7",
+      "cssPage": "255 247 237",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "254 252 232",
+      "cssText": "59 7 100",
+      "cssTextMuted": "107 33 168",
+      "cssBorder": "245 208 254"
+    },
+    "identity": {
+      "personality": [
+        "trustworthy",
+        "warm",
+        "precise"
+      ],
+      "voice": "acolhedora, clara e responsável",
+      "promise": "cuidado coordenado sem atrito",
+      "visualMetaphor": "ritmo de cuidado contínuo",
+      "signature": "blocos calmos, sinais de status e espaço respirável",
+      "imagery": "pessoas, cuidado e ambientes luminosos"
+    },
+    "experience": {
+      "pattern": "care-hub",
+      "hierarchy": "people-first",
+      "heroTreatment": "solid",
+      "componentShape": "quiet",
+      "layout": "split-focus",
+      "screenPriorities": [
+        "agenda do dia",
+        "pacientes prioritários",
+        "continuidade do cuidado"
+      ],
+      "primaryDataView": "calendar"
+    },
+    "composition": {
+      "shell": "sidebar-workspace",
+      "contentFrame": "contained",
+      "header": "minimal",
+      "actionPlacement": "command-bar",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:healthcare",
+        "layout:split-focus",
+        "hierarchy:people-first",
+        "action:command-bar"
+      ]
+    },
+    "evidence": [
+      "style:premium",
+      "archetype:healthcare",
+      "archetype-score:2",
+      "palette:explicit-warm",
+      "composition:planned-sidebar-workspace"
+    ]
+  },
+  "prompt": "Aplicação clínica fullstack Amparo Care para cuidado materno e acompanhamento pós-parto. Incluir pacientes, profissionais, agenda, plano de cuidado, registros clínicos, retornos, tarefas e alertas. Visual acolhedor e sofisticado em argila, rosa queimado, ameixa e creme, formas orgânicas, tipografia humana e composição de jornada. A tela inicial deve priorizar agenda do dia, pacientes que exigem atenção e continuidade do cuidado. Criar calendário, linha do tempo clínica e permissões por papel.",
+  "build": "passed"
+}

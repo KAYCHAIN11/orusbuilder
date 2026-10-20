@@ -1,0 +1,299 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-3e4e45aa-c019-4fc6-8d84-bf787ea9f2bc",
+  "blueprintVersion": 1,
+  "criteria": [
+    {
+      "id": "AC-001",
+      "statement": "Shipment records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Shipment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Remessas e entregas",
+        "strategy": "workflow",
+        "entities": [
+          "Shipment",
+          "Delivery"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Remessas e entregas",
+          "route": "/shipments"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-002",
+      "statement": "Remessas e entregas handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Shipment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Remessas e entregas",
+        "strategy": "workflow",
+        "entities": [
+          "Shipment",
+          "Delivery"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Remessas e entregas",
+          "route": "/shipments"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-003",
+      "statement": "Vehicle records can be created, loaded, updated and removed through persistent APIs",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "persistence",
+      "entity": "Vehicle",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Frota",
+        "strategy": "crud",
+        "entities": [
+          "Vehicle",
+          "Driver"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Frota",
+          "route": "/fleet"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-004",
+      "statement": "Frota handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Vehicle",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Frota",
+        "strategy": "crud",
+        "entities": [
+          "Vehicle",
+          "Driver"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Frota",
+          "route": "/fleet"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-005",
+      "statement": "DeliveryRoute records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "DeliveryRoute",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Planejamento de rotas",
+        "strategy": "workflow",
+        "entities": [
+          "DeliveryRoute",
+          "Shipment",
+          "Vehicle"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Planejamento de rotas",
+          "route": "/routes"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-006",
+      "statement": "Planejamento de rotas handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "DeliveryRoute",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Planejamento de rotas",
+        "strategy": "workflow",
+        "entities": [
+          "DeliveryRoute",
+          "Shipment",
+          "Vehicle"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Planejamento de rotas",
+          "route": "/routes"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-007",
+      "statement": "TrackingEvent content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "TrackingEvent",
+      "route": "/tracking",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Rastreamento logístico",
+        "strategy": "content",
+        "entities": [
+          "TrackingEvent",
+          "Shipment"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Rastreamento logístico",
+          "route": "/tracking"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-008",
+      "statement": "Rastreamento logístico handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "TrackingEvent",
+      "route": "/tracking",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Rastreamento logístico",
+        "strategy": "content",
+        "entities": [
+          "TrackingEvent",
+          "Shipment"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Rastreamento logístico",
+          "route": "/tracking"
+        }
+      ],
+      "status": "planned"
+    }
+  ]
+}

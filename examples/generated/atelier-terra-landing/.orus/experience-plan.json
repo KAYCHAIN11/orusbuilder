@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Orus Studio",
+  "experience": {
+    "pattern": "creative-studio",
+    "hierarchy": "content-first",
+    "heroTreatment": "editorial",
+    "componentShape": "layered",
+    "layout": "editorial-stack",
+    "screenPriorities": [
+      "trabalho em destaque",
+      "projetos ativos",
+      "próximas entregas"
+    ],
+    "primaryDataView": "gallery"
+  },
+  "composition": {
+    "shell": "canvas",
+    "contentFrame": "fluid",
+    "header": "immersive",
+    "actionPlacement": "floating",
+    "mobileNavigation": "scrolling-tabs",
+    "rationale": [
+      "archetype:creative",
+      "layout:editorial-stack",
+      "hierarchy:content-first",
+      "action:floating"
+    ]
+  },
+  "navigation": "top",
+  "density": "spacious",
+  "motion": "subtle",
+  "componentPlan": [
+    "hero",
+    "feature-grid",
+    "testimonial",
+    "cta",
+    "button",
+    "text-field"
+  ]
+}

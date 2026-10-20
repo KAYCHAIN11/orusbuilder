@@ -1,0 +1,1103 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-1c3e6002-0dcf-43b8-a810-4d3bc58be411",
+  "projectId": "frameflow-studio",
+  "version": 1,
+  "status": "ready",
+  "depth": "comprehensive",
+  "source": {
+    "type": "prompt",
+    "prompt": "Workspace criativo fullstack FrameFlow Studio para produtoras audiovisuais. Gerenciar projetos, cenas, takes, ativos de mídia, revisões, comentários, aprovações e entregas. Visual imersivo inspirado em sala de edição, grafite, violeta intenso e verde-lima pontual; canvas central, filmstrip horizontal, painéis flutuantes e galeria de ativos. A página inicial deve abrir o trabalho em andamento, não métricas genéricas. Criar fluxo de revisão com versões, comentários por timecode e aprovação do cliente.",
+    "documentIds": []
+  },
+  "product": {
+    "name": "FrameFlow Studio",
+    "summary": "Workspace criativo fullstack FrameFlow Studio para produtoras audiovisuais. Gerenciar projetos, cenas, takes, ativos de mídia, revisões, comentários, aprovações e entregas. Visual imersivo inspirado em sala de edição, grafite, violeta intenso e verde-lima pontual; canvas central, filmstrip horizontal, painéis flutuantes e galeria de ativos. A página inicial deve abrir o trabalho em andamento, não métricas genéricas. Criar fluxo de revisão com versões, comentários por timecode e aprovação do cliente.",
+    "problem": "Organizar trabalhos, entregas e revisão criativa",
+    "valueProposition": "Uma experiência visual para apresentar e conduzir projetos",
+    "audience": [
+      "Criador",
+      "Cliente"
+    ],
+    "goals": [
+      "Apresentar trabalhos e estudos de caso",
+      "Organizar projetos e entregas",
+      "Coletar contexto e aprovação",
+      "Manter o contexto e o histórico dos clientes atendidos",
+      "Transformar dados operacionais em decisões",
+      "Organizar uploads e documentos associados ao trabalho"
+    ],
+    "outOfScope": []
+  },
+  "visualIntent": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "creative",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "FrameFlow Studio",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "ink-paper",
+      "primary": "bg-gray-950",
+      "primaryHover": "hover:bg-gray-800",
+      "primaryText": "text-white",
+      "primarySoft": "bg-gray-100 text-gray-900",
+      "accent": "text-gray-950",
+      "page": "bg-white",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-gray-50",
+      "text": "text-gray-950",
+      "textMuted": "text-gray-500",
+      "border": "border-gray-200",
+      "heroGradient": "bg-gradient-to-b from-gray-50 to-white",
+      "cssPrimary": "17 24 39",
+      "cssPrimaryHover": "31 41 55",
+      "cssPrimarySoft": "243 244 246",
+      "cssAccent": "17 24 39",
+      "cssPage": "255 255 255",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "249 250 251",
+      "cssText": "17 24 39",
+      "cssTextMuted": "107 114 128",
+      "cssBorder": "229 231 235"
+    },
+    "identity": {
+      "personality": [
+        "inventive",
+        "bold",
+        "refined"
+      ],
+      "voice": "autoral, expressiva e confiante",
+      "promise": "trabalho memorável apresentado com intenção",
+      "visualMetaphor": "canvas vivo",
+      "signature": "composição assimétrica e tipografia protagonista",
+      "imagery": "portfólio imersivo e recortes de processo"
+    },
+    "experience": {
+      "pattern": "creative-studio",
+      "hierarchy": "content-first",
+      "heroTreatment": "editorial",
+      "componentShape": "layered",
+      "layout": "immersive-canvas",
+      "screenPriorities": [
+        "trabalho em destaque",
+        "projetos ativos",
+        "próximas entregas"
+      ],
+      "primaryDataView": "gallery"
+    },
+    "composition": {
+      "shell": "canvas",
+      "contentFrame": "fluid",
+      "header": "immersive",
+      "actionPlacement": "floating",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:creative",
+        "layout:immersive-canvas",
+        "hierarchy:content-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "archetype:creative",
+      "archetype-score:1",
+      "palette:explicit-green-teal",
+      "composition:explicit-canvas"
+    ]
+  },
+  "personas": [
+    {
+      "id": "PERSONA-001",
+      "name": "Criador",
+      "goals": [
+        "Uma experiência visual para apresentar e conduzir projetos"
+      ],
+      "permissions": [
+        "public"
+      ]
+    },
+    {
+      "id": "PERSONA-002",
+      "name": "Cliente",
+      "goals": [
+        "Administrar e acompanhar a operação"
+      ],
+      "permissions": [
+        "public"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Portfólio",
+      "purpose": "Apresentar trabalhos e estudos de caso",
+      "strategy": "content",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Project",
+        "Asset"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Project content can be created, loaded and opened from persistent storage",
+        "Portfólio handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "creative:Portfólio",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-002",
+      "name": "Produção criativa",
+      "purpose": "Organizar projetos e entregas",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Project",
+        "Asset"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Project records can move only through allowed persisted workflow transitions",
+        "Produção criativa handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "creative:Produção criativa",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-003",
+      "name": "Revisão",
+      "purpose": "Coletar contexto e aprovação",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Review",
+        "Project"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Review records can move only through allowed persisted workflow transitions",
+        "Revisão handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "creative:Revisão",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-004",
+      "name": "Clientes",
+      "purpose": "Manter o contexto e o histórico dos clientes atendidos",
+      "strategy": "crud",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Customer"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Customer records can be created, loaded, updated and removed through persistent APIs",
+        "Clientes handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Clientes",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-005",
+      "name": "Relatórios e análises",
+      "purpose": "Transformar dados operacionais em decisões",
+      "strategy": "computed",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Report"
+      ],
+      "rules": [
+        "Summaries include every persisted record",
+        "Numeric totals are calculated on the server"
+      ],
+      "acceptanceCriteria": [
+        "Report indicators are calculated from all persisted source records and expose grouped totals",
+        "Relatórios e análises handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Relatórios e análises",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-006",
+      "name": "Arquivos",
+      "purpose": "Organizar uploads e documentos associados ao trabalho",
+      "strategy": "content",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "FileAsset"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "FileAsset content can be created, loaded and opened from persistent storage",
+        "Arquivos handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Arquivos",
+          "confidence": 0.96
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "FLOW-001",
+      "name": "Clientes",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Clientes",
+      "steps": [
+        "Open the relevant workspace",
+        "Manter o contexto e o histórico dos clientes atendidos",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-004"
+      ],
+      "outcome": "Customer records can be created, loaded, updated and removed through persistent APIs"
+    },
+    {
+      "id": "FLOW-002",
+      "name": "Relatórios e análises",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Relatórios e análises",
+      "steps": [
+        "Open the relevant workspace",
+        "Transformar dados operacionais em decisões",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "outcome": "Report indicators are calculated from all persisted source records and expose grouped totals"
+    },
+    {
+      "id": "FLOW-003",
+      "name": "Arquivos",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Arquivos",
+      "steps": [
+        "Open the relevant workspace",
+        "Organizar uploads e documentos associados ao trabalho",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-006"
+      ],
+      "outcome": "FileAsset content can be created, loaded and opened from persistent storage"
+    },
+    {
+      "id": "FLOW-004",
+      "name": "Portfólio",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Portfólio",
+      "steps": [
+        "Open the relevant workspace",
+        "Apresentar trabalhos e estudos de caso",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "outcome": "Project content can be created, loaded and opened from persistent storage"
+    },
+    {
+      "id": "FLOW-005",
+      "name": "Produção criativa",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Produção criativa",
+      "steps": [
+        "Open the relevant workspace",
+        "Organizar projetos e entregas",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "outcome": "Project records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-006",
+      "name": "Revisão",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Revisão",
+      "steps": [
+        "Open the relevant workspace",
+        "Coletar contexto e aprovação",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "outcome": "Review records can move only through allowed persisted workflow transitions"
+    }
+  ],
+  "screens": [
+    {
+      "id": "SCREEN-001",
+      "name": "Estúdio",
+      "route": "/",
+      "purpose": "Destacar trabalhos e entregas",
+      "layout": "immersive-canvas",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-001",
+        "COMP-002",
+        "COMP-003"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-002",
+      "name": "Projetos",
+      "route": "/projects",
+      "purpose": "Acompanhar produção",
+      "layout": "gallery",
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-004",
+        "COMP-005"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-003",
+      "name": "Revisão",
+      "route": "/reviews",
+      "purpose": "Conduzir aprovações",
+      "layout": "split-focus",
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "componentIds": [
+        "COMP-006",
+        "COMP-007",
+        "COMP-008"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-004",
+      "name": "Clientes",
+      "route": "/customers",
+      "purpose": "Manter o contexto e o histórico dos clientes atendidos",
+      "layout": "directory",
+      "capabilityIds": [
+        "CAP-004"
+      ],
+      "componentIds": [
+        "COMP-009",
+        "COMP-010",
+        "COMP-011"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-005",
+      "name": "Relatórios e análises",
+      "route": "/reports",
+      "purpose": "Transformar dados operacionais em decisões",
+      "layout": "analytics",
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "componentIds": [
+        "COMP-012",
+        "COMP-013",
+        "COMP-014"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-006",
+      "name": "Arquivos",
+      "route": "/files",
+      "purpose": "Organizar uploads e documentos associados ao trabalho",
+      "layout": "asset-library",
+      "capabilityIds": [
+        "CAP-006"
+      ],
+      "componentIds": [
+        "COMP-015",
+        "COMP-016",
+        "COMP-017"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-001",
+      "name": "FeaturedProject",
+      "category": "domain",
+      "purpose": "FeaturedProject on Estúdio",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "name": "ProjectGallery",
+      "category": "domain",
+      "purpose": "ProjectGallery on Estúdio",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "name": "DeliveryRail",
+      "category": "domain",
+      "purpose": "DeliveryRail on Estúdio",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "name": "ProjectGallery",
+      "category": "domain",
+      "purpose": "ProjectGallery on Projetos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "name": "ProgressFilter",
+      "category": "domain",
+      "purpose": "ProgressFilter on Projetos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "name": "AssetPreview",
+      "category": "domain",
+      "purpose": "AssetPreview on Revisão",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-007",
+      "name": "ReviewThread",
+      "category": "domain",
+      "purpose": "ReviewThread on Revisão",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-008",
+      "name": "ApprovalActions",
+      "category": "domain",
+      "purpose": "ApprovalActions on Revisão",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-009",
+      "name": "CustomerDirectory",
+      "category": "domain",
+      "purpose": "CustomerDirectory on Clientes",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-010",
+      "name": "CustomerSearch",
+      "category": "domain",
+      "purpose": "CustomerSearch on Clientes",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-011",
+      "name": "CustomerProfile",
+      "category": "domain",
+      "purpose": "CustomerProfile on Clientes",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-012",
+      "name": "ReportBuilder",
+      "category": "domain",
+      "purpose": "ReportBuilder on Relatórios e análises",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-013",
+      "name": "MetricCanvas",
+      "category": "domain",
+      "purpose": "MetricCanvas on Relatórios e análises",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-014",
+      "name": "ExportActions",
+      "category": "domain",
+      "purpose": "ExportActions on Relatórios e análises",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-015",
+      "name": "FileLibrary",
+      "category": "domain",
+      "purpose": "FileLibrary on Arquivos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-016",
+      "name": "UploadDropzone",
+      "category": "domain",
+      "purpose": "UploadDropzone on Arquivos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-017",
+      "name": "FilePreview",
+      "category": "domain",
+      "purpose": "FilePreview on Arquivos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "DATA-001",
+      "name": "Project",
+      "purpose": "Support Portfólio, Produção criativa, Revisão",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002",
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-002",
+      "name": "Asset",
+      "purpose": "Support Portfólio, Produção criativa",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002"
+      ]
+    },
+    {
+      "id": "DATA-003",
+      "name": "Client",
+      "purpose": "Support ",
+      "capabilityIds": []
+    },
+    {
+      "id": "DATA-004",
+      "name": "Review",
+      "purpose": "Support Revisão",
+      "capabilityIds": [
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-005",
+      "name": "Customer",
+      "purpose": "Support Clientes",
+      "capabilityIds": [
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-006",
+      "name": "Report",
+      "purpose": "Support Relatórios e análises",
+      "capabilityIds": [
+        "CAP-005"
+      ]
+    },
+    {
+      "id": "DATA-007",
+      "name": "FileAsset",
+      "purpose": "Support Arquivos",
+      "capabilityIds": [
+        "CAP-006"
+      ]
+    }
+  ],
+  "architecture": {
+    "frontend": [
+      "react",
+      "typescript"
+    ],
+    "backend": [
+      "node.js",
+      "express"
+    ],
+    "database": "sqlite",
+    "authentication": false,
+    "api": "rest"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "AC-001",
+      "statement": "Project content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-002",
+      "statement": "Portfólio handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-003",
+      "statement": "Project records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-004",
+      "statement": "Produção criativa handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-005",
+      "statement": "Review records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Review",
+      "route": "/reviews",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-006",
+      "statement": "Revisão handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Review",
+      "route": "/reviews",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-007",
+      "statement": "Customer records can be created, loaded, updated and removed through persistent APIs",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": true,
+      "kind": "persistence",
+      "entity": "Customer",
+      "route": "/customers",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-008",
+      "statement": "Clientes handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Customer",
+      "route": "/customers",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-009",
+      "statement": "Report indicators are calculated from all persisted source records and expose grouped totals",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "calculation",
+      "entity": "Report",
+      "route": "/reports",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-010",
+      "statement": "Relatórios e análises handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Report",
+      "route": "/reports",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-011",
+      "statement": "FileAsset content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-006",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "FileAsset",
+      "route": "/files",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-012",
+      "statement": "Arquivos handles loading, empty, success and error states",
+      "capabilityId": "CAP-006",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "FileAsset",
+      "route": "/files",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Low-confidence requirements must be reviewed in the workspace"
+  ],
+  "openQuestions": [],
+  "confidence": 0.71,
+  "createdAt": "2026-10-11T17:51:30.868Z",
+  "updatedAt": "2026-10-11T17:51:30.868Z"
+}

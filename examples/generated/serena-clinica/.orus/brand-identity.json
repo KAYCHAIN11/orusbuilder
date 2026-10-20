@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Serena",
+  "style": "premium",
+  "archetype": "healthcare",
+  "identity": {
+    "personality": [
+      "trustworthy",
+      "warm",
+      "precise"
+    ],
+    "voice": "acolhedora, clara e responsável",
+    "promise": "cuidado coordenado sem atrito",
+    "visualMetaphor": "ritmo de cuidado contínuo",
+    "signature": "blocos calmos, sinais de status e espaço respirável",
+    "imagery": "pessoas, cuidado e ambientes luminosos"
+  },
+  "typography": {
+    "display": "Manrope",
+    "body": "Inter"
+  },
+  "palette": {
+    "name": "clinical-mint",
+    "primary": "bg-teal-600",
+    "primaryHover": "hover:bg-teal-500",
+    "primaryText": "text-white",
+    "primarySoft": "bg-teal-50 text-teal-800",
+    "accent": "text-emerald-500",
+    "page": "bg-slate-50",
+    "surface": "bg-white",
+    "surfaceMuted": "bg-teal-50",
+    "text": "text-slate-950",
+    "textMuted": "text-slate-600",
+    "border": "border-teal-100",
+    "heroGradient": "bg-gradient-to-br from-teal-950 via-teal-800 to-emerald-600",
+    "cssPrimary": "13 148 136",
+    "cssPrimaryHover": "20 184 166",
+    "cssPrimarySoft": "240 253 250",
+    "cssAccent": "16 185 129",
+    "cssPage": "248 250 252",
+    "cssSurface": "255 255 255",
+    "cssSurfaceMuted": "240 253 250",
+    "cssText": "15 23 42",
+    "cssTextMuted": "71 85 105",
+    "cssBorder": "204 251 241"
+  }
+}

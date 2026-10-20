@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "corporate",
+    "archetype": "generic",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Orus Studio",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "aurora-glass",
+      "primary": "bg-cyan-500",
+      "primaryHover": "hover:bg-cyan-400",
+      "primaryText": "text-slate-950",
+      "primarySoft": "bg-cyan-400/10 text-cyan-300",
+      "accent": "text-fuchsia-400",
+      "page": "bg-slate-950",
+      "surface": "bg-white/10 backdrop-blur-xl",
+      "surfaceMuted": "bg-slate-900/60",
+      "text": "text-white",
+      "textMuted": "text-slate-300",
+      "border": "border-white/15",
+      "heroGradient": "bg-gradient-to-br from-slate-950 via-cyan-950 to-fuchsia-950",
+      "cssPrimary": "6 182 212",
+      "cssPrimaryHover": "34 211 238",
+      "cssPrimarySoft": "8 51 68",
+      "cssAccent": "232 121 249",
+      "cssPage": "2 6 23",
+      "cssSurface": "15 23 42",
+      "cssSurfaceMuted": "15 23 42",
+      "cssText": "255 255 255",
+      "cssTextMuted": "203 213 225",
+      "cssBorder": "51 65 85"
+    },
+    "identity": {
+      "personality": [
+        "precise",
+        "bold",
+        "trustworthy"
+      ],
+      "voice": "operacional, antecipatória e direta",
+      "promise": "cada movimento acompanhado até o destino",
+      "visualMetaphor": "rede logística em fluxo",
+      "signature": "rotas, eventos e exceções em tempo real",
+      "imagery": "mapas, deslocamentos e sinais operacionais"
+    },
+    "experience": {
+      "pattern": "logistics-control",
+      "primaryDataView": "timeline",
+      "hierarchy": "workflow-first",
+      "heroTreatment": "solid",
+      "componentShape": "outlined",
+      "layout": "dense-rail",
+      "screenPriorities": [
+        "entregas em risco",
+        "rotas em execução",
+        "capacidade da frota"
+      ]
+    },
+    "composition": {
+      "shell": "split-workspace",
+      "contentFrame": "asymmetric",
+      "header": "command",
+      "actionPlacement": "header",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:generic",
+        "layout:dense-rail",
+        "hierarchy:workflow-first",
+        "action:header"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "domain-family:logistics",
+      "archetype:generic",
+      "palette:aurora-glass",
+      "composition:planned-split-workspace"
+    ]
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "category": "layout",
+      "variants": [
+        "topbar",
+        "sidebar"
+      ],
+      "states": [
+        "desktop",
+        "mobile"
+      ],
+      "purpose": "Application frame and responsive navigation",
+      "selectedVariant": "sidebar"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "select",
+      "category": "input",
+      "variants": [
+        "default",
+        "combobox"
+      ],
+      "states": [
+        "default",
+        "open",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Single or searchable selection",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "card",
+      "category": "data-display",
+      "variants": [
+        "standard",
+        "interactive",
+        "media",
+        "metric"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "selected",
+        "loading"
+      ],
+      "purpose": "Grouped information and actions",
+      "selectedVariant": "interactive"
+    },
+    {
+      "id": "data-table",
+      "category": "data-display",
+      "variants": [
+        "comfortable",
+        "compact"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "error"
+      ],
+      "purpose": "Scannable structured records",
+      "selectedVariant": "comfortable"
+    },
+    {
+      "id": "timeline",
+      "category": "data-display",
+      "variants": [
+        "activity",
+        "milestone"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated"
+      ],
+      "purpose": "Chronological progress and history",
+      "selectedVariant": "activity"
+    },
+    {
+      "id": "stat",
+      "category": "data-display",
+      "variants": [
+        "plain",
+        "trend",
+        "progress"
+      ],
+      "states": [
+        "loading",
+        "populated"
+      ],
+      "purpose": "Key performance indicators",
+      "selectedVariant": "plain"
+    },
+    {
+      "id": "badge",
+      "category": "data-display",
+      "variants": [
+        "neutral",
+        "success",
+        "warning",
+        "danger"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Status and compact metadata",
+      "selectedVariant": "neutral"
+    },
+    {
+      "id": "empty-state",
+      "category": "feedback",
+      "variants": [
+        "first-use",
+        "no-results",
+        "error"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Actionable absence of data",
+      "selectedVariant": "first-use"
+    },
+    {
+      "id": "toast",
+      "category": "feedback",
+      "variants": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ],
+      "states": [
+        "enter",
+        "visible",
+        "exit"
+      ],
+      "purpose": "Non-blocking operation feedback",
+      "selectedVariant": "success"
+    },
+    {
+      "id": "dialog",
+      "category": "feedback",
+      "variants": [
+        "confirmation",
+        "form",
+        "detail"
+      ],
+      "states": [
+        "open",
+        "closing"
+      ],
+      "purpose": "Focused decisions and workflows",
+      "selectedVariant": "confirmation"
+    },
+    {
+      "id": "skeleton",
+      "category": "feedback",
+      "variants": [
+        "text",
+        "card",
+        "table"
+      ],
+      "states": [
+        "loading"
+      ],
+      "purpose": "Layout-stable loading feedback",
+      "selectedVariant": "text"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

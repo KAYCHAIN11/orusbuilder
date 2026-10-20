@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-11T17:51:29.121Z",
+  "generator": "CodeGenerator",
+  "type": "fullstack",
+  "visualFingerprint": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "generic",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "Lumen Academy",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "studio-cobalt",
+      "primary": "bg-blue-600",
+      "primaryHover": "hover:bg-blue-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-blue-50 text-blue-800",
+      "accent": "text-fuchsia-700",
+      "page": "bg-zinc-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-violet-50",
+      "text": "text-zinc-950",
+      "textMuted": "text-zinc-600",
+      "border": "border-violet-100",
+      "heroGradient": "bg-gradient-to-br from-blue-700 via-violet-700 to-fuchsia-600",
+      "cssPrimary": "37 99 235",
+      "cssPrimaryHover": "59 130 246",
+      "cssPrimarySoft": "239 246 255",
+      "cssAccent": "162 28 175",
+      "cssPage": "250 250 250",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "245 243 255",
+      "cssText": "24 24 27",
+      "cssTextMuted": "82 82 91",
+      "cssBorder": "237 233 254"
+    },
+    "identity": {
+      "personality": [
+        "inventive",
+        "warm",
+        "trustworthy"
+      ],
+      "voice": "encorajadora, clara e progressiva",
+      "promise": "aprendizagem visível do primeiro passo à conquista",
+      "visualMetaphor": "campus vivo de conhecimento",
+      "signature": "trilhas, marcos e progresso acumulado",
+      "imagery": "conteúdo, descoberta e evolução pessoal"
+    },
+    "experience": {
+      "pattern": "learning-campus",
+      "primaryDataView": "catalog",
+      "hierarchy": "content-first",
+      "heroTreatment": "editorial",
+      "componentShape": "elevated",
+      "layout": "editorial-stack",
+      "screenPriorities": [
+        "trilhas em destaque",
+        "progresso dos estudantes",
+        "avaliações pendentes"
+      ]
+    },
+    "composition": {
+      "shell": "top-navigation",
+      "contentFrame": "narrow",
+      "header": "editorial",
+      "actionPlacement": "header",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:generic",
+        "layout:editorial-stack",
+        "hierarchy:content-first",
+        "action:header"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "domain-family:education",
+      "archetype:generic",
+      "palette:explicit-cobalt",
+      "composition:explicit-top-navigation"
+    ]
+  },
+  "prompt": "Plataforma fullstack Lumen Academy para formação criativa. Deve possuir catálogo de cursos, trilhas, aulas, matrículas, progresso, avaliações e certificados. Identidade clara e otimista com azul cobalto, amarelo solar e fundos marfim; navegação superior, capas editoriais grandes, catálogo visual em mosaico e página inicial semelhante a um campus digital, não a um painel administrativo. Criar jornadas de descoberta, matrícula, continuidade da aula, avaliação e conclusão.",
+  "build": "passed"
+}

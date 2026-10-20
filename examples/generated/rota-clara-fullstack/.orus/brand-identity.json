@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Orus Studio",
+  "style": "corporate",
+  "archetype": "generic",
+  "identity": {
+    "personality": [
+      "precise",
+      "bold",
+      "trustworthy"
+    ],
+    "voice": "operacional, antecipatória e direta",
+    "promise": "cada movimento acompanhado até o destino",
+    "visualMetaphor": "rede logística em fluxo",
+    "signature": "rotas, eventos e exceções em tempo real",
+    "imagery": "mapas, deslocamentos e sinais operacionais"
+  },
+  "typography": {
+    "display": "Manrope",
+    "body": "Inter"
+  },
+  "palette": {
+    "name": "aurora-glass",
+    "primary": "bg-cyan-500",
+    "primaryHover": "hover:bg-cyan-400",
+    "primaryText": "text-slate-950",
+    "primarySoft": "bg-cyan-400/10 text-cyan-300",
+    "accent": "text-fuchsia-400",
+    "page": "bg-slate-950",
+    "surface": "bg-white/10 backdrop-blur-xl",
+    "surfaceMuted": "bg-slate-900/60",
+    "text": "text-white",
+    "textMuted": "text-slate-300",
+    "border": "border-white/15",
+    "heroGradient": "bg-gradient-to-br from-slate-950 via-cyan-950 to-fuchsia-950",
+    "cssPrimary": "6 182 212",
+    "cssPrimaryHover": "34 211 238",
+    "cssPrimarySoft": "8 51 68",
+    "cssAccent": "232 121 249",
+    "cssPage": "2 6 23",
+    "cssSurface": "15 23 42",
+    "cssSurfaceMuted": "15 23 42",
+    "cssText": "255 255 255",
+    "cssTextMuted": "203 213 225",
+    "cssBorder": "51 65 85"
+  }
+}

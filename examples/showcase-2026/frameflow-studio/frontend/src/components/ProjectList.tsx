@@ -1,0 +1,9 @@
+import { Link } from 'react-router-dom';
+import { useProjects } from '../hooks/useApi';
+import { Project } from '../types/project.types';
+
+export default function ProjectList() {
+  const { data: projects, loading } = useProjects();
+  if (loading) return <div className="grid min-h-64 place-items-center"><div className="h-10 w-10 animate-spin rounded-full border-2 border-[rgb(var(--orus-primary))] border-t-transparent"/></div>;
+  return <div className="space-y-8"><header className="max-w-3xl"><p className="text-xs font-bold uppercase tracking-[.28em] text-[rgb(var(--orus-accent))]">Portfólio em movimento</p><h2 className="mt-3 font-display text-4xl font-bold leading-tight">Projetos com ritmo, contexto e direção.</h2></header><div className="grid gap-6 md:grid-cols-2">{(projects || []).map((project: Project, index: number) => <Link key={project.id} to={'/projects/' + project.id} className={'group relative min-h-[300px] overflow-hidden rounded-[var(--orus-radius)] p-7 text-white ' + (index % 3 === 0 ? 'md:col-span-2 bg-gradient-to-br from-slate-950 via-violet-950 to-fuchsia-700' : index % 3 === 1 ? 'bg-gradient-to-br from-blue-950 to-cyan-600' : 'bg-gradient-to-br from-zinc-900 to-orange-600')}><span className="text-xs font-bold uppercase tracking-[.2em] opacity-60">{project.status}</span><div className="absolute inset-x-7 bottom-7"><h3 className="font-display text-3xl font-bold transition group-hover:translate-x-2">{project.name}</h3><p className="mt-2 max-w-xl text-sm text-white/70">{project.description || 'Projeto autoral em desenvolvimento.'}</p><div className="mt-5 h-1.5 overflow-hidden rounded-full bg-white/15"><div className="h-full rounded-full bg-[rgb(var(--orus-panel))]" style={{ width: Math.min(100, Number(project.progress || 0)) + '%' }}/></div><p className="mt-2 text-xs text-white/60">{project.progress || 0}% concluído</p></div></Link>)}</div></div>;
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Serena",
+  "experience": {
+    "pattern": "care-hub",
+    "hierarchy": "people-first",
+    "heroTreatment": "solid",
+    "componentShape": "quiet",
+    "screenPriorities": [
+      "agenda do dia",
+      "pacientes prioritários",
+      "continuidade do cuidado"
+    ],
+    "primaryDataView": "calendar"
+  },
+  "navigation": "top",
+  "density": "comfortable",
+  "motion": "subtle",
+  "componentPlan": [
+    "hero",
+    "feature-grid",
+    "testimonial",
+    "cta",
+    "button",
+    "text-field"
+  ]
+}

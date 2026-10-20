@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Northstar Control",
+  "style": "corporate",
+  "archetype": "generic",
+  "identity": {
+    "personality": [
+      "precise",
+      "bold",
+      "trustworthy"
+    ],
+    "voice": "operacional, antecipatória e direta",
+    "promise": "cada movimento acompanhado até o destino",
+    "visualMetaphor": "rede logística em fluxo",
+    "signature": "rotas, eventos e exceções em tempo real",
+    "imagery": "mapas, deslocamentos e sinais operacionais"
+  },
+  "typography": {
+    "display": "Manrope",
+    "body": "Inter"
+  },
+  "palette": {
+    "name": "studio-cobalt",
+    "primary": "bg-blue-600",
+    "primaryHover": "hover:bg-blue-500",
+    "primaryText": "text-white",
+    "primarySoft": "bg-blue-50 text-blue-800",
+    "accent": "text-fuchsia-700",
+    "page": "bg-zinc-50",
+    "surface": "bg-white",
+    "surfaceMuted": "bg-violet-50",
+    "text": "text-zinc-950",
+    "textMuted": "text-zinc-600",
+    "border": "border-violet-100",
+    "heroGradient": "bg-gradient-to-br from-blue-700 via-violet-700 to-fuchsia-600",
+    "cssPrimary": "37 99 235",
+    "cssPrimaryHover": "59 130 246",
+    "cssPrimarySoft": "239 246 255",
+    "cssAccent": "162 28 175",
+    "cssPage": "250 250 250",
+    "cssSurface": "255 255 255",
+    "cssSurfaceMuted": "245 243 255",
+    "cssText": "24 24 27",
+    "cssTextMuted": "82 82 91",
+    "cssBorder": "237 233 254"
+  }
+}

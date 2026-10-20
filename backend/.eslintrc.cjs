@@ -1,0 +1,32 @@
+module.exports = {
+  root: true,
+  env: {
+    es2022: true,
+    node: true,
+    jest: true,
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
+  ignorePatterns: ['dist', 'coverage', 'node_modules', 'logs'],
+  rules: {
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-empty-object-type': 'off',
+    '@typescript-eslint/no-require-imports': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    'no-empty': 'off',
+    'no-case-declarations': 'off',
+    'no-constant-condition': 'off',
+    'no-prototype-builtins': 'off',
+    'no-useless-escape': 'off',
+    'prefer-const': 'off',
+  },
+};

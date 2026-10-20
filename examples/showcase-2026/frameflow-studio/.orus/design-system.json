@@ -1,0 +1,316 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "creative",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "FrameFlow Studio",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "ink-paper",
+      "primary": "bg-gray-950",
+      "primaryHover": "hover:bg-gray-800",
+      "primaryText": "text-white",
+      "primarySoft": "bg-gray-100 text-gray-900",
+      "accent": "text-gray-950",
+      "page": "bg-white",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-gray-50",
+      "text": "text-gray-950",
+      "textMuted": "text-gray-500",
+      "border": "border-gray-200",
+      "heroGradient": "bg-gradient-to-b from-gray-50 to-white",
+      "cssPrimary": "17 24 39",
+      "cssPrimaryHover": "31 41 55",
+      "cssPrimarySoft": "243 244 246",
+      "cssAccent": "17 24 39",
+      "cssPage": "255 255 255",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "249 250 251",
+      "cssText": "17 24 39",
+      "cssTextMuted": "107 114 128",
+      "cssBorder": "229 231 235"
+    },
+    "identity": {
+      "personality": [
+        "inventive",
+        "bold",
+        "refined"
+      ],
+      "voice": "autoral, expressiva e confiante",
+      "promise": "trabalho memorável apresentado com intenção",
+      "visualMetaphor": "canvas vivo",
+      "signature": "composição assimétrica e tipografia protagonista",
+      "imagery": "portfólio imersivo e recortes de processo"
+    },
+    "experience": {
+      "pattern": "creative-studio",
+      "hierarchy": "content-first",
+      "heroTreatment": "editorial",
+      "componentShape": "layered",
+      "layout": "immersive-canvas",
+      "screenPriorities": [
+        "trabalho em destaque",
+        "projetos ativos",
+        "próximas entregas"
+      ],
+      "primaryDataView": "gallery"
+    },
+    "composition": {
+      "shell": "canvas",
+      "contentFrame": "fluid",
+      "header": "immersive",
+      "actionPlacement": "floating",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:creative",
+        "layout:immersive-canvas",
+        "hierarchy:content-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "archetype:creative",
+      "archetype-score:1",
+      "palette:explicit-green-teal",
+      "composition:explicit-canvas"
+    ]
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "category": "layout",
+      "variants": [
+        "topbar",
+        "sidebar"
+      ],
+      "states": [
+        "desktop",
+        "mobile"
+      ],
+      "purpose": "Application frame and responsive navigation",
+      "selectedVariant": "top"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "select",
+      "category": "input",
+      "variants": [
+        "default",
+        "combobox"
+      ],
+      "states": [
+        "default",
+        "open",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Single or searchable selection",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "card",
+      "category": "data-display",
+      "variants": [
+        "standard",
+        "interactive",
+        "media",
+        "metric"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "selected",
+        "loading"
+      ],
+      "purpose": "Grouped information and actions",
+      "selectedVariant": "media"
+    },
+    {
+      "id": "data-table",
+      "category": "data-display",
+      "variants": [
+        "comfortable",
+        "compact"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "error"
+      ],
+      "purpose": "Scannable structured records",
+      "selectedVariant": "comfortable"
+    },
+    {
+      "id": "gallery",
+      "category": "data-display",
+      "variants": [
+        "masonry",
+        "case-study"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "selected"
+      ],
+      "purpose": "Visual work and media presentation",
+      "selectedVariant": "masonry"
+    },
+    {
+      "id": "stat",
+      "category": "data-display",
+      "variants": [
+        "plain",
+        "trend",
+        "progress"
+      ],
+      "states": [
+        "loading",
+        "populated"
+      ],
+      "purpose": "Key performance indicators",
+      "selectedVariant": "plain"
+    },
+    {
+      "id": "badge",
+      "category": "data-display",
+      "variants": [
+        "neutral",
+        "success",
+        "warning",
+        "danger"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Status and compact metadata",
+      "selectedVariant": "neutral"
+    },
+    {
+      "id": "empty-state",
+      "category": "feedback",
+      "variants": [
+        "first-use",
+        "no-results",
+        "error"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Actionable absence of data",
+      "selectedVariant": "first-use"
+    },
+    {
+      "id": "toast",
+      "category": "feedback",
+      "variants": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ],
+      "states": [
+        "enter",
+        "visible",
+        "exit"
+      ],
+      "purpose": "Non-blocking operation feedback",
+      "selectedVariant": "success"
+    },
+    {
+      "id": "dialog",
+      "category": "feedback",
+      "variants": [
+        "confirmation",
+        "form",
+        "detail"
+      ],
+      "states": [
+        "open",
+        "closing"
+      ],
+      "purpose": "Focused decisions and workflows",
+      "selectedVariant": "confirmation"
+    },
+    {
+      "id": "skeleton",
+      "category": "feedback",
+      "variants": [
+        "text",
+        "card",
+        "table"
+      ],
+      "states": [
+        "loading"
+      ],
+      "purpose": "Layout-stable loading feedback",
+      "selectedVariant": "text"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

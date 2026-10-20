@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Northstar Control",
+  "experience": {
+    "pattern": "logistics-control",
+    "primaryDataView": "timeline",
+    "hierarchy": "workflow-first",
+    "heroTreatment": "solid",
+    "componentShape": "outlined",
+    "layout": "dense-rail",
+    "screenPriorities": [
+      "entregas em risco",
+      "rotas em execução",
+      "capacidade da frota"
+    ]
+  },
+  "composition": {
+    "shell": "split-workspace",
+    "contentFrame": "asymmetric",
+    "header": "command",
+    "actionPlacement": "inline",
+    "mobileNavigation": "drawer",
+    "rationale": [
+      "archetype:generic",
+      "layout:dense-rail",
+      "hierarchy:workflow-first",
+      "action:inline"
+    ]
+  },
+  "navigation": "sidebar",
+  "density": "compact",
+  "motion": "subtle",
+  "componentPlan": [
+    "app-shell",
+    "button",
+    "text-field",
+    "select",
+    "card",
+    "data-table",
+    "stat",
+    "badge",
+    "empty-state",
+    "toast",
+    "dialog",
+    "skeleton",
+    "timeline"
+  ]
+}

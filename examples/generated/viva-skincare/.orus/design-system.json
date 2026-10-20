@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "playful",
+    "archetype": "commerce",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "VIVA",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "commerce-coral",
+      "primary": "bg-orange-600",
+      "primaryHover": "hover:bg-orange-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-orange-50 text-orange-800",
+      "accent": "text-rose-500",
+      "page": "bg-stone-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-orange-50",
+      "text": "text-stone-950",
+      "textMuted": "text-stone-600",
+      "border": "border-orange-100",
+      "heroGradient": "bg-gradient-to-br from-stone-950 via-orange-950 to-rose-900",
+      "cssPrimary": "234 88 12",
+      "cssPrimaryHover": "249 115 22",
+      "cssPrimarySoft": "255 247 237",
+      "cssAccent": "244 63 94",
+      "cssPage": "250 250 249",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "255 247 237",
+      "cssText": "28 25 23",
+      "cssTextMuted": "87 83 78",
+      "cssBorder": "255 237 213"
+    },
+    "identity": {
+      "personality": [
+        "energetic",
+        "warm",
+        "inventive"
+      ],
+      "voice": "direta, desejável e orientada à ação",
+      "promise": "descoberta rápida até a conversão",
+      "visualMetaphor": "vitrine em movimento",
+      "signature": "cards de produto, contrastes quentes e chamadas decisivas",
+      "imagery": "produto em primeiro plano e recortes editoriais"
+    },
+    "experience": {
+      "pattern": "commerce-pulse",
+      "hierarchy": "metric-first",
+      "heroTreatment": "gradient",
+      "componentShape": "elevated",
+      "screenPriorities": [
+        "receita e conversão",
+        "pedidos",
+        "catálogo e estoque"
+      ],
+      "primaryDataView": "catalog"
+    },
+    "evidence": [
+      "style:playful",
+      "archetype:commerce",
+      "palette:explicit-orange-coral"
+    ]
+  },
+  "components": [
+    {
+      "id": "hero",
+      "category": "marketing",
+      "variants": [
+        "centered",
+        "split",
+        "editorial"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Primary value proposition and actions",
+      "selectedVariant": "centered"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "feature-grid",
+      "category": "marketing",
+      "variants": [
+        "three-column",
+        "bento"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Product capability storytelling",
+      "selectedVariant": "three-column"
+    },
+    {
+      "id": "testimonial",
+      "category": "marketing",
+      "variants": [
+        "quote",
+        "logo-wall"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Trust and social proof",
+      "selectedVariant": "quote"
+    },
+    {
+      "id": "cta",
+      "category": "marketing",
+      "variants": [
+        "banner",
+        "contained"
+      ],
+      "states": [
+        "default",
+        "submitted"
+      ],
+      "purpose": "Conversion-focused final action",
+      "selectedVariant": "banner"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Orus Studio",
+  "experience": {
+    "pattern": "talent-hub",
+    "primaryDataView": "kanban",
+    "hierarchy": "people-first",
+    "heroTreatment": "ambient",
+    "componentShape": "layered",
+    "layout": "split-focus",
+    "screenPriorities": [
+      "vagas prioritárias",
+      "candidatos em movimento",
+      "entrevistas próximas"
+    ]
+  },
+  "composition": {
+    "shell": "sidebar-workspace",
+    "contentFrame": "contained",
+    "header": "minimal",
+    "actionPlacement": "floating",
+    "mobileNavigation": "drawer",
+    "rationale": [
+      "archetype:generic",
+      "layout:split-focus",
+      "hierarchy:people-first",
+      "action:floating"
+    ]
+  },
+  "navigation": "sidebar",
+  "density": "comfortable",
+  "motion": "subtle",
+  "componentPlan": [
+    "app-shell",
+    "button",
+    "text-field",
+    "select",
+    "card",
+    "data-table",
+    "stat",
+    "badge",
+    "empty-state",
+    "toast",
+    "dialog",
+    "skeleton",
+    "kanban"
+  ]
+}

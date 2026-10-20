@@ -1,0 +1,316 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "generic",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Orus Studio",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "studio-cobalt",
+      "primary": "bg-blue-600",
+      "primaryHover": "hover:bg-blue-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-blue-50 text-blue-800",
+      "accent": "text-fuchsia-700",
+      "page": "bg-zinc-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-violet-50",
+      "text": "text-zinc-950",
+      "textMuted": "text-zinc-600",
+      "border": "border-violet-100",
+      "heroGradient": "bg-gradient-to-br from-blue-700 via-violet-700 to-fuchsia-600",
+      "cssPrimary": "37 99 235",
+      "cssPrimaryHover": "59 130 246",
+      "cssPrimarySoft": "239 246 255",
+      "cssAccent": "162 28 175",
+      "cssPage": "250 250 250",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "245 243 255",
+      "cssText": "24 24 27",
+      "cssTextMuted": "82 82 91",
+      "cssBorder": "237 233 254"
+    },
+    "identity": {
+      "personality": [
+        "warm",
+        "precise",
+        "trustworthy"
+      ],
+      "voice": "humana, objetiva e orientada a potencial",
+      "promise": "talentos e oportunidades avançam com contexto",
+      "visualMetaphor": "jornada de talentos em movimento",
+      "signature": "perfis, etapas e sinais de aderência",
+      "imagery": "pessoas, competências e encontros profissionais"
+    },
+    "experience": {
+      "pattern": "talent-hub",
+      "primaryDataView": "kanban",
+      "hierarchy": "people-first",
+      "heroTreatment": "ambient",
+      "componentShape": "layered",
+      "layout": "split-focus",
+      "screenPriorities": [
+        "vagas prioritárias",
+        "candidatos em movimento",
+        "entrevistas próximas"
+      ]
+    },
+    "composition": {
+      "shell": "sidebar-workspace",
+      "contentFrame": "contained",
+      "header": "minimal",
+      "actionPlacement": "floating",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:generic",
+        "layout:split-focus",
+        "hierarchy:people-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:editorial",
+      "domain-family:recruiting",
+      "archetype:generic",
+      "palette:explicit-blue",
+      "composition:planned-sidebar-workspace"
+    ]
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "category": "layout",
+      "variants": [
+        "topbar",
+        "sidebar"
+      ],
+      "states": [
+        "desktop",
+        "mobile"
+      ],
+      "purpose": "Application frame and responsive navigation",
+      "selectedVariant": "sidebar"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "select",
+      "category": "input",
+      "variants": [
+        "default",
+        "combobox"
+      ],
+      "states": [
+        "default",
+        "open",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Single or searchable selection",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "card",
+      "category": "data-display",
+      "variants": [
+        "standard",
+        "interactive",
+        "media",
+        "metric"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "selected",
+        "loading"
+      ],
+      "purpose": "Grouped information and actions",
+      "selectedVariant": "media"
+    },
+    {
+      "id": "data-table",
+      "category": "data-display",
+      "variants": [
+        "comfortable",
+        "compact"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "error"
+      ],
+      "purpose": "Scannable structured records",
+      "selectedVariant": "comfortable"
+    },
+    {
+      "id": "kanban",
+      "category": "data-display",
+      "variants": [
+        "workflow",
+        "priority"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "dragging"
+      ],
+      "purpose": "Work organized by stage and status",
+      "selectedVariant": "workflow"
+    },
+    {
+      "id": "stat",
+      "category": "data-display",
+      "variants": [
+        "plain",
+        "trend",
+        "progress"
+      ],
+      "states": [
+        "loading",
+        "populated"
+      ],
+      "purpose": "Key performance indicators",
+      "selectedVariant": "plain"
+    },
+    {
+      "id": "badge",
+      "category": "data-display",
+      "variants": [
+        "neutral",
+        "success",
+        "warning",
+        "danger"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Status and compact metadata",
+      "selectedVariant": "neutral"
+    },
+    {
+      "id": "empty-state",
+      "category": "feedback",
+      "variants": [
+        "first-use",
+        "no-results",
+        "error"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Actionable absence of data",
+      "selectedVariant": "first-use"
+    },
+    {
+      "id": "toast",
+      "category": "feedback",
+      "variants": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ],
+      "states": [
+        "enter",
+        "visible",
+        "exit"
+      ],
+      "purpose": "Non-blocking operation feedback",
+      "selectedVariant": "success"
+    },
+    {
+      "id": "dialog",
+      "category": "feedback",
+      "variants": [
+        "confirmation",
+        "form",
+        "detail"
+      ],
+      "states": [
+        "open",
+        "closing"
+      ],
+      "purpose": "Focused decisions and workflows",
+      "selectedVariant": "confirmation"
+    },
+    {
+      "id": "skeleton",
+      "category": "feedback",
+      "variants": [
+        "text",
+        "card",
+        "table"
+      ],
+      "states": [
+        "loading"
+      ],
+      "purpose": "Layout-stable loading feedback",
+      "selectedVariant": "text"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

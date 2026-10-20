@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-11T17:51:27.825Z",
+  "generator": "CodeGenerator",
+  "type": "fullstack",
+  "visualFingerprint": {
+    "version": 2,
+    "style": "corporate",
+    "archetype": "generic",
+    "density": "compact",
+    "locale": "pt-BR",
+    "colorMode": "dark",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Northstar Control",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "studio-cobalt",
+      "primary": "bg-blue-600",
+      "primaryHover": "hover:bg-blue-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-blue-50 text-blue-800",
+      "accent": "text-fuchsia-700",
+      "page": "bg-zinc-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-violet-50",
+      "text": "text-zinc-950",
+      "textMuted": "text-zinc-600",
+      "border": "border-violet-100",
+      "heroGradient": "bg-gradient-to-br from-blue-700 via-violet-700 to-fuchsia-600",
+      "cssPrimary": "37 99 235",
+      "cssPrimaryHover": "59 130 246",
+      "cssPrimarySoft": "239 246 255",
+      "cssAccent": "162 28 175",
+      "cssPage": "250 250 250",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "245 243 255",
+      "cssText": "24 24 27",
+      "cssTextMuted": "82 82 91",
+      "cssBorder": "237 233 254"
+    },
+    "identity": {
+      "personality": [
+        "precise",
+        "bold",
+        "trustworthy"
+      ],
+      "voice": "operacional, antecipatória e direta",
+      "promise": "cada movimento acompanhado até o destino",
+      "visualMetaphor": "rede logística em fluxo",
+      "signature": "rotas, eventos e exceções em tempo real",
+      "imagery": "mapas, deslocamentos e sinais operacionais"
+    },
+    "experience": {
+      "pattern": "logistics-control",
+      "primaryDataView": "timeline",
+      "hierarchy": "workflow-first",
+      "heroTreatment": "solid",
+      "componentShape": "outlined",
+      "layout": "dense-rail",
+      "screenPriorities": [
+        "entregas em risco",
+        "rotas em execução",
+        "capacidade da frota"
+      ]
+    },
+    "composition": {
+      "shell": "split-workspace",
+      "contentFrame": "asymmetric",
+      "header": "command",
+      "actionPlacement": "inline",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:generic",
+        "layout:dense-rail",
+        "hierarchy:workflow-first",
+        "action:inline"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "domain-family:logistics",
+      "archetype:generic",
+      "palette:explicit-blue",
+      "composition:planned-split-workspace"
+    ]
+  },
+  "prompt": "Central operacional fullstack Northstar Control para logística de cadeia fria. Deve acompanhar remessas e entregas, gestão de frota, planejamento de rotas, rastreamento logístico, sensores de temperatura e incidentes críticos. Visual escuro de sala de comando, azul noite, ciano elétrico e sinais âmbar, rail compacto, mapa operacional dominante, timeline de exceções e ações contextuais próximas aos dados. Criar fluxos de despacho, monitoramento, tratamento de incidente e confirmação de entrega. Não usar dashboard CRUD genérico.",
+  "build": "passed"
+}

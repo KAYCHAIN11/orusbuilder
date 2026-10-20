@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-11T17:51:32.646Z",
+  "generator": "CodeGenerator",
+  "type": "fullstack",
+  "visualFingerprint": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "creative",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "FrameFlow Studio",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "ink-paper",
+      "primary": "bg-gray-950",
+      "primaryHover": "hover:bg-gray-800",
+      "primaryText": "text-white",
+      "primarySoft": "bg-gray-100 text-gray-900",
+      "accent": "text-gray-950",
+      "page": "bg-white",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-gray-50",
+      "text": "text-gray-950",
+      "textMuted": "text-gray-500",
+      "border": "border-gray-200",
+      "heroGradient": "bg-gradient-to-b from-gray-50 to-white",
+      "cssPrimary": "17 24 39",
+      "cssPrimaryHover": "31 41 55",
+      "cssPrimarySoft": "243 244 246",
+      "cssAccent": "17 24 39",
+      "cssPage": "255 255 255",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "249 250 251",
+      "cssText": "17 24 39",
+      "cssTextMuted": "107 114 128",
+      "cssBorder": "229 231 235"
+    },
+    "identity": {
+      "personality": [
+        "inventive",
+        "bold",
+        "refined"
+      ],
+      "voice": "autoral, expressiva e confiante",
+      "promise": "trabalho memorável apresentado com intenção",
+      "visualMetaphor": "canvas vivo",
+      "signature": "composição assimétrica e tipografia protagonista",
+      "imagery": "portfólio imersivo e recortes de processo"
+    },
+    "experience": {
+      "pattern": "creative-studio",
+      "hierarchy": "content-first",
+      "heroTreatment": "editorial",
+      "componentShape": "layered",
+      "layout": "immersive-canvas",
+      "screenPriorities": [
+        "trabalho em destaque",
+        "projetos ativos",
+        "próximas entregas"
+      ],
+      "primaryDataView": "gallery"
+    },
+    "composition": {
+      "shell": "canvas",
+      "contentFrame": "fluid",
+      "header": "immersive",
+      "actionPlacement": "floating",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:creative",
+        "layout:immersive-canvas",
+        "hierarchy:content-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "archetype:creative",
+      "archetype-score:1",
+      "palette:explicit-green-teal",
+      "composition:explicit-canvas"
+    ]
+  },
+  "prompt": "Workspace criativo fullstack FrameFlow Studio para produtoras audiovisuais. Gerenciar projetos, cenas, takes, ativos de mídia, revisões, comentários, aprovações e entregas. Visual imersivo inspirado em sala de edição, grafite, violeta intenso e verde-lima pontual; canvas central, filmstrip horizontal, painéis flutuantes e galeria de ativos. A página inicial deve abrir o trabalho em andamento, não métricas genéricas. Criar fluxo de revisão com versões, comentários por timecode e aprovação do cliente.",
+  "build": "passed"
+}

@@ -1,0 +1,1069 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-31fa330b-3e87-47bd-901d-4be46ee7d446",
+  "projectId": "amparo-care",
+  "version": 1,
+  "status": "ready",
+  "depth": "comprehensive",
+  "source": {
+    "type": "prompt",
+    "prompt": "Aplicação clínica fullstack Amparo Care para cuidado materno e acompanhamento pós-parto. Incluir pacientes, profissionais, agenda, plano de cuidado, registros clínicos, retornos, tarefas e alertas. Visual acolhedor e sofisticado em argila, rosa queimado, ameixa e creme, formas orgânicas, tipografia humana e composição de jornada. A tela inicial deve priorizar agenda do dia, pacientes que exigem atenção e continuidade do cuidado. Criar calendário, linha do tempo clínica e permissões por papel.",
+    "documentIds": []
+  },
+  "product": {
+    "name": "Amparo Care",
+    "summary": "Aplicação clínica fullstack Amparo Care para cuidado materno e acompanhamento pós-parto. Incluir pacientes, profissionais, agenda, plano de cuidado, registros clínicos, retornos, tarefas e alertas. Visual acolhedor e sofisticado em argila, rosa queimado, ameixa e creme, formas orgânicas, tipografia humana e composição de jornada. A tela inicial deve priorizar agenda do dia, pacientes que exigem atenção e continuidade do cuidado. Criar calendário, linha do tempo clínica e permissões por papel.",
+    "problem": "Coordenar agenda e continuidade do cuidado com contexto",
+    "valueProposition": "Atendimentos organizados em torno da jornada do paciente",
+    "audience": [
+      "Profissional de saúde",
+      "Recepção"
+    ],
+    "goals": [
+      "Organizar horários, profissionais e confirmações",
+      "Manter dados essenciais do paciente",
+      "Registrar e consultar a linha do tempo clínica",
+      "Entregar alertas relevantes dentro do produto",
+      "Controlar acesso por responsabilidade"
+    ],
+    "outOfScope": []
+  },
+  "visualIntent": {
+    "version": 2,
+    "style": "premium",
+    "archetype": "healthcare",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "dark",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Amparo Care",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "electric-candy",
+      "primary": "bg-fuchsia-600",
+      "primaryHover": "hover:bg-fuchsia-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-fuchsia-50 text-fuchsia-700",
+      "accent": "text-amber-700",
+      "page": "bg-orange-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-yellow-50",
+      "text": "text-purple-950",
+      "textMuted": "text-purple-700/70",
+      "border": "border-fuchsia-200",
+      "heroGradient": "bg-gradient-to-br from-fuchsia-600 via-purple-600 to-orange-400",
+      "cssPrimary": "192 38 211",
+      "cssPrimaryHover": "217 70 239",
+      "cssPrimarySoft": "253 244 255",
+      "cssAccent": "161 98 7",
+      "cssPage": "255 247 237",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "254 252 232",
+      "cssText": "59 7 100",
+      "cssTextMuted": "107 33 168",
+      "cssBorder": "245 208 254"
+    },
+    "identity": {
+      "personality": [
+        "trustworthy",
+        "warm",
+        "precise"
+      ],
+      "voice": "acolhedora, clara e responsável",
+      "promise": "cuidado coordenado sem atrito",
+      "visualMetaphor": "ritmo de cuidado contínuo",
+      "signature": "blocos calmos, sinais de status e espaço respirável",
+      "imagery": "pessoas, cuidado e ambientes luminosos"
+    },
+    "experience": {
+      "pattern": "care-hub",
+      "hierarchy": "people-first",
+      "heroTreatment": "solid",
+      "componentShape": "quiet",
+      "layout": "split-focus",
+      "screenPriorities": [
+        "agenda do dia",
+        "pacientes prioritários",
+        "continuidade do cuidado"
+      ],
+      "primaryDataView": "calendar"
+    },
+    "composition": {
+      "shell": "sidebar-workspace",
+      "contentFrame": "contained",
+      "header": "minimal",
+      "actionPlacement": "command-bar",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:healthcare",
+        "layout:split-focus",
+        "hierarchy:people-first",
+        "action:command-bar"
+      ]
+    },
+    "evidence": [
+      "style:premium",
+      "archetype:healthcare",
+      "archetype-score:2",
+      "palette:explicit-warm",
+      "composition:planned-sidebar-workspace"
+    ]
+  },
+  "personas": [
+    {
+      "id": "PERSONA-001",
+      "name": "Profissional de saúde",
+      "goals": [
+        "Atendimentos organizados em torno da jornada do paciente"
+      ],
+      "permissions": [
+        "member"
+      ]
+    },
+    {
+      "id": "PERSONA-002",
+      "name": "Recepção",
+      "goals": [
+        "Administrar e acompanhar a operação"
+      ],
+      "permissions": [
+        "admin"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Agenda clínica",
+      "purpose": "Organizar horários, profissionais e confirmações",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Appointment",
+        "Professional",
+        "Patient"
+      ],
+      "rules": [
+        "A professional cannot have overlapping active appointments",
+        "Cancelled appointments do not block availability"
+      ],
+      "acceptanceCriteria": [
+        "Appointments require a responsible professional and reject overlapping persisted time ranges",
+        "Agenda clínica handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "healthcare:Agenda clínica",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-002",
+      "name": "Cadastro de pacientes",
+      "purpose": "Manter dados essenciais do paciente",
+      "strategy": "crud",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Patient"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Patient records can be created, loaded, updated and removed through persistent APIs",
+        "Cadastro de pacientes handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "healthcare:Cadastro de pacientes",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-003",
+      "name": "Prontuário",
+      "purpose": "Registrar e consultar a linha do tempo clínica",
+      "strategy": "custom",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "ClinicalRecord",
+        "Patient"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Prontuário completes its declared domain outcome with persisted data",
+        "Prontuário handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "healthcare:Prontuário",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-004",
+      "name": "Continuidade do cuidado",
+      "purpose": "Planejar retornos e pendências",
+      "strategy": "workflow",
+      "priority": "should",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Appointment",
+        "Patient"
+      ],
+      "rules": [
+        "A professional cannot have overlapping active appointments",
+        "Cancelled appointments do not block availability"
+      ],
+      "acceptanceCriteria": [
+        "Appointments require a responsible professional and reject overlapping persisted time ranges",
+        "Continuidade do cuidado handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "inference",
+          "excerpt": "healthcare:Continuidade do cuidado",
+          "confidence": 0.82
+        }
+      ]
+    },
+    {
+      "id": "CAP-005",
+      "name": "Notificações",
+      "purpose": "Entregar alertas relevantes dentro do produto",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Notification"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Notification records can move only through allowed persisted workflow transitions",
+        "Notificações handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Notificações",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-006",
+      "name": "Papéis e permissões",
+      "purpose": "Controlar acesso por responsabilidade",
+      "strategy": "custom",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001",
+        "PERSONA-002"
+      ],
+      "entities": [
+        "Role"
+      ],
+      "rules": [
+        "Only administrators can change access policies",
+        "Every policy declares scope and permissions"
+      ],
+      "acceptanceCriteria": [
+        "Access policies persist explicit scopes and permissions and can be changed only by administrators",
+        "Papéis e permissões handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Papéis e permissões",
+          "confidence": 0.96
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "FLOW-001",
+      "name": "Notificações",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Notificações",
+      "steps": [
+        "Open the relevant workspace",
+        "Entregar alertas relevantes dentro do produto",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "outcome": "Notification records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-002",
+      "name": "Papéis e permissões",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Papéis e permissões",
+      "steps": [
+        "Open the relevant workspace",
+        "Controlar acesso por responsabilidade",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-006"
+      ],
+      "outcome": "Access policies persist explicit scopes and permissions and can be changed only by administrators"
+    },
+    {
+      "id": "FLOW-003",
+      "name": "Agenda clínica",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Agenda clínica",
+      "steps": [
+        "Open the relevant workspace",
+        "Organizar horários, profissionais e confirmações",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "outcome": "Appointments require a responsible professional and reject overlapping persisted time ranges"
+    },
+    {
+      "id": "FLOW-004",
+      "name": "Cadastro de pacientes",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Cadastro de pacientes",
+      "steps": [
+        "Open the relevant workspace",
+        "Manter dados essenciais do paciente",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "outcome": "Patient records can be created, loaded, updated and removed through persistent APIs"
+    },
+    {
+      "id": "FLOW-005",
+      "name": "Prontuário",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Prontuário",
+      "steps": [
+        "Open the relevant workspace",
+        "Registrar e consultar a linha do tempo clínica",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "outcome": "Prontuário completes its declared domain outcome with persisted data"
+    }
+  ],
+  "screens": [
+    {
+      "id": "SCREEN-001",
+      "name": "Central de cuidado",
+      "route": "/",
+      "purpose": "Priorizar agenda e pacientes",
+      "layout": "care-hub",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-004"
+      ],
+      "componentIds": [
+        "COMP-001",
+        "COMP-002",
+        "COMP-003"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-002",
+      "name": "Agenda",
+      "route": "/appointments",
+      "purpose": "Gerenciar atendimentos",
+      "layout": "calendar",
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "componentIds": [
+        "COMP-004",
+        "COMP-005",
+        "COMP-006"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-003",
+      "name": "Pacientes",
+      "route": "/patients",
+      "purpose": "Localizar pacientes",
+      "layout": "directory",
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-007",
+        "COMP-008"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-004",
+      "name": "Paciente",
+      "route": "/patients/:id",
+      "purpose": "Acompanhar histórico e plano de cuidado",
+      "layout": "timeline",
+      "capabilityIds": [
+        "CAP-003",
+        "CAP-004"
+      ],
+      "componentIds": [
+        "COMP-009",
+        "COMP-010",
+        "COMP-011"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-005",
+      "name": "Notificações",
+      "route": "/notifications",
+      "purpose": "Entregar alertas relevantes dentro do produto",
+      "layout": "inbox",
+      "capabilityIds": [
+        "CAP-005"
+      ],
+      "componentIds": [
+        "COMP-012",
+        "COMP-013"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-006",
+      "name": "Papéis e permissões",
+      "route": "/access",
+      "purpose": "Controlar acesso por responsabilidade",
+      "layout": "permission-matrix",
+      "capabilityIds": [
+        "CAP-006"
+      ],
+      "componentIds": [
+        "COMP-014",
+        "COMP-015",
+        "COMP-016"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-001",
+      "name": "DailyAgenda",
+      "category": "domain",
+      "purpose": "DailyAgenda on Central de cuidado",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "name": "CareAlerts",
+      "category": "domain",
+      "purpose": "CareAlerts on Central de cuidado",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "name": "PatientQueue",
+      "category": "domain",
+      "purpose": "PatientQueue on Central de cuidado",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "name": "Calendar",
+      "category": "domain",
+      "purpose": "Calendar on Agenda",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "name": "AppointmentDrawer",
+      "category": "domain",
+      "purpose": "AppointmentDrawer on Agenda",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "name": "ProfessionalFilter",
+      "category": "domain",
+      "purpose": "ProfessionalFilter on Agenda",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-007",
+      "name": "PatientDirectory",
+      "category": "domain",
+      "purpose": "PatientDirectory on Pacientes",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-008",
+      "name": "PatientSearch",
+      "category": "domain",
+      "purpose": "PatientSearch on Pacientes",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-009",
+      "name": "PatientHeader",
+      "category": "domain",
+      "purpose": "PatientHeader on Paciente",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-010",
+      "name": "ClinicalTimeline",
+      "category": "domain",
+      "purpose": "ClinicalTimeline on Paciente",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-011",
+      "name": "FollowUpPanel",
+      "category": "domain",
+      "purpose": "FollowUpPanel on Paciente",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-012",
+      "name": "NotificationInbox",
+      "category": "domain",
+      "purpose": "NotificationInbox on Notificações",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-013",
+      "name": "NotificationPreferences",
+      "category": "domain",
+      "purpose": "NotificationPreferences on Notificações",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-014",
+      "name": "RoleDirectory",
+      "category": "domain",
+      "purpose": "RoleDirectory on Papéis e permissões",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-015",
+      "name": "PermissionMatrix",
+      "category": "domain",
+      "purpose": "PermissionMatrix on Papéis e permissões",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    },
+    {
+      "id": "COMP-016",
+      "name": "AccessAudit",
+      "category": "domain",
+      "purpose": "AccessAudit on Papéis e permissões",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-006"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "DATA-001",
+      "name": "Patient",
+      "purpose": "Support Agenda clínica, Cadastro de pacientes, Prontuário, Continuidade do cuidado",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002",
+        "CAP-003",
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-002",
+      "name": "Appointment",
+      "purpose": "Support Agenda clínica, Continuidade do cuidado",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-003",
+      "name": "ClinicalRecord",
+      "purpose": "Support Prontuário",
+      "capabilityIds": [
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-004",
+      "name": "Professional",
+      "purpose": "Support Agenda clínica",
+      "capabilityIds": [
+        "CAP-001"
+      ]
+    },
+    {
+      "id": "DATA-005",
+      "name": "Notification",
+      "purpose": "Support Notificações",
+      "capabilityIds": [
+        "CAP-005"
+      ]
+    },
+    {
+      "id": "DATA-006",
+      "name": "Role",
+      "purpose": "Support Papéis e permissões",
+      "capabilityIds": [
+        "CAP-006"
+      ]
+    }
+  ],
+  "architecture": {
+    "frontend": [
+      "react",
+      "typescript"
+    ],
+    "backend": [
+      "node.js",
+      "express"
+    ],
+    "database": "sqlite",
+    "authentication": true,
+    "api": "rest"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "AC-001",
+      "statement": "Appointments require a responsible professional and reject overlapping persisted time ranges",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-002",
+      "statement": "Agenda clínica handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-003",
+      "statement": "Patient records can be created, loaded, updated and removed through persistent APIs",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "persistence",
+      "entity": "Patient",
+      "route": "/patients",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-004",
+      "statement": "Cadastro de pacientes handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Patient",
+      "route": "/patients",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-005",
+      "statement": "Prontuário completes its declared domain outcome with persisted data",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "custom",
+      "entity": "ClinicalRecord",
+      "route": "/patients/:id",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-006",
+      "statement": "Prontuário handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "ClinicalRecord",
+      "route": "/patients/:id",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-007",
+      "statement": "Appointments require a responsible professional and reject overlapping persisted time ranges",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": false,
+      "kind": "workflow",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-008",
+      "statement": "Continuidade do cuidado handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": false,
+      "kind": "state-handling",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-009",
+      "statement": "Notification records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-010",
+      "statement": "Notificações handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-011",
+      "statement": "Access policies persist explicit scopes and permissions and can be changed only by administrators",
+      "capabilityId": "CAP-006",
+      "testType": "journey",
+      "required": true,
+      "kind": "custom",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-012",
+      "statement": "Papéis e permissões handles loading, empty, success and error states",
+      "capabilityId": "CAP-006",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Low-confidence requirements must be reviewed in the workspace"
+  ],
+  "openQuestions": [],
+  "confidence": 0.71,
+  "createdAt": "2026-10-11T17:51:29.170Z",
+  "updatedAt": "2026-10-11T17:51:29.170Z"
+}

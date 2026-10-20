@@ -1,0 +1,563 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-daa7aa82-df5c-4ea6-a6f6-a0093913e080",
+  "projectId": "lumen-academy",
+  "version": 1,
+  "status": "ready",
+  "depth": "comprehensive",
+  "source": {
+    "type": "prompt",
+    "prompt": "Plataforma fullstack Lumen Academy para formação criativa. Deve possuir catálogo de cursos, trilhas, aulas, matrículas, progresso, avaliações e certificados. Identidade clara e otimista com azul cobalto, amarelo solar e fundos marfim; navegação superior, capas editoriais grandes, catálogo visual em mosaico e página inicial semelhante a um campus digital, não a um painel administrativo. Criar jornadas de descoberta, matrícula, continuidade da aula, avaliação e conclusão.",
+    "documentIds": []
+  },
+  "product": {
+    "name": "Lumen Academy",
+    "summary": "Plataforma fullstack Lumen Academy para formação criativa. Deve possuir catálogo de cursos, trilhas, aulas, matrículas, progresso, avaliações e certificados. Identidade clara e otimista com azul cobalto, amarelo solar e fundos marfim; navegação superior, capas editoriais grandes, catálogo visual em mosaico e página inicial semelhante a um campus digital, não a um painel administrativo. Criar jornadas de descoberta, matrícula, continuidade da aula, avaliação e conclusão.",
+    "problem": "Executar o objetivo descrito pelo usuário",
+    "valueProposition": "Uma experiência coerente com o fluxo solicitado",
+    "audience": [
+      "Usuário"
+    ],
+    "goals": [
+      "Organizar cursos, trilhas e conteúdos de aprendizagem",
+      "Relacionar estudantes a cursos e acompanhar sua situação acadêmica"
+    ],
+    "outOfScope": []
+  },
+  "visualIntent": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "generic",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "Lumen Academy",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "studio-cobalt",
+      "primary": "bg-blue-600",
+      "primaryHover": "hover:bg-blue-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-blue-50 text-blue-800",
+      "accent": "text-fuchsia-700",
+      "page": "bg-zinc-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-violet-50",
+      "text": "text-zinc-950",
+      "textMuted": "text-zinc-600",
+      "border": "border-violet-100",
+      "heroGradient": "bg-gradient-to-br from-blue-700 via-violet-700 to-fuchsia-600",
+      "cssPrimary": "37 99 235",
+      "cssPrimaryHover": "59 130 246",
+      "cssPrimarySoft": "239 246 255",
+      "cssAccent": "162 28 175",
+      "cssPage": "250 250 250",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "245 243 255",
+      "cssText": "24 24 27",
+      "cssTextMuted": "82 82 91",
+      "cssBorder": "237 233 254"
+    },
+    "identity": {
+      "personality": [
+        "inventive",
+        "warm",
+        "trustworthy"
+      ],
+      "voice": "encorajadora, clara e progressiva",
+      "promise": "aprendizagem visível do primeiro passo à conquista",
+      "visualMetaphor": "campus vivo de conhecimento",
+      "signature": "trilhas, marcos e progresso acumulado",
+      "imagery": "conteúdo, descoberta e evolução pessoal"
+    },
+    "experience": {
+      "pattern": "learning-campus",
+      "primaryDataView": "catalog",
+      "hierarchy": "content-first",
+      "heroTreatment": "editorial",
+      "componentShape": "elevated",
+      "layout": "editorial-stack",
+      "screenPriorities": [
+        "trilhas em destaque",
+        "progresso dos estudantes",
+        "avaliações pendentes"
+      ]
+    },
+    "composition": {
+      "shell": "top-navigation",
+      "contentFrame": "narrow",
+      "header": "editorial",
+      "actionPlacement": "header",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:generic",
+        "layout:editorial-stack",
+        "hierarchy:content-first",
+        "action:header"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "domain-family:education",
+      "archetype:generic",
+      "palette:explicit-cobalt",
+      "composition:explicit-top-navigation"
+    ]
+  },
+  "personas": [
+    {
+      "id": "PERSONA-001",
+      "name": "Usuário",
+      "goals": [
+        "Uma experiência coerente com o fluxo solicitado"
+      ],
+      "permissions": [
+        "member"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Catálogo de cursos",
+      "purpose": "Organizar cursos, trilhas e conteúdos de aprendizagem",
+      "strategy": "content",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Course",
+        "Lesson"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Course content can be created, loaded and opened from persistent storage",
+        "Catálogo de cursos handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Catálogo de cursos",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-002",
+      "name": "Matrículas",
+      "purpose": "Relacionar estudantes a cursos e acompanhar sua situação acadêmica",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Enrollment",
+        "Student",
+        "Course"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Enrollment records can move only through allowed persisted workflow transitions",
+        "Matrículas handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Matrículas",
+          "confidence": 0.96
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "FLOW-001",
+      "name": "Catálogo de cursos",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Catálogo de cursos",
+      "steps": [
+        "Open the relevant workspace",
+        "Organizar cursos, trilhas e conteúdos de aprendizagem",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "outcome": "Course content can be created, loaded and opened from persistent storage"
+    },
+    {
+      "id": "FLOW-002",
+      "name": "Matrículas",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Matrículas",
+      "steps": [
+        "Open the relevant workspace",
+        "Relacionar estudantes a cursos e acompanhar sua situação acadêmica",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "outcome": "Enrollment records can move only through allowed persisted workflow transitions"
+    }
+  ],
+  "screens": [
+    {
+      "id": "SCREEN-001",
+      "name": "Experiência principal",
+      "route": "/",
+      "purpose": "Executar o fluxo principal",
+      "layout": "editorial-overview",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-001",
+        "COMP-002",
+        "COMP-003"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-002",
+      "name": "Catálogo de cursos",
+      "route": "/courses",
+      "purpose": "Organizar cursos, trilhas e conteúdos de aprendizagem",
+      "layout": "catalog",
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "componentIds": [
+        "COMP-004",
+        "COMP-005",
+        "COMP-006"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-003",
+      "name": "Matrículas",
+      "route": "/enrollments",
+      "purpose": "Relacionar estudantes a cursos e acompanhar sua situação acadêmica",
+      "layout": "directory",
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-007",
+        "COMP-008",
+        "COMP-009"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-001",
+      "name": "PrimaryWorkspace",
+      "category": "domain",
+      "purpose": "PrimaryWorkspace on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "name": "ActionPanel",
+      "category": "domain",
+      "purpose": "ActionPanel on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "name": "FeedbackState",
+      "category": "domain",
+      "purpose": "FeedbackState on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "name": "CourseCatalog",
+      "category": "domain",
+      "purpose": "CourseCatalog on Catálogo de cursos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "name": "LearningPathFilter",
+      "category": "domain",
+      "purpose": "LearningPathFilter on Catálogo de cursos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "name": "CourseEditor",
+      "category": "domain",
+      "purpose": "CourseEditor on Catálogo de cursos",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-007",
+      "name": "EnrollmentDirectory",
+      "category": "domain",
+      "purpose": "EnrollmentDirectory on Matrículas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-008",
+      "name": "StudentSearch",
+      "category": "domain",
+      "purpose": "StudentSearch on Matrículas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-009",
+      "name": "EnrollmentDrawer",
+      "category": "domain",
+      "purpose": "EnrollmentDrawer on Matrículas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "DATA-001",
+      "name": "Course",
+      "purpose": "Support Catálogo de cursos, Matrículas",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002"
+      ]
+    },
+    {
+      "id": "DATA-002",
+      "name": "Lesson",
+      "purpose": "Support Catálogo de cursos",
+      "capabilityIds": [
+        "CAP-001"
+      ]
+    },
+    {
+      "id": "DATA-003",
+      "name": "Enrollment",
+      "purpose": "Support Matrículas",
+      "capabilityIds": [
+        "CAP-002"
+      ]
+    },
+    {
+      "id": "DATA-004",
+      "name": "Student",
+      "purpose": "Support Matrículas",
+      "capabilityIds": [
+        "CAP-002"
+      ]
+    }
+  ],
+  "architecture": {
+    "frontend": [
+      "react",
+      "typescript"
+    ],
+    "backend": [
+      "node.js",
+      "express"
+    ],
+    "database": "sqlite",
+    "authentication": true,
+    "api": "rest"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "AC-001",
+      "statement": "Course content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "Course",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-002",
+      "statement": "Catálogo de cursos handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Course",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-003",
+      "statement": "Enrollment records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Enrollment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-004",
+      "statement": "Matrículas handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Enrollment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Low-confidence requirements must be reviewed in the workspace"
+  ],
+  "openQuestions": [],
+  "confidence": 0.71,
+  "createdAt": "2026-10-11T17:51:27.880Z",
+  "updatedAt": "2026-10-11T17:51:27.880Z"
+}

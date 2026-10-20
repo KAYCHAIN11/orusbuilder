@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Amparo Care",
+  "style": "premium",
+  "archetype": "healthcare",
+  "identity": {
+    "personality": [
+      "trustworthy",
+      "warm",
+      "precise"
+    ],
+    "voice": "acolhedora, clara e responsável",
+    "promise": "cuidado coordenado sem atrito",
+    "visualMetaphor": "ritmo de cuidado contínuo",
+    "signature": "blocos calmos, sinais de status e espaço respirável",
+    "imagery": "pessoas, cuidado e ambientes luminosos"
+  },
+  "typography": {
+    "display": "Manrope",
+    "body": "Inter"
+  },
+  "palette": {
+    "name": "electric-candy",
+    "primary": "bg-fuchsia-600",
+    "primaryHover": "hover:bg-fuchsia-500",
+    "primaryText": "text-white",
+    "primarySoft": "bg-fuchsia-50 text-fuchsia-700",
+    "accent": "text-amber-700",
+    "page": "bg-orange-50",
+    "surface": "bg-white",
+    "surfaceMuted": "bg-yellow-50",
+    "text": "text-purple-950",
+    "textMuted": "text-purple-700/70",
+    "border": "border-fuchsia-200",
+    "heroGradient": "bg-gradient-to-br from-fuchsia-600 via-purple-600 to-orange-400",
+    "cssPrimary": "192 38 211",
+    "cssPrimaryHover": "217 70 239",
+    "cssPrimarySoft": "253 244 255",
+    "cssAccent": "161 98 7",
+    "cssPage": "255 247 237",
+    "cssSurface": "255 255 255",
+    "cssSurfaceMuted": "254 252 232",
+    "cssText": "59 7 100",
+    "cssTextMuted": "107 33 168",
+    "cssBorder": "245 208 254"
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-1c3e6002-0dcf-43b8-a810-4d3bc58be411",
+  "blueprintVersion": 1,
+  "criteria": [
+    {
+      "id": "AC-001",
+      "statement": "Project content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Portfólio",
+        "strategy": "content",
+        "entities": [
+          "Project",
+          "Asset"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Estúdio",
+          "route": "/"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-002",
+      "statement": "Portfólio handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Portfólio",
+        "strategy": "content",
+        "entities": [
+          "Project",
+          "Asset"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Estúdio",
+          "route": "/"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-003",
+      "statement": "Project records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Produção criativa",
+        "strategy": "workflow",
+        "entities": [
+          "Project",
+          "Asset"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Estúdio",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Projetos",
+          "route": "/projects"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-004",
+      "statement": "Produção criativa handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Project",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Produção criativa",
+        "strategy": "workflow",
+        "entities": [
+          "Project",
+          "Asset"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Estúdio",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Projetos",
+          "route": "/projects"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-005",
+      "statement": "Review records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Review",
+      "route": "/reviews",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Revisão",
+        "strategy": "workflow",
+        "entities": [
+          "Review",
+          "Project"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-003",
+          "name": "Revisão",
+          "route": "/reviews"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-006",
+      "statement": "Revisão handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Review",
+      "route": "/reviews",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Revisão",
+        "strategy": "workflow",
+        "entities": [
+          "Review",
+          "Project"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-003",
+          "name": "Revisão",
+          "route": "/reviews"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-007",
+      "statement": "Customer records can be created, loaded, updated and removed through persistent APIs",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": true,
+      "kind": "persistence",
+      "entity": "Customer",
+      "route": "/customers",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Clientes",
+        "strategy": "crud",
+        "entities": [
+          "Customer"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-004",
+          "name": "Clientes",
+          "route": "/customers"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-008",
+      "statement": "Clientes handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Customer",
+      "route": "/customers",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Clientes",
+        "strategy": "crud",
+        "entities": [
+          "Customer"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-004",
+          "name": "Clientes",
+          "route": "/customers"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-009",
+      "statement": "Report indicators are calculated from all persisted source records and expose grouped totals",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "calculation",
+      "entity": "Report",
+      "route": "/reports",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Relatórios e análises",
+        "strategy": "computed",
+        "entities": [
+          "Report"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Relatórios e análises",
+          "route": "/reports"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-010",
+      "statement": "Relatórios e análises handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Report",
+      "route": "/reports",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Relatórios e análises",
+        "strategy": "computed",
+        "entities": [
+          "Report"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Relatórios e análises",
+          "route": "/reports"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-011",
+      "statement": "FileAsset content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-006",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "FileAsset",
+      "route": "/files",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-006",
+        "name": "Arquivos",
+        "strategy": "content",
+        "entities": [
+          "FileAsset"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Arquivos",
+          "route": "/files"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-012",
+      "statement": "Arquivos handles loading, empty, success and error states",
+      "capabilityId": "CAP-006",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "FileAsset",
+      "route": "/files",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-006",
+        "name": "Arquivos",
+        "strategy": "content",
+        "entities": [
+          "FileAsset"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Arquivos",
+          "route": "/files"
+        }
+      ],
+      "status": "planned"
+    }
+  ]
+}

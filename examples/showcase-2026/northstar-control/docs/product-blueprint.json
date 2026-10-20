@@ -1,0 +1,880 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-3e4e45aa-c019-4fc6-8d84-bf787ea9f2bc",
+  "projectId": "northstar-control",
+  "version": 1,
+  "status": "ready",
+  "depth": "comprehensive",
+  "source": {
+    "type": "prompt",
+    "prompt": "Central operacional fullstack Northstar Control para logística de cadeia fria. Deve acompanhar remessas e entregas, gestão de frota, planejamento de rotas, rastreamento logístico, sensores de temperatura e incidentes críticos. Visual escuro de sala de comando, azul noite, ciano elétrico e sinais âmbar, rail compacto, mapa operacional dominante, timeline de exceções e ações contextuais próximas aos dados. Criar fluxos de despacho, monitoramento, tratamento de incidente e confirmação de entrega. Não usar dashboard CRUD genérico.",
+    "documentIds": []
+  },
+  "product": {
+    "name": "Northstar Control",
+    "summary": "Central operacional fullstack Northstar Control para logística de cadeia fria. Deve acompanhar remessas e entregas, gestão de frota, planejamento de rotas, rastreamento logístico, sensores de temperatura e incidentes críticos. Visual escuro de sala de comando, azul noite, ciano elétrico e sinais âmbar, rail compacto, mapa operacional dominante, timeline de exceções e ações contextuais próximas aos dados. Criar fluxos de despacho, monitoramento, tratamento de incidente e confirmação de entrega. Não usar dashboard CRUD genérico.",
+    "problem": "Executar o objetivo descrito pelo usuário",
+    "valueProposition": "Uma experiência coerente com o fluxo solicitado",
+    "audience": [
+      "Usuário"
+    ],
+    "goals": [
+      "Coordenar remessas desde a expedição até a confirmação de entrega",
+      "Manter veículos, motoristas e disponibilidade operacional",
+      "Planejar rotas e distribuir entregas por capacidade e prioridade",
+      "Registrar eventos de rastreamento e comunicar exceções operacionais"
+    ],
+    "outOfScope": []
+  },
+  "visualIntent": {
+    "version": 2,
+    "style": "corporate",
+    "archetype": "generic",
+    "density": "compact",
+    "locale": "pt-BR",
+    "colorMode": "dark",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Northstar Control",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "studio-cobalt",
+      "primary": "bg-blue-600",
+      "primaryHover": "hover:bg-blue-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-blue-50 text-blue-800",
+      "accent": "text-fuchsia-700",
+      "page": "bg-zinc-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-violet-50",
+      "text": "text-zinc-950",
+      "textMuted": "text-zinc-600",
+      "border": "border-violet-100",
+      "heroGradient": "bg-gradient-to-br from-blue-700 via-violet-700 to-fuchsia-600",
+      "cssPrimary": "37 99 235",
+      "cssPrimaryHover": "59 130 246",
+      "cssPrimarySoft": "239 246 255",
+      "cssAccent": "162 28 175",
+      "cssPage": "250 250 250",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "245 243 255",
+      "cssText": "24 24 27",
+      "cssTextMuted": "82 82 91",
+      "cssBorder": "237 233 254"
+    },
+    "identity": {
+      "personality": [
+        "precise",
+        "bold",
+        "trustworthy"
+      ],
+      "voice": "operacional, antecipatória e direta",
+      "promise": "cada movimento acompanhado até o destino",
+      "visualMetaphor": "rede logística em fluxo",
+      "signature": "rotas, eventos e exceções em tempo real",
+      "imagery": "mapas, deslocamentos e sinais operacionais"
+    },
+    "experience": {
+      "pattern": "logistics-control",
+      "primaryDataView": "timeline",
+      "hierarchy": "workflow-first",
+      "heroTreatment": "solid",
+      "componentShape": "outlined",
+      "layout": "dense-rail",
+      "screenPriorities": [
+        "entregas em risco",
+        "rotas em execução",
+        "capacidade da frota"
+      ]
+    },
+    "composition": {
+      "shell": "split-workspace",
+      "contentFrame": "asymmetric",
+      "header": "command",
+      "actionPlacement": "inline",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:generic",
+        "layout:dense-rail",
+        "hierarchy:workflow-first",
+        "action:inline"
+      ]
+    },
+    "evidence": [
+      "style:premium-default",
+      "domain-family:logistics",
+      "archetype:generic",
+      "palette:explicit-blue",
+      "composition:planned-split-workspace"
+    ]
+  },
+  "personas": [
+    {
+      "id": "PERSONA-001",
+      "name": "Usuário",
+      "goals": [
+        "Uma experiência coerente com o fluxo solicitado"
+      ],
+      "permissions": [
+        "public"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Remessas e entregas",
+      "purpose": "Coordenar remessas desde a expedição até a confirmação de entrega",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Shipment",
+        "Delivery"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "Shipment records can move only through allowed persisted workflow transitions",
+        "Remessas e entregas handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Remessas e entregas",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-002",
+      "name": "Frota",
+      "purpose": "Manter veículos, motoristas e disponibilidade operacional",
+      "strategy": "crud",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "Vehicle",
+        "Driver"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "Vehicle records can be created, loaded, updated and removed through persistent APIs",
+        "Frota handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Frota",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-003",
+      "name": "Planejamento de rotas",
+      "purpose": "Planejar rotas e distribuir entregas por capacidade e prioridade",
+      "strategy": "workflow",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "DeliveryRoute",
+        "Shipment",
+        "Vehicle"
+      ],
+      "rules": [
+        "Transitions must follow the defined domain workflow"
+      ],
+      "acceptanceCriteria": [
+        "DeliveryRoute records can move only through allowed persisted workflow transitions",
+        "Planejamento de rotas handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Planejamento de rotas",
+          "confidence": 0.96
+        }
+      ]
+    },
+    {
+      "id": "CAP-004",
+      "name": "Rastreamento logístico",
+      "purpose": "Registrar eventos de rastreamento e comunicar exceções operacionais",
+      "strategy": "content",
+      "priority": "must",
+      "actors": [
+        "PERSONA-001"
+      ],
+      "entities": [
+        "TrackingEvent",
+        "Shipment"
+      ],
+      "rules": [],
+      "acceptanceCriteria": [
+        "TrackingEvent content can be created, loaded and opened from persistent storage",
+        "Rastreamento logístico handles loading, empty, success and error states"
+      ],
+      "evidence": [
+        {
+          "source": "user",
+          "excerpt": "Rastreamento logístico",
+          "confidence": 0.96
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "FLOW-001",
+      "name": "Remessas e entregas",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Remessas e entregas",
+      "steps": [
+        "Open the relevant workspace",
+        "Coordenar remessas desde a expedição até a confirmação de entrega",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "outcome": "Shipment records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-002",
+      "name": "Frota",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Frota",
+      "steps": [
+        "Open the relevant workspace",
+        "Manter veículos, motoristas e disponibilidade operacional",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "outcome": "Vehicle records can be created, loaded, updated and removed through persistent APIs"
+    },
+    {
+      "id": "FLOW-003",
+      "name": "Planejamento de rotas",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Planejamento de rotas",
+      "steps": [
+        "Open the relevant workspace",
+        "Planejar rotas e distribuir entregas por capacidade e prioridade",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "outcome": "DeliveryRoute records can move only through allowed persisted workflow transitions"
+    },
+    {
+      "id": "FLOW-004",
+      "name": "Rastreamento logístico",
+      "actorId": "PERSONA-001",
+      "trigger": "The user starts Rastreamento logístico",
+      "steps": [
+        "Open the relevant workspace",
+        "Registrar eventos de rastreamento e comunicar exceções operacionais",
+        "Review the result and receive feedback"
+      ],
+      "capabilityIds": [
+        "CAP-004"
+      ],
+      "outcome": "TrackingEvent content can be created, loaded and opened from persistent storage"
+    }
+  ],
+  "screens": [
+    {
+      "id": "SCREEN-001",
+      "name": "Experiência principal",
+      "route": "/",
+      "purpose": "Executar o fluxo principal",
+      "layout": "editorial-overview",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-002",
+        "CAP-003"
+      ],
+      "componentIds": [
+        "COMP-001",
+        "COMP-002",
+        "COMP-003"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-002",
+      "name": "Remessas e entregas",
+      "route": "/shipments",
+      "purpose": "Coordenar remessas desde a expedição até a confirmação de entrega",
+      "layout": "timeline",
+      "capabilityIds": [
+        "CAP-001"
+      ],
+      "componentIds": [
+        "COMP-004",
+        "COMP-005",
+        "COMP-006"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-003",
+      "name": "Frota",
+      "route": "/fleet",
+      "purpose": "Manter veículos, motoristas e disponibilidade operacional",
+      "layout": "directory",
+      "capabilityIds": [
+        "CAP-002"
+      ],
+      "componentIds": [
+        "COMP-007",
+        "COMP-008",
+        "COMP-009"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-004",
+      "name": "Planejamento de rotas",
+      "route": "/routes",
+      "purpose": "Planejar rotas e distribuir entregas por capacidade e prioridade",
+      "layout": "command-center",
+      "capabilityIds": [
+        "CAP-003"
+      ],
+      "componentIds": [
+        "COMP-010",
+        "COMP-011",
+        "COMP-012"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    },
+    {
+      "id": "SCREEN-005",
+      "name": "Rastreamento logístico",
+      "route": "/tracking",
+      "purpose": "Registrar eventos de rastreamento e comunicar exceções operacionais",
+      "layout": "timeline",
+      "capabilityIds": [
+        "CAP-004"
+      ],
+      "componentIds": [
+        "COMP-013",
+        "COMP-014",
+        "COMP-015"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "COMP-001",
+      "name": "PrimaryWorkspace",
+      "category": "domain",
+      "purpose": "PrimaryWorkspace on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-002",
+      "name": "ActionPanel",
+      "category": "domain",
+      "purpose": "ActionPanel on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-003",
+      "name": "FeedbackState",
+      "category": "domain",
+      "purpose": "FeedbackState on Experiência principal",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-001"
+      ]
+    },
+    {
+      "id": "COMP-004",
+      "name": "ShipmentTimeline",
+      "category": "domain",
+      "purpose": "ShipmentTimeline on Remessas e entregas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-005",
+      "name": "DeliveryStatus",
+      "category": "domain",
+      "purpose": "DeliveryStatus on Remessas e entregas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-006",
+      "name": "ExceptionQueue",
+      "category": "domain",
+      "purpose": "ExceptionQueue on Remessas e entregas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-002"
+      ]
+    },
+    {
+      "id": "COMP-007",
+      "name": "FleetDirectory",
+      "category": "domain",
+      "purpose": "FleetDirectory on Frota",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-008",
+      "name": "VehicleStatus",
+      "category": "domain",
+      "purpose": "VehicleStatus on Frota",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-009",
+      "name": "DriverRoster",
+      "category": "domain",
+      "purpose": "DriverRoster on Frota",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-003"
+      ]
+    },
+    {
+      "id": "COMP-010",
+      "name": "RoutePlanner",
+      "category": "domain",
+      "purpose": "RoutePlanner on Planejamento de rotas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-011",
+      "name": "DispatchMap",
+      "category": "domain",
+      "purpose": "DispatchMap on Planejamento de rotas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-012",
+      "name": "CapacityPanel",
+      "category": "domain",
+      "purpose": "CapacityPanel on Planejamento de rotas",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-004"
+      ]
+    },
+    {
+      "id": "COMP-013",
+      "name": "TrackingTimeline",
+      "category": "domain",
+      "purpose": "TrackingTimeline on Rastreamento logístico",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-014",
+      "name": "ShipmentLookup",
+      "category": "domain",
+      "purpose": "ShipmentLookup on Rastreamento logístico",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    },
+    {
+      "id": "COMP-015",
+      "name": "ExceptionDetails",
+      "category": "domain",
+      "purpose": "ExceptionDetails on Rastreamento logístico",
+      "variants": [
+        "default"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "ready",
+        "error"
+      ],
+      "screenIds": [
+        "SCREEN-005"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "id": "DATA-001",
+      "name": "Shipment",
+      "purpose": "Support Remessas e entregas, Planejamento de rotas, Rastreamento logístico",
+      "capabilityIds": [
+        "CAP-001",
+        "CAP-003",
+        "CAP-004"
+      ]
+    },
+    {
+      "id": "DATA-002",
+      "name": "Delivery",
+      "purpose": "Support Remessas e entregas",
+      "capabilityIds": [
+        "CAP-001"
+      ]
+    },
+    {
+      "id": "DATA-003",
+      "name": "Vehicle",
+      "purpose": "Support Frota, Planejamento de rotas",
+      "capabilityIds": [
+        "CAP-002",
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-004",
+      "name": "Driver",
+      "purpose": "Support Frota",
+      "capabilityIds": [
+        "CAP-002"
+      ]
+    },
+    {
+      "id": "DATA-005",
+      "name": "DeliveryRoute",
+      "purpose": "Support Planejamento de rotas",
+      "capabilityIds": [
+        "CAP-003"
+      ]
+    },
+    {
+      "id": "DATA-006",
+      "name": "TrackingEvent",
+      "purpose": "Support Rastreamento logístico",
+      "capabilityIds": [
+        "CAP-004"
+      ]
+    }
+  ],
+  "architecture": {
+    "frontend": [
+      "react",
+      "typescript"
+    ],
+    "backend": [
+      "node.js",
+      "express"
+    ],
+    "database": "sqlite",
+    "authentication": false,
+    "api": "rest"
+  },
+  "acceptanceCriteria": [
+    {
+      "id": "AC-001",
+      "statement": "Shipment records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Shipment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-002",
+      "statement": "Remessas e entregas handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Shipment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-003",
+      "statement": "Vehicle records can be created, loaded, updated and removed through persistent APIs",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "persistence",
+      "entity": "Vehicle",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-004",
+      "statement": "Frota handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Vehicle",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-005",
+      "statement": "DeliveryRoute records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "DeliveryRoute",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-006",
+      "statement": "Planejamento de rotas handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "DeliveryRoute",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    },
+    {
+      "id": "AC-007",
+      "statement": "TrackingEvent content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "TrackingEvent",
+      "route": "/tracking",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ]
+    },
+    {
+      "id": "AC-008",
+      "statement": "Rastreamento logístico handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "TrackingEvent",
+      "route": "/tracking",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ]
+    }
+  ],
+  "assumptions": [
+    "Low-confidence requirements must be reviewed in the workspace"
+  ],
+  "openQuestions": [],
+  "confidence": 0.71,
+  "createdAt": "2026-10-11T17:51:25.738Z",
+  "updatedAt": "2026-10-11T17:51:25.738Z"
+}

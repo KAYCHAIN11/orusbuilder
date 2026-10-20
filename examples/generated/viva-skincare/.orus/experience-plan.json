@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "VIVA",
+  "experience": {
+    "pattern": "commerce-pulse",
+    "hierarchy": "metric-first",
+    "heroTreatment": "gradient",
+    "componentShape": "elevated",
+    "screenPriorities": [
+      "receita e conversão",
+      "pedidos",
+      "catálogo e estoque"
+    ],
+    "primaryDataView": "catalog"
+  },
+  "navigation": "top",
+  "density": "comfortable",
+  "motion": "subtle",
+  "componentPlan": [
+    "hero",
+    "feature-grid",
+    "testimonial",
+    "cta",
+    "button",
+    "text-field"
+  ]
+}

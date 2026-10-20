@@ -1,0 +1,313 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "editorial",
+    "archetype": "generic",
+    "density": "spacious",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "Orus Studio",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "earth-atelier",
+      "primary": "bg-orange-800",
+      "primaryHover": "hover:bg-orange-700",
+      "primaryText": "text-white",
+      "primarySoft": "bg-orange-100 text-orange-950",
+      "accent": "text-lime-900",
+      "page": "bg-stone-100",
+      "surface": "bg-amber-50",
+      "surfaceMuted": "bg-stone-200",
+      "text": "text-stone-900",
+      "textMuted": "text-stone-600",
+      "border": "border-stone-300",
+      "heroGradient": "bg-gradient-to-br from-stone-100 via-amber-50 to-orange-100",
+      "cssPrimary": "154 52 18",
+      "cssPrimaryHover": "194 65 12",
+      "cssPrimarySoft": "255 237 213",
+      "cssAccent": "54 83 20",
+      "cssPage": "245 245 244",
+      "cssSurface": "255 251 235",
+      "cssSurfaceMuted": "231 229 228",
+      "cssText": "28 25 23",
+      "cssTextMuted": "87 83 78",
+      "cssBorder": "214 211 209"
+    },
+    "identity": {
+      "personality": [
+        "refined",
+        "trustworthy"
+      ],
+      "voice": "clara, contemporânea e confiante",
+      "promise": "uma experiência coerente do início ao resultado",
+      "visualMetaphor": "sistema modular",
+      "signature": "ritmo consistente, contraste e foco em tarefas",
+      "imagery": "contexto real de uso e detalhes do produto"
+    },
+    "experience": {
+      "pattern": "editorial-overview",
+      "hierarchy": "content-first",
+      "heroTreatment": "editorial",
+      "componentShape": "outlined",
+      "layout": "editorial-stack",
+      "screenPriorities": [
+        "visão geral",
+        "ações frequentes",
+        "atividade recente"
+      ],
+      "primaryDataView": "catalog"
+    },
+    "composition": {
+      "shell": "top-navigation",
+      "contentFrame": "narrow",
+      "header": "editorial",
+      "actionPlacement": "navigation",
+      "mobileNavigation": "scrolling-tabs",
+      "rationale": [
+        "archetype:generic",
+        "layout:editorial-stack",
+        "hierarchy:content-first",
+        "action:navigation"
+      ]
+    },
+    "evidence": [
+      "style:editorial",
+      "palette:explicit-earth-atelier",
+      "composition:explicit-top-navigation"
+    ]
+  },
+  "components": [
+    {
+      "id": "app-shell",
+      "category": "layout",
+      "variants": [
+        "topbar",
+        "sidebar"
+      ],
+      "states": [
+        "desktop",
+        "mobile"
+      ],
+      "purpose": "Application frame and responsive navigation",
+      "selectedVariant": "top"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "select",
+      "category": "input",
+      "variants": [
+        "default",
+        "combobox"
+      ],
+      "states": [
+        "default",
+        "open",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Single or searchable selection",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "card",
+      "category": "data-display",
+      "variants": [
+        "standard",
+        "interactive",
+        "media",
+        "metric"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "selected",
+        "loading"
+      ],
+      "purpose": "Grouped information and actions",
+      "selectedVariant": "interactive"
+    },
+    {
+      "id": "data-table",
+      "category": "data-display",
+      "variants": [
+        "comfortable",
+        "compact"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "error"
+      ],
+      "purpose": "Scannable structured records",
+      "selectedVariant": "comfortable"
+    },
+    {
+      "id": "catalog",
+      "category": "data-display",
+      "variants": [
+        "product-grid",
+        "collection"
+      ],
+      "states": [
+        "loading",
+        "empty",
+        "populated",
+        "filtered"
+      ],
+      "purpose": "Visual product discovery",
+      "selectedVariant": "product-grid"
+    },
+    {
+      "id": "stat",
+      "category": "data-display",
+      "variants": [
+        "plain",
+        "trend",
+        "progress"
+      ],
+      "states": [
+        "loading",
+        "populated"
+      ],
+      "purpose": "Key performance indicators",
+      "selectedVariant": "plain"
+    },
+    {
+      "id": "badge",
+      "category": "data-display",
+      "variants": [
+        "neutral",
+        "success",
+        "warning",
+        "danger"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Status and compact metadata",
+      "selectedVariant": "neutral"
+    },
+    {
+      "id": "empty-state",
+      "category": "feedback",
+      "variants": [
+        "first-use",
+        "no-results",
+        "error"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Actionable absence of data",
+      "selectedVariant": "first-use"
+    },
+    {
+      "id": "toast",
+      "category": "feedback",
+      "variants": [
+        "success",
+        "info",
+        "warning",
+        "error"
+      ],
+      "states": [
+        "enter",
+        "visible",
+        "exit"
+      ],
+      "purpose": "Non-blocking operation feedback",
+      "selectedVariant": "success"
+    },
+    {
+      "id": "dialog",
+      "category": "feedback",
+      "variants": [
+        "confirmation",
+        "form",
+        "detail"
+      ],
+      "states": [
+        "open",
+        "closing"
+      ],
+      "purpose": "Focused decisions and workflows",
+      "selectedVariant": "confirmation"
+    },
+    {
+      "id": "skeleton",
+      "category": "feedback",
+      "variants": [
+        "text",
+        "card",
+        "table"
+      ],
+      "states": [
+        "loading"
+      ],
+      "purpose": "Layout-stable loading feedback",
+      "selectedVariant": "text"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

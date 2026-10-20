@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Orus Studio",
+  "experience": {
+    "pattern": "editorial-overview",
+    "hierarchy": "content-first",
+    "heroTreatment": "editorial",
+    "componentShape": "outlined",
+    "layout": "editorial-stack",
+    "screenPriorities": [
+      "visão geral",
+      "ações frequentes",
+      "atividade recente"
+    ],
+    "primaryDataView": "catalog"
+  },
+  "composition": {
+    "shell": "top-navigation",
+    "contentFrame": "narrow",
+    "header": "editorial",
+    "actionPlacement": "navigation",
+    "mobileNavigation": "scrolling-tabs",
+    "rationale": [
+      "archetype:generic",
+      "layout:editorial-stack",
+      "hierarchy:content-first",
+      "action:navigation"
+    ]
+  },
+  "navigation": "top",
+  "density": "spacious",
+  "motion": "subtle",
+  "componentPlan": [
+    "app-shell",
+    "button",
+    "text-field",
+    "select",
+    "card",
+    "data-table",
+    "stat",
+    "badge",
+    "empty-state",
+    "toast",
+    "dialog",
+    "skeleton",
+    "catalog"
+  ]
+}

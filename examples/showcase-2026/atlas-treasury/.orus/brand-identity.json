@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Atlas Treasury",
+  "style": "corporate",
+  "archetype": "finance",
+  "identity": {
+    "personality": [
+      "precise",
+      "trustworthy",
+      "refined"
+    ],
+    "voice": "segura, objetiva e orientada a decisões",
+    "promise": "clareza para decidir com confiança",
+    "visualMetaphor": "sinais financeiros em movimento",
+    "signature": "linhas de tendência e destaques numéricos",
+    "imagery": "dados, profundidade e luz controlada"
+  },
+  "typography": {
+    "display": "Manrope",
+    "body": "Inter"
+  },
+  "palette": {
+    "name": "ink-paper",
+    "primary": "bg-gray-950",
+    "primaryHover": "hover:bg-gray-800",
+    "primaryText": "text-white",
+    "primarySoft": "bg-gray-100 text-gray-900",
+    "accent": "text-gray-950",
+    "page": "bg-white",
+    "surface": "bg-white",
+    "surfaceMuted": "bg-gray-50",
+    "text": "text-gray-950",
+    "textMuted": "text-gray-500",
+    "border": "border-gray-200",
+    "heroGradient": "bg-gradient-to-b from-gray-50 to-white",
+    "cssPrimary": "17 24 39",
+    "cssPrimaryHover": "31 41 55",
+    "cssPrimarySoft": "243 244 246",
+    "cssAccent": "17 24 39",
+    "cssPage": "255 255 255",
+    "cssSurface": "255 255 255",
+    "cssSurfaceMuted": "249 250 251",
+    "cssText": "17 24 39",
+    "cssTextMuted": "107 114 128",
+    "cssBorder": "229 231 235"
+  }
+}

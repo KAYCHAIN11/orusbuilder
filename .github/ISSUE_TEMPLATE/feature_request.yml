@@ -1,0 +1,31 @@
+name: Propor melhoria
+description: Proponha uma capacidade, integração ou evolução da arquitetura existente.
+title: "[Proposta]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema
+      description: Qual necessidade real ainda não é atendida?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Explique o comportamento esperado sem presumir uma implementação específica.
+    validations:
+      required: true
+  - type: textarea
+    id: architecture
+    attributes:
+      label: Integração com a arquitetura
+      description: Indique engines, contratos ou componentes existentes que podem ser reutilizados.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critérios de aceite
+      description: Como a comunidade poderá comprovar que a melhoria funciona?
+    validations:
+      required: true

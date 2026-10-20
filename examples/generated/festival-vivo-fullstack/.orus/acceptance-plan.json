@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-54a13ac7-10ea-4412-b797-e3de5a71ff3a",
+  "blueprintVersion": 1,
+  "criteria": [
+    {
+      "id": "AC-001",
+      "statement": "Event content can be created, loaded and opened from persistent storage",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "content",
+      "entity": "Event",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Programação de eventos",
+        "strategy": "content",
+        "entities": [
+          "Event",
+          "EventSession"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Programação de eventos",
+          "route": "/events"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-002",
+      "statement": "Programação de eventos handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Event",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Programação de eventos",
+        "strategy": "content",
+        "entities": [
+          "Event",
+          "EventSession"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Programação de eventos",
+          "route": "/events"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-003",
+      "statement": "Ticket records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Ticket",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Ingressos e inscrições",
+        "strategy": "workflow",
+        "entities": [
+          "Ticket",
+          "Attendee",
+          "Event"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Ingressos e inscrições",
+          "route": "/tickets"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-004",
+      "statement": "Ingressos e inscrições handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Ticket",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Ingressos e inscrições",
+        "strategy": "workflow",
+        "entities": [
+          "Ticket",
+          "Attendee",
+          "Event"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-003",
+          "name": "Ingressos e inscrições",
+          "route": "/tickets"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-005",
+      "statement": "CheckIn records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "CheckIn",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Credenciamento",
+        "strategy": "workflow",
+        "entities": [
+          "CheckIn",
+          "Ticket"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Credenciamento",
+          "route": "/check-in"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-006",
+      "statement": "Credenciamento handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "CheckIn",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Credenciamento",
+        "strategy": "workflow",
+        "entities": [
+          "CheckIn",
+          "Ticket"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Experiência principal",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Credenciamento",
+          "route": "/check-in"
+        }
+      ],
+      "status": "planned"
+    }
+  ]
+}

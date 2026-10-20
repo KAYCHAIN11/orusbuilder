@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "2.0.0",
+  "generator": "orus-ui-generator",
+  "planningOrder": [
+    "brand-identity",
+    "product-experience",
+    "components",
+    "screens"
+  ],
+  "visualIntent": {
+    "version": 2,
+    "style": "premium",
+    "archetype": "healthcare",
+    "density": "comfortable",
+    "locale": "pt-BR",
+    "colorMode": "light",
+    "radius": "rounded",
+    "navigation": "top",
+    "motion": "subtle",
+    "brandName": "Serena",
+    "typography": {
+      "display": "Manrope",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "clinical-mint",
+      "primary": "bg-teal-600",
+      "primaryHover": "hover:bg-teal-500",
+      "primaryText": "text-white",
+      "primarySoft": "bg-teal-50 text-teal-800",
+      "accent": "text-emerald-500",
+      "page": "bg-slate-50",
+      "surface": "bg-white",
+      "surfaceMuted": "bg-teal-50",
+      "text": "text-slate-950",
+      "textMuted": "text-slate-600",
+      "border": "border-teal-100",
+      "heroGradient": "bg-gradient-to-br from-teal-950 via-teal-800 to-emerald-600",
+      "cssPrimary": "13 148 136",
+      "cssPrimaryHover": "20 184 166",
+      "cssPrimarySoft": "240 253 250",
+      "cssAccent": "16 185 129",
+      "cssPage": "248 250 252",
+      "cssSurface": "255 255 255",
+      "cssSurfaceMuted": "240 253 250",
+      "cssText": "15 23 42",
+      "cssTextMuted": "71 85 105",
+      "cssBorder": "204 251 241"
+    },
+    "identity": {
+      "personality": [
+        "trustworthy",
+        "warm",
+        "precise"
+      ],
+      "voice": "acolhedora, clara e responsável",
+      "promise": "cuidado coordenado sem atrito",
+      "visualMetaphor": "ritmo de cuidado contínuo",
+      "signature": "blocos calmos, sinais de status e espaço respirável",
+      "imagery": "pessoas, cuidado e ambientes luminosos"
+    },
+    "experience": {
+      "pattern": "care-hub",
+      "hierarchy": "people-first",
+      "heroTreatment": "solid",
+      "componentShape": "quiet",
+      "screenPriorities": [
+        "agenda do dia",
+        "pacientes prioritários",
+        "continuidade do cuidado"
+      ],
+      "primaryDataView": "calendar"
+    },
+    "evidence": [
+      "style:premium",
+      "archetype:healthcare",
+      "palette:explicit-green-teal"
+    ]
+  },
+  "components": [
+    {
+      "id": "hero",
+      "category": "marketing",
+      "variants": [
+        "centered",
+        "split",
+        "editorial"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Primary value proposition and actions",
+      "selectedVariant": "centered"
+    },
+    {
+      "id": "button",
+      "category": "input",
+      "variants": [
+        "primary",
+        "secondary",
+        "ghost",
+        "danger"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "disabled",
+        "loading"
+      ],
+      "purpose": "Actions with a clear hierarchy",
+      "selectedVariant": "primary"
+    },
+    {
+      "id": "text-field",
+      "category": "input",
+      "variants": [
+        "default",
+        "search",
+        "with-icon"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "invalid",
+        "disabled"
+      ],
+      "purpose": "Accessible text input",
+      "selectedVariant": "default"
+    },
+    {
+      "id": "feature-grid",
+      "category": "marketing",
+      "variants": [
+        "three-column",
+        "bento"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Product capability storytelling",
+      "selectedVariant": "three-column"
+    },
+    {
+      "id": "testimonial",
+      "category": "marketing",
+      "variants": [
+        "quote",
+        "logo-wall"
+      ],
+      "states": [
+        "default"
+      ],
+      "purpose": "Trust and social proof",
+      "selectedVariant": "quote"
+    },
+    {
+      "id": "cta",
+      "category": "marketing",
+      "variants": [
+        "banner",
+        "contained"
+      ],
+      "states": [
+        "default",
+        "submitted"
+      ],
+      "purpose": "Conversion-focused final action",
+      "selectedVariant": "banner"
+    }
+  ],
+  "constraints": {
+    "accessibility": "WCAG 2.2 AA",
+    "responsive": "mobile-first",
+    "requiredStates": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "focus"
+    ],
+    "rawColorsAllowed": false
+  }
+}

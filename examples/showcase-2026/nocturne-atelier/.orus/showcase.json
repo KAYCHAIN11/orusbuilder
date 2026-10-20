@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-11T17:51:25.684Z",
+  "generator": "UIGenerator",
+  "type": "landing",
+  "visualFingerprint": {
+    "version": 2,
+    "style": "luxury",
+    "archetype": "dashboard",
+    "density": "spacious",
+    "locale": "pt-BR",
+    "colorMode": "dark",
+    "radius": "rounded",
+    "navigation": "sidebar",
+    "motion": "subtle",
+    "brandName": "Nocturne Atelier",
+    "typography": {
+      "display": "Playfair Display",
+      "body": "Inter"
+    },
+    "palette": {
+      "name": "obsidian-gold",
+      "primary": "bg-amber-500",
+      "primaryHover": "hover:bg-amber-400",
+      "primaryText": "text-neutral-950",
+      "primarySoft": "bg-amber-400/10 text-amber-300",
+      "accent": "text-amber-400",
+      "page": "bg-neutral-950",
+      "surface": "bg-neutral-900",
+      "surfaceMuted": "bg-neutral-900/70",
+      "text": "text-amber-50",
+      "textMuted": "text-neutral-400",
+      "border": "border-amber-400/20",
+      "heroGradient": "bg-gradient-to-br from-black via-neutral-950 to-amber-950",
+      "cssPrimary": "245 158 11",
+      "cssPrimaryHover": "251 191 36",
+      "cssPrimarySoft": "69 26 3",
+      "cssAccent": "251 191 36",
+      "cssPage": "10 10 10",
+      "cssSurface": "10 10 10",
+      "cssSurfaceMuted": "23 23 23",
+      "cssText": "255 251 235",
+      "cssTextMuted": "163 163 163",
+      "cssBorder": "69 58 25"
+    },
+    "identity": {
+      "personality": [
+        "refined",
+        "precise"
+      ],
+      "voice": "operacional, direta e acionável",
+      "promise": "controle do que exige atenção agora",
+      "visualMetaphor": "central de comando",
+      "signature": "hierarquia por urgência e densidade controlada",
+      "imagery": "dados operacionais e sinais de progresso"
+    },
+    "experience": {
+      "pattern": "command-center",
+      "hierarchy": "workflow-first",
+      "heroTreatment": "solid",
+      "componentShape": "outlined",
+      "layout": "editorial-stack",
+      "screenPriorities": [
+        "itens críticos",
+        "fluxo em andamento",
+        "atividade recente"
+      ],
+      "primaryDataView": "gallery"
+    },
+    "composition": {
+      "shell": "compact-rail",
+      "contentFrame": "narrow",
+      "header": "command",
+      "actionPlacement": "floating",
+      "mobileNavigation": "drawer",
+      "rationale": [
+        "archetype:dashboard",
+        "layout:editorial-stack",
+        "hierarchy:workflow-first",
+        "action:floating"
+      ]
+    },
+    "evidence": [
+      "style:luxury",
+      "archetype:dashboard",
+      "archetype-score:1",
+      "composition:planned-compact-rail"
+    ]
+  },
+  "prompt": "Landing page editorial de luxo para Nocturne Atelier, uma casa brasileira de mobiliário colecionável. Visual cinematográfico escuro, preto mineral, marfim e cobre, tipografia serifada monumental, composição assimétrica, muito espaço negativo e detalhes de galeria. Exatamente quatro seções: manifesto hero, coleção selecionada, processo artesanal e visita ao atelier. Evitar dashboard, cards SaaS e gradientes genéricos.",
+  "build": "passed"
+}

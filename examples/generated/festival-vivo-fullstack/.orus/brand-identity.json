@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "brandName": "Orus Studio",
+  "style": "playful",
+  "archetype": "generic",
+  "identity": {
+    "personality": [
+      "energetic",
+      "warm",
+      "inventive"
+    ],
+    "voice": "vibrante, convidativa e coordenada",
+    "promise": "da programação à entrada, cada momento conectado",
+    "visualMetaphor": "palco em preparação",
+    "signature": "agenda, lotes e pulsos de presença",
+    "imagery": "palcos, encontros e experiências coletivas"
+  },
+  "typography": {
+    "display": "Manrope",
+    "body": "Inter"
+  },
+  "palette": {
+    "name": "commerce-coral",
+    "primary": "bg-orange-700",
+    "primaryHover": "hover:bg-orange-800",
+    "primaryText": "text-white",
+    "primarySoft": "bg-orange-50 text-orange-800",
+    "accent": "text-rose-700",
+    "page": "bg-stone-50",
+    "surface": "bg-white",
+    "surfaceMuted": "bg-orange-50",
+    "text": "text-stone-950",
+    "textMuted": "text-stone-600",
+    "border": "border-orange-100",
+    "heroGradient": "bg-gradient-to-br from-stone-950 via-orange-950 to-rose-900",
+    "cssPrimary": "194 65 12",
+    "cssPrimaryHover": "154 52 18",
+    "cssPrimarySoft": "255 247 237",
+    "cssAccent": "190 18 60",
+    "cssPage": "250 250 249",
+    "cssSurface": "255 255 255",
+    "cssSurfaceMuted": "255 247 237",
+    "cssText": "28 25 23",
+    "cssTextMuted": "87 83 78",
+    "cssBorder": "255 237 213"
+  }
+}

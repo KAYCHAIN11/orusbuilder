@@ -1,0 +1,413 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-31fa330b-3e87-47bd-901d-4be46ee7d446",
+  "blueprintVersion": 1,
+  "criteria": [
+    {
+      "id": "AC-001",
+      "statement": "Appointments require a responsible professional and reject overlapping persisted time ranges",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Agenda clínica",
+        "strategy": "workflow",
+        "entities": [
+          "Appointment",
+          "Professional",
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Central de cuidado",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Agenda",
+          "route": "/appointments"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-002",
+      "statement": "Agenda clínica handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Agenda clínica",
+        "strategy": "workflow",
+        "entities": [
+          "Appointment",
+          "Professional",
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Central de cuidado",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-002",
+          "name": "Agenda",
+          "route": "/appointments"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-003",
+      "statement": "Patient records can be created, loaded, updated and removed through persistent APIs",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "persistence",
+      "entity": "Patient",
+      "route": "/patients",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Cadastro de pacientes",
+        "strategy": "crud",
+        "entities": [
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-003",
+          "name": "Pacientes",
+          "route": "/patients"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-004",
+      "statement": "Cadastro de pacientes handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Patient",
+      "route": "/patients",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Cadastro de pacientes",
+        "strategy": "crud",
+        "entities": [
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-003",
+          "name": "Pacientes",
+          "route": "/patients"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-005",
+      "statement": "Prontuário completes its declared domain outcome with persisted data",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "custom",
+      "entity": "ClinicalRecord",
+      "route": "/patients/:id",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Prontuário",
+        "strategy": "custom",
+        "entities": [
+          "ClinicalRecord",
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-004",
+          "name": "Paciente",
+          "route": "/patients/:id"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-006",
+      "statement": "Prontuário handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "ClinicalRecord",
+      "route": "/patients/:id",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Prontuário",
+        "strategy": "custom",
+        "entities": [
+          "ClinicalRecord",
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-004",
+          "name": "Paciente",
+          "route": "/patients/:id"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-007",
+      "statement": "Appointments require a responsible professional and reject overlapping persisted time ranges",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": false,
+      "kind": "workflow",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Continuidade do cuidado",
+        "strategy": "workflow",
+        "entities": [
+          "Appointment",
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Central de cuidado",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Paciente",
+          "route": "/patients/:id"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-008",
+      "statement": "Continuidade do cuidado handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": false,
+      "kind": "state-handling",
+      "entity": "Appointment",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Continuidade do cuidado",
+        "strategy": "workflow",
+        "entities": [
+          "Appointment",
+          "Patient"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Central de cuidado",
+          "route": "/"
+        },
+        {
+          "id": "SCREEN-004",
+          "name": "Paciente",
+          "route": "/patients/:id"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-009",
+      "statement": "Notification records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Notificações",
+        "strategy": "workflow",
+        "entities": [
+          "Notification"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Notificações",
+          "route": "/notifications"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-010",
+      "statement": "Notificações handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Notificações",
+        "strategy": "workflow",
+        "entities": [
+          "Notification"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Notificações",
+          "route": "/notifications"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-011",
+      "statement": "Access policies persist explicit scopes and permissions and can be changed only by administrators",
+      "capabilityId": "CAP-006",
+      "testType": "journey",
+      "required": true,
+      "kind": "custom",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-006",
+        "name": "Papéis e permissões",
+        "strategy": "custom",
+        "entities": [
+          "Role"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Papéis e permissões",
+          "route": "/access"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-012",
+      "statement": "Papéis e permissões handles loading, empty, success and error states",
+      "capabilityId": "CAP-006",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-006",
+        "name": "Papéis e permissões",
+        "strategy": "custom",
+        "entities": [
+          "Role"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Papéis e permissões",
+          "route": "/access"
+        }
+      ],
+      "status": "planned"
+    }
+  ]
+}

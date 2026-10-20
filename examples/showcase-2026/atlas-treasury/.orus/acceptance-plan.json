@@ -1,0 +1,454 @@
+{
+  "schemaVersion": "1.0.0",
+  "blueprintId": "blueprint-8c8aa6a8-293e-4df9-b326-d3f944390eaa",
+  "blueprintVersion": 1,
+  "criteria": [
+    {
+      "id": "AC-001",
+      "statement": "Transaction records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-001",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Transaction",
+      "route": "/transactions",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Movimentações",
+        "strategy": "workflow",
+        "entities": [
+          "Transaction",
+          "Account"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-002",
+          "name": "Movimentações",
+          "route": "/transactions"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-002",
+      "statement": "Movimentações handles loading, empty, success and error states",
+      "capabilityId": "CAP-001",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Transaction",
+      "route": "/transactions",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-001",
+        "name": "Movimentações",
+        "strategy": "workflow",
+        "entities": [
+          "Transaction",
+          "Account"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-002",
+          "name": "Movimentações",
+          "route": "/transactions"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-003",
+      "statement": "Invoice records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-002",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Invoice",
+      "route": "/invoices",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Contas e faturas",
+        "strategy": "workflow",
+        "entities": [
+          "Invoice"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-003",
+          "name": "Faturas",
+          "route": "/invoices"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-004",
+      "statement": "Contas e faturas handles loading, empty, success and error states",
+      "capabilityId": "CAP-002",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Invoice",
+      "route": "/invoices",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-002",
+        "name": "Contas e faturas",
+        "strategy": "workflow",
+        "entities": [
+          "Invoice"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-003",
+          "name": "Faturas",
+          "route": "/invoices"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-005",
+      "statement": "Orçamento indicators are calculated from persisted source records",
+      "capabilityId": "CAP-003",
+      "testType": "journey",
+      "required": true,
+      "kind": "calculation",
+      "entity": "Budget",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Orçamento",
+        "strategy": "computed",
+        "entities": [
+          "Budget",
+          "Transaction"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Visão financeira",
+          "route": "/"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-006",
+      "statement": "Orçamento handles loading, empty, success and error states",
+      "capabilityId": "CAP-003",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Budget",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-003",
+        "name": "Orçamento",
+        "strategy": "computed",
+        "entities": [
+          "Budget",
+          "Transaction"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Visão financeira",
+          "route": "/"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-007",
+      "statement": "Indicadores financeiros indicators are calculated from persisted source records",
+      "capabilityId": "CAP-004",
+      "testType": "journey",
+      "required": false,
+      "kind": "calculation",
+      "entity": "Transaction",
+      "route": "/",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Indicadores financeiros",
+        "strategy": "computed",
+        "entities": [
+          "Transaction",
+          "Invoice"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Visão financeira",
+          "route": "/"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-008",
+      "statement": "Indicadores financeiros handles loading, empty, success and error states",
+      "capabilityId": "CAP-004",
+      "testType": "integration",
+      "required": false,
+      "kind": "state-handling",
+      "entity": "Transaction",
+      "route": "/",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-004",
+        "name": "Indicadores financeiros",
+        "strategy": "computed",
+        "entities": [
+          "Transaction",
+          "Invoice"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-001",
+          "name": "Visão financeira",
+          "route": "/"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-009",
+      "statement": "Notification records can move only through allowed persisted workflow transitions",
+      "capabilityId": "CAP-005",
+      "testType": "journey",
+      "required": true,
+      "kind": "workflow",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Notificações",
+        "strategy": "workflow",
+        "entities": [
+          "Notification"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-004",
+          "name": "Notificações",
+          "route": "/notifications"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-010",
+      "statement": "Notificações handles loading, empty, success and error states",
+      "capabilityId": "CAP-005",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Notification",
+      "route": "/notifications",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-005",
+        "name": "Notificações",
+        "strategy": "workflow",
+        "entities": [
+          "Notification"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-004",
+          "name": "Notificações",
+          "route": "/notifications"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-011",
+      "statement": "Access policies persist explicit scopes and permissions and can be changed only by administrators",
+      "capabilityId": "CAP-006",
+      "testType": "journey",
+      "required": true,
+      "kind": "custom",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-006",
+        "name": "Papéis e permissões",
+        "strategy": "custom",
+        "entities": [
+          "Role"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Papéis e permissões",
+          "route": "/access"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-012",
+      "statement": "Papéis e permissões handles loading, empty, success and error states",
+      "capabilityId": "CAP-006",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Role",
+      "route": "/access",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-006",
+        "name": "Papéis e permissões",
+        "strategy": "custom",
+        "entities": [
+          "Role"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-005",
+          "name": "Papéis e permissões",
+          "route": "/access"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-013",
+      "statement": "Payments preserve amount and method while allowing only declared financial status transitions",
+      "capabilityId": "CAP-007",
+      "testType": "journey",
+      "required": true,
+      "kind": "integration",
+      "entity": "Payment",
+      "route": "/payments",
+      "assertions": [
+        "operation reaches the declared outcome",
+        "server response is reflected in the interface",
+        "result remains available after reload"
+      ],
+      "capability": {
+        "id": "CAP-007",
+        "name": "Pagamentos",
+        "strategy": "integration",
+        "entities": [
+          "Payment"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Pagamentos",
+          "route": "/payments"
+        }
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "AC-014",
+      "statement": "Pagamentos handles loading, empty, success and error states",
+      "capabilityId": "CAP-007",
+      "testType": "integration",
+      "required": true,
+      "kind": "state-handling",
+      "entity": "Payment",
+      "route": "/payments",
+      "assertions": [
+        "loading state is visible",
+        "empty state is useful",
+        "errors are actionable",
+        "success state uses persisted data"
+      ],
+      "capability": {
+        "id": "CAP-007",
+        "name": "Pagamentos",
+        "strategy": "integration",
+        "entities": [
+          "Payment"
+        ]
+      },
+      "screens": [
+        {
+          "id": "SCREEN-006",
+          "name": "Pagamentos",
+          "route": "/payments"
+        }
+      ],
+      "status": "planned"
+    }
+  ]
+}

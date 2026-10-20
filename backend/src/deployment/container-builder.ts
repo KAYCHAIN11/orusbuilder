@@ -338,7 +338,7 @@ export class ContainerBuilder {
       results.push(await testAutomation.runCommand({
         command: 'docker',
         args: [
-          'run', '--rm', '--detach', '--name', containerName,
+          'run', '--detach', '--name', containerName,
           '--network', 'none',
           '--memory', `${memoryMb}m`,
           '--cpus', String(cpus),

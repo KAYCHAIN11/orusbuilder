@@ -894,6 +894,7 @@ export class BuildSystem {
       }),
       stdio: ['ignore', 'pipe', 'pipe'],
       windowsHide: true,
+      detached: process.platform !== 'win32',
     });
     let output = '';
     let outputBytes = 0;
@@ -955,7 +956,29 @@ export class BuildSystem {
   private async terminateProcessTree(child: ChildProcess): Promise<void> {
     if (!child.pid || child.exitCode !== null) return;
     if (process.platform !== 'win32') {
-      child.kill('SIGTERM');
+      const waitForExit = async (timeout: number): Promise<boolean> => {
+        if (child.exitCode !== null || child.signalCode !== null) return true;
+        return new Promise(resolve => {
+          const timer = setTimeout(() => resolve(false), timeout);
+          child.once('close', () => {
+            clearTimeout(timer);
+            resolve(true);
+          });
+        });
+      };
+      try {
+        process.kill(-child.pid, 'SIGTERM');
+      } catch {
+        child.kill('SIGTERM');
+      }
+      if (!await waitForExit(1500)) {
+        try {
+          process.kill(-child.pid, 'SIGKILL');
+        } catch {
+          child.kill('SIGKILL');
+        }
+        await waitForExit(1500);
+      }
       return;
     }
     await new Promise<void>(resolve => {

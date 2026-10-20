@@ -83,7 +83,7 @@ describe('ContainerBuilder execution isolation', () => {
     expect(runCommand).toHaveBeenNthCalledWith(1, expect.objectContaining({
       command: 'docker',
       args: expect.arrayContaining([
-        'run', '--rm', '--detach',
+        'run', '--detach',
         '--network', 'none',
         '--cap-drop', 'ALL',
         '--read-only',
@@ -92,6 +92,7 @@ describe('ContainerBuilder execution isolation', () => {
         'npm', 'run', 'start'
       ])
     }));
+    expect(runCommand.mock.calls[0]?.[0].args).not.toContain('--rm');
     expect(runCommand).toHaveBeenNthCalledWith(2, expect.objectContaining({
       args: expect.arrayContaining(['exec', 'node', '-e'])
     }));

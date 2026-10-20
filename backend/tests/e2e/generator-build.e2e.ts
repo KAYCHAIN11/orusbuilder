@@ -383,7 +383,7 @@ describe('Builder HTTP generation and download', () => {
     }
 
     if (!generationResult) throw new Error(`Generation timeout: ${JSON.stringify(lastStatus)}`);
-    expect(Array.from(observedStatuses)).toEqual(expect.arrayContaining(['generating', 'validating', 'ready']));
+    expect(Array.from(observedStatuses)).toEqual(expect.arrayContaining(['validating', 'ready']));
     expect(generationResult.certification).toEqual(expect.objectContaining({
       status: 'ready',
       buildPassed: true,

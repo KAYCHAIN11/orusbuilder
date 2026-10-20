@@ -68,10 +68,10 @@
     "es5-ext@0.10.64": true
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.13.0",
+    "@axe-core/playwright": "^4.14.0",
     "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.64.0",
-    "jsdom": "^30.1.2"
+    "jsdom": "^30.1.3"
   }
 }

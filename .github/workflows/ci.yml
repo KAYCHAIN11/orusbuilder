@@ -80,7 +80,8 @@ jobs:
       - run: npm ci
       - run: docker pull node:20-bookworm-slim
       - run: docker compose up -d --wait mongodb
-      - run: docker compose exec -T mongodb mongosh --quiet --eval "db.adminCommand({ ping: 1 }).ok"
+      - run: |
+          docker compose exec -T mongodb mongosh --quiet --eval "db.adminCommand({ ping: 1 }).ok"
       - run: npm run test:e2e:isolation
       - if: always()
         run: docker compose down -v

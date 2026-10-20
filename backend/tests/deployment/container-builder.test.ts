@@ -44,6 +44,7 @@ describe('ContainerBuilder execution isolation', () => {
         '--network', 'none',
         '--cap-drop', 'ALL',
         '--read-only',
+        '--env', 'NPM_CONFIG_CACHE=/tmp/npm-cache',
         '--workdir', '/workspace',
         'npm', 'run', 'build'
       ]),
@@ -86,6 +87,7 @@ describe('ContainerBuilder execution isolation', () => {
         '--network', 'none',
         '--cap-drop', 'ALL',
         '--read-only',
+        '--env', 'NPM_CONFIG_CACHE=/tmp/npm-cache',
         '--workdir', '/workspace/backend',
         'npm', 'run', 'start'
       ])

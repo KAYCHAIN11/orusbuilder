@@ -9,7 +9,7 @@ import { uiGenerator, type GeneratedUIFile } from '../../src/generation/ui-gener
 import { analyzeVisualIntent, visualFingerprint } from '../../src/generation/visual-intent';
 
 const npmCli = process.env['npm_execpath'];
-const chromeExecutable = process.env['ORUS_BROWSER_EXECUTABLE'] || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+const chromeExecutable = process.env['ORUS_BROWSER_EXECUTABLE'];
 
 if (!npmCli) throw new Error('npm_execpath is required to run browser E2E tests');
 
@@ -232,8 +232,8 @@ describe('Generated interface browser matrix', () => {
   beforeAll(async () => {
     jest.spyOn(console, 'log').mockImplementation(() => undefined);
     jest.spyOn(console, 'warn').mockImplementation(() => undefined);
-    await fs.access(chromeExecutable);
-    browser = await chromium.launch({ headless: true, executablePath: chromeExecutable });
+    if (chromeExecutable) await fs.access(chromeExecutable);
+    browser = await chromium.launch({ headless: true, ...(chromeExecutable ? { executablePath: chromeExecutable } : {}) });
   });
 
   afterAll(async () => {

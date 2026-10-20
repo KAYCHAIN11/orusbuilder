@@ -306,6 +306,8 @@ export class ContainerBuilder {
         '--cap-drop', 'ALL',
         '--read-only',
         '--tmpfs', '/tmp:rw,noexec,nosuid,size=128m',
+        '--env', 'HOME=/tmp',
+        '--env', 'NPM_CONFIG_CACHE=/tmp/npm-cache',
         '--volume', mount,
         '--workdir', '/workspace',
         ...envArgs,
@@ -345,6 +347,8 @@ export class ContainerBuilder {
           '--cap-drop', 'ALL',
           '--read-only',
           '--tmpfs', '/tmp:rw,noexec,nosuid,size=128m',
+          '--env', 'HOME=/tmp',
+          '--env', 'NPM_CONFIG_CACHE=/tmp/npm-cache',
           '--volume', mount,
           '--workdir', workDir,
           ...envArgs,
@@ -379,7 +383,18 @@ export class ContainerBuilder {
             maxOutputBytes: 1024,
             signal: request.signal
           }).catch(() => undefined);
-          if (!state || state.stdout.trim() !== 'true') throw new Error('Isolated backend stopped before readiness');
+          if (!state || state.stdout.trim() !== 'true') {
+            const logs = await testAutomation.runCommand({
+              command: 'docker',
+              args: ['logs', containerName],
+              cwd: request.projectRoot,
+              timeout: 3000,
+              maxOutputBytes: request.maxOutputBytes,
+              signal: request.signal
+            }).catch(() => undefined);
+            const diagnostic = [logs?.stdout, logs?.stderr].filter(Boolean).join('\n').trim();
+            throw new Error(`Isolated backend stopped before readiness${diagnostic ? `:\n${diagnostic}` : ''}`);
+          }
           await new Promise(resolve => setTimeout(resolve, 200));
         }
       }

@@ -294,6 +294,9 @@ export class ContainerBuilder {
     const envArgs = Object.entries(request.env || {})
       .filter((entry): entry is [string, string] => typeof entry[1] === 'string')
       .flatMap(([key, value]) => ['--env', `${key}=${value}`]);
+    const userArgs = process.platform !== 'win32' && process.getuid && process.getgid
+      ? ['--user', `${process.getuid()}:${process.getgid()}`]
+      : [];
     return testAutomation.runCommand({
       command: 'docker',
       args: [
@@ -304,6 +307,7 @@ export class ContainerBuilder {
         '--pids-limit', String(pidsLimit),
         '--security-opt', 'no-new-privileges:true',
         '--cap-drop', 'ALL',
+        ...userArgs,
         '--read-only',
         '--tmpfs', '/tmp:rw,noexec,nosuid,size=128m',
         '--env', 'HOME=/tmp',
@@ -332,6 +336,9 @@ export class ContainerBuilder {
     const envArgs = Object.entries(request.env || {})
       .filter((entry): entry is [string, string] => typeof entry[1] === 'string')
       .flatMap(([key, value]) => ['--env', `${key}=${value}`]);
+    const userArgs = process.platform !== 'win32' && process.getuid && process.getgid
+      ? ['--user', `${process.getuid()}:${process.getgid()}`]
+      : [];
     const results: CommandExecutionResult[] = [];
     const startedAt = Date.now();
     try {
@@ -345,6 +352,7 @@ export class ContainerBuilder {
           '--pids-limit', String(pidsLimit),
           '--security-opt', 'no-new-privileges:true',
           '--cap-drop', 'ALL',
+          ...userArgs,
           '--read-only',
           '--tmpfs', '/tmp:rw,noexec,nosuid,size=128m',
           '--env', 'HOME=/tmp',

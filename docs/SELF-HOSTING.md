@@ -4,7 +4,7 @@ O ORUS Builder é executado e administrado por quem instala o projeto. Não depe
 
 ## Requisitos
 
-- Node.js 20 ou superior;
+- Node.js 24.15 ou superior;
 - npm 9 ou superior;
 - Docker com Compose;
 - acesso ao registro npm durante a certificação;

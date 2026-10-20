@@ -47,7 +47,7 @@
     "test:data-recovery": "node scripts/production-data.test.mjs"
   },
   "engines": {
-    "node": ">=20.0.0",
+    "node": ">=24.15.0",
     "npm": ">=9.0.0"
   },
   "overrides": {

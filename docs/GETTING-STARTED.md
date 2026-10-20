@@ -4,7 +4,7 @@ Este guia conduz uma instalação local reproduzível até a primeira geração.
 
 ## Requisitos
 
-- Node.js 20 ou superior;
+- Node.js 24.15 ou superior;
 - npm 9 ou superior;
 - Git;
 - Docker com Compose para MongoDB e isolamento;

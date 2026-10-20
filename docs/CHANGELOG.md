@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Toolchain atualizada para Node.js 20+, Vite 8.3.3, Vitest 5.0.3, Tailwind CSS 4.3.3 e ESLint 10.12.0.
+- Toolchain atualizada para Node.js 24.15+, Vite 8.3.3, Vitest 5.0.3, Tailwind CSS 4.3.3 e ESLint 10.12.0.
 - CIG histórico conectado à decisão canônica de certificação.
 - Gerador passou a compor projetos a partir do Blueprint e de estratégias de capacidade.
 - Engines sem provedor real são desabilitadas e declaradas como indisponíveis.

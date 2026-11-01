@@ -35,7 +35,7 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/dependency-review-action@v4
+      - uses: actions/dependency-review-action@v5
 
   generator-e2e:
     if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
